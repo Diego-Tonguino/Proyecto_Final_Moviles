@@ -1,0 +1,91 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.sourcelink.json

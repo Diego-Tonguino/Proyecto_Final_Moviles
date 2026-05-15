@@ -1,0 +1,78 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using NorthWind.Sales.Backend.Controllers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace NorthWind.Sales.Backend.Controllers.Auth;
+
+public static class AuthController
+{
+    public record LoginDto(string UserName, string Password);
+
+    public static WebApplication UseAuthController(this WebApplication app)
+    {
+        app.MapPost("/api/auth/login", Login);
+        return app;
+    }
+
+    private static async Task<IResult> Login(LoginDto dto, HttpContext httpContext, IConfiguration configuration)
+    {
+        // Resolve UserManager and SignInManager from the request services to avoid
+        // RequestDelegateFactory inference issues when types are not registered at mapping time.
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var signInManager = httpContext.RequestServices.GetRequiredService<SignInManager<ApplicationUser>>();
+
+        if (userManager == null || signInManager == null)
+        {
+            return Results.StatusCode(500);
+        }
+
+        var user = await userManager.FindByNameAsync(dto.UserName);
+        if (user == null) return Results.Unauthorized();
+
+        var check = await signInManager.CheckPasswordSignInAsync(user, dto.Password, false);
+        if (!check.Succeeded) return Results.Unauthorized();
+
+        var roles = await userManager.GetRolesAsync(user);
+
+        var claims = new List<Claim>
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+            new Claim(ClaimTypes.Name, user.UserName ?? string.Empty)
+        };
+
+        claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
+
+        // Read JWT options from configuration (appsettings.json: JwtOptions)
+        var secKey = configuration["JwtOptions:SecurityKey"] ?? configuration["Jwt:Key"];
+        var issuer = configuration["JwtOptions:Issuer"] ?? configuration["JwtOptions:ValidIssuer"] ?? configuration["Jwt:Issuer"] ?? configuration["Jwt:ValidIssuer"];
+        var audience = configuration["JwtOptions:Audience"] ?? configuration["JwtOptions:ValidAudience"] ?? configuration["Jwt:Audience"] ?? configuration["Jwt:ValidAudience"];
+        var expireMinutesString = configuration["JwtOptions:ExpireInMinutes"] ?? configuration["JwtOptions:ExpireMinutes"] ?? configuration["Jwt:ExpireMinutes"] ?? configuration["Jwt:ExpireInMinutes"] ?? "60";
+        if (string.IsNullOrEmpty(secKey)) return Results.StatusCode(500);
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secKey));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        if (!int.TryParse(expireMinutesString, out var expireMinutes)) expireMinutes = 60;
+
+        var token = new JwtSecurityToken(
+            issuer: issuer,
+            audience: audience,
+            claims: claims,
+            expires: DateTime.UtcNow.AddMinutes(expireMinutes),
+            signingCredentials: creds);
+
+        var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+        return Results.Ok(new { token = tokenString, roles = roles });
+    }
+}

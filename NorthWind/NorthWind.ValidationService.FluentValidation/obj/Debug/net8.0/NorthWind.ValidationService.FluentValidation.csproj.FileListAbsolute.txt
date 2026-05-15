@@ -1,0 +1,91 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.sourcelink.json

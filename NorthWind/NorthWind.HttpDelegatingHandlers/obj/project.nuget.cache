@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "f01jEElhoH8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind\\NorthWind.HttpDelegatingHandlers\\NorthWind.HttpDelegatingHandlers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\northwind.validation.entities\\1.0.0\\northwind.validation.entities.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

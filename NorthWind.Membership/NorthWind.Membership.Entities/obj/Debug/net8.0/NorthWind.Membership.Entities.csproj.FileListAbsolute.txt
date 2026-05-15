@@ -1,0 +1,46 @@
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.deps.json
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.AssemblyReference.cache
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserLoginMessages.resources
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserRegistrationMessages.resources
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.GenerateResource.cache
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfo.cs
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\refint\NorthWind.Membership.Entities.dll
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\Noemi\OneDrive\Documentos\Univercidad\Aplicacion Movil\Aplicaciones.2\PracticasAntes\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\ref\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserLoginMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserRegistrationMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\refint\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\ref\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\bin\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserLoginMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.Resources.UserRegistrationMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\refint\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\ref\NorthWind.Membership.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind.Membership\NorthWind.Membership.Entities\obj\Debug\net8.0\NorthWind.Membership.Entities.sourcelink.json

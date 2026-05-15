@@ -1,0 +1,91 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.sourcelink.json

@@ -1,0 +1,91 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.sourcelink.json

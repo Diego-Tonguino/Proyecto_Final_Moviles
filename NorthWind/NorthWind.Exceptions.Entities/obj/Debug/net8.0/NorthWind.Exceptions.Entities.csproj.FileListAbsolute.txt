@@ -1,0 +1,103 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.sourcelink.json

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome">
+
+    <!-- Overlay oscuro para resaltar el contenido -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D90F172A" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="24dp"
+            android:layout_margin="16dp">
+
+            <!-- Botón Volver -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="#FFFFFF"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Volver" />
+
+            <!-- Foto de Perfil -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfilePicture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/CircleImageView"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#7c3aed"
+                    android:background="#33FFFFFF"/>
+
+                <!-- Ícono para indicar que se puede cambiar la foto -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom|end"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="#7c3aed"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="4dp">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_menu_edit"
+                        app:tint="#FFFFFF"/>
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi Perfil"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="24dp" />
+
+            <ProgressBar
+                android:id="@+id/pbProfile"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:indeterminateTint="#7c3aed" />
+
+            <!-- Cédula -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cédula" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfCedula" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCedula" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nombre -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nombre" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfNombre" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfNombre" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Apellido -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfApellido" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfApellido" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Correo Electrónico" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfEmail" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:inputType="textEmailAddress" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Teléfono -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Teléfono" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfPhone" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:inputType="phone" android:maxLength="10" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Ciudad -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ciudad" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfCity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCity" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nueva Contraseña (Opcional) -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nueva Contraseña (Opcional)" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" app:endIconMode="password_toggle" app:endIconTint="#FFFFFF" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfPassword" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:hint="Dejar vacío para mantener actual" android:inputType="textPassword" android:maxLength="16" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:textColorHint="#8094a3b8" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirmar Contraseña -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Confirmar Contraseña" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfConfirmPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" app:hintEnabled="false" app:endIconMode="password_toggle" app:endIconTint="#FFFFFF" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfConfirmPassword" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:inputType="textPassword" android:maxLength="16" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="#7c3aed"
+                android:text="Guardar Cambios"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

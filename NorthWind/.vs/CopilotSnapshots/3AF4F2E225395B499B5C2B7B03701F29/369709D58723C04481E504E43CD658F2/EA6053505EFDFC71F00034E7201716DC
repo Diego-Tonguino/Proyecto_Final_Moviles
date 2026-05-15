@@ -1,0 +1,144 @@
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http.Json;
+using System.Text.Json;
+using NorthWind.Membership.Backend.AspNetIdentity.Options;
+using NorthWind.Membership.Backend.Core.Options;
+using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
+using NorthWind.Sales.Backend.IoC;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using NorthWind.Sales.Backend.Controllers;
+
+namespace NorthWind.Sales.WebApi;
+
+//  El código expone dos métodos de extensión para configurar los servicios y agregar los
+//  middlewares y endpoints de la Web API.
+internal static class Startup
+{
+    //  Agregar soporte para documentación Swagger.
+    public static WebApplication CreateWebApplication(this WebApplicationBuilder builder)
+    {
+        // Esto registra los servicios necesarios para generar la documentación automática Swagger de la API.
+        // Configurar APIExplorer para descubrir y exponer los metadatos de los endpoints de la aplicación.    
+        builder.Services.AddEndpointsApiExplorer();
+
+        //  Habilita la documentación de la API.
+        builder.Services.AddSwaggerGenBearer();
+        //  Registrar servicios con Inyección de Dependencias.
+        //  Registrar los servicios de la aplicación.
+        //  Esto utiliza el contenedor de IoC (DependencyContainer) para registrar todas las dependencias
+        //  del dominio NorthWind Sales, incluyendo:
+        //  Use Cases, Repositories, Data Contexts, Presenters.
+        //  Aquí "DBOptions" representa un objeto que contiene el "ConnectionString" y se carga
+        //  desde "appsettings.json".
+        builder.Services.AddNorthWindSalesServices(
+            dbObtions =>
+            builder.Configuration.GetSection(DBOptions.SectionKey)
+            .Bind(dbObtions),
+            smtpOptions =>
+            builder.Configuration.GetSection(SmtpOptions.SectionKey)
+            .Bind(smtpOptions),
+            membershipDBOptions =>
+            builder.Configuration.GetSection(MembershipDBOptions.SectionKey)
+            .Bind(membershipDBOptions),
+            jwtOptions =>
+            builder.Configuration
+            .GetSection(JwtOptions.SectionKey).Bind(jwtOptions));
+
+        // Ensure Identity services are registered so UserManager/SignInManager are available
+        // Use the Membership DB connection configured in appsettings.json
+        var membershipConn = builder.Configuration.GetSection(MembershipDBOptions.SectionKey)?[nameof(MembershipDBOptions.ConnectionString)];
+        if (!string.IsNullOrEmpty(membershipConn))
+        {
+            // ensure ApplicationUser type is available
+            // ApplicationUser is defined in NorthWind.Sales.Backend.Controllers
+            // add using to reference it
+            // (No code changes required here; this comment documents the intent.)
+            // Use a custom ApplicationDbContext so extra user fields (FirstName/LastName) are persisted
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(membershipConn));
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+        }
+
+        //  Configurar CORS.
+        //  Definir una política específica para el cliente Svelte en desarrollo
+        //  (ejecutándose en http://localhost:5173). Usar una política con origen
+        //  permitido en lugar de AllowAnyOrigin para permitir también credenciales
+        //  y encabezados como Authorization.
+        builder.Services.AddCors(options =>
+               {
+                   options.AddPolicy("SvelteDevPolicy", config =>
+                   {
+                       config.WithOrigins("http://localhost:5173")
+                             .AllowAnyMethod()
+                             .AllowAnyHeader()
+                             .AllowCredentials();
+                   });
+               });
+
+        // Asegurar que el JSON se serializa en camelCase para que sea más natural
+        // de consumir desde clientes JavaScript/TypeScript (como Svelte).
+        builder.Services.Configure<JsonOptions>(opts =>
+        {
+            opts.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        });
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                // Establecer la configuración del Token.
+                builder.Configuration.GetSection(JwtOptions.SectionKey)
+                .Bind(options.TokenValidationParameters);
+                // Establecer la llave para validación de la firma
+                string SecurityKey = builder.Configuration
+                .GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.SecurityKey)];
+                byte[] SecurityKeyBytes = Encoding.UTF8.GetBytes(SecurityKey);
+                options.TokenValidationParameters.IssuerSigningKey =
+                new SymmetricSecurityKey(SecurityKeyBytes);
+            });
+        builder.Services.AddAuthorization();
+        //  Construye la instancia "WebApplication" con todos los servicios configurados.
+        return builder.Build();
+    }
+
+    //  Este método se encarga de:
+    //  -Habilitar Swagger solo en desarrollo
+    //  -Mapear los endpoints de la aplicación
+    public static WebApplication ConfigureWebApplication(this WebApplication app)
+    {
+        app.UseExceptionHandler(builder => { });
+        //  Solo cuando el entorno es "Development", se activa Swagger para ver la documentación
+        //  de la API y la interfaz UI de Swagger en el navegador.
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            //  Activa la interfaz (UI) de Swagger para probar la API en desarrollo
+            app.UseSwaggerUI();
+        }
+
+        // Redirigir HTTP a HTTPS para evitar problemas de mixed-content y asegurar
+        // que la UI de Swagger esté accesible en el puerto HTTPS configurado.
+        app.UseHttpsRedirection();
+
+        //  Agregar el Middleware CORS
+        //  Usar la política específica para Svelte en desarrollo.
+        app.UseCors("SvelteDevPolicy");
+        app.UseAuthentication();
+        app.UseAuthorization();
+
+        //  Registra todos los servicios necesarios usando Clean Architecture (casos de uso,
+        //  repositorios, presenters, etc.)
+        //  Mapea los controladores implementados, como el de crear órdenes "CreateOrders"
+        app.MapNorthWindSalesEndpoints();
+
+        // Redirigir la raíz al Swagger UI para facilitar pruebas desde el navegador.
+        app.MapGet("/", () => Results.Redirect("/swagger"));
+        return app;
+    }
+}

@@ -1,0 +1,67 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\bin\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.sourcelink.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\refint\NorthWind.Result.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\NorthWind.Result.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Result.Entities\obj\Debug\net8.0\ref\NorthWind.Result.Entities.dll

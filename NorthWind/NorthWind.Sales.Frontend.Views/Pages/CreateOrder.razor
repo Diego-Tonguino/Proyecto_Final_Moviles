@@ -1,0 +1,17 @@
+﻿@page "/createorder"
+@attribute [Authorize]
+@using NorthWind.Sales.Frontend.Views.Resources
+
+<PageTitle>@CreateOrderMessages.CreateOrderPageTitle</PageTitle>
+
+<ErrorBoundary @ref=ErrorBoundaryRef>
+    <ChildContent>
+        <CreateOrderComponent Order=ViewModel />
+    </ChildContent>
+    <ErrorContent>
+        <ExceptionDisplay Exception=context />
+        <button class="btn btn-danger" @onclick=Recover>
+            @CommonMessages.OK
+        </button>
+    </ErrorContent>
+</ErrorBoundary>

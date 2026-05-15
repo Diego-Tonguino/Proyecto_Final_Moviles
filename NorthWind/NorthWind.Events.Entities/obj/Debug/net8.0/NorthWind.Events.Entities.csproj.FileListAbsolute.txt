@@ -1,0 +1,73 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.sourcelink.json

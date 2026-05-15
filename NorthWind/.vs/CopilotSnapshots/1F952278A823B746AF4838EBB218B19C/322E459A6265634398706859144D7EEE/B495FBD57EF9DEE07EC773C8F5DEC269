@@ -1,0 +1,41 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Interfaces;
+
+namespace NorthWind.Sales.Backend.Controllers.Admin;
+
+public static class DomainLogsController
+{
+    public record DomainLogDto(int Id, DateTime CreatedDate, string? Information, string? UserName);
+
+    public static WebApplication UseDomainLogsController(this WebApplication app)
+    {
+        app.MapGet("/api/logs", GetAllLogs)
+            .WithName("GetAllLogs");
+        
+        return app;
+    }
+
+    private static async Task<List<DomainLogDto>> GetAllLogs(INorthWindDomainLogsDataContext domainLogsContext)
+    {
+        try
+        {
+            var logs = await domainLogsContext.GetAllLogsAsync();
+            
+            var logsDto = logs
+                .Select(log => new DomainLogDto(log.Id, log.CreatedDate, log.Information, log.UserName))
+                .ToList();
+
+            return logsDto;
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+}

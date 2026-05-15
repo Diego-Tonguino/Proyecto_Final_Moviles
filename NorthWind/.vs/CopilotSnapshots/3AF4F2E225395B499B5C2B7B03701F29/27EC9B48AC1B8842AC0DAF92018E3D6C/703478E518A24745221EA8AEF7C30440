@@ -1,0 +1,130 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using NorthWind.Sales.Backend.Controllers;
+
+namespace NorthWind.Sales.Backend.Controllers.Admin;
+
+public static class UsersController
+{
+    public record UserDto(string Id, string UserName, string Email, string? FirstName, string? LastName, IList<string> Roles);
+    public record CreateUserDto(string UserName, string Email, string Password, string? FirstName, string? LastName, IList<string> Roles);
+    public record UpdateUserDto(string UserName, string Email, string? FirstName, string? LastName, IList<string> Roles);
+
+    public static WebApplication UseUsersController(this WebApplication app)
+    {
+        app.MapGet("/api/users", GetUsers);
+        app.MapGet("/api/users/{id}", GetUserById);
+        app.MapPost("/api/users", CreateUser);
+        app.MapPut("/api/users/{id}", UpdateUser);
+        app.MapDelete("/api/users/{id}", DeleteUser);
+        return app;
+    }
+
+    private static async Task<IResult> GetUsers(HttpContext httpContext)
+    {
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var users = userManager.Users.Select(u => new UserDto(u.Id, u.UserName, u.Email, u.FirstName, u.LastName, new List<string>())).ToList();
+        // load roles for each user
+        foreach (var u in users)
+        {
+            var user = await userManager.FindByIdAsync(u.Id);
+            var roles = await userManager.GetRolesAsync(user);
+            u.Roles.Clear();
+            foreach (var r in roles) u.Roles.Add(r);
+        }
+        return Results.Ok(users);
+    }
+
+    private static async Task<IResult> GetUserById(string id, HttpContext httpContext)
+    {
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var user = await userManager.FindByIdAsync(id);
+        if (user == null) return Results.NotFound();
+        var roles = await userManager.GetRolesAsync(user);
+        return Results.Ok(new UserDto(user.Id, user.UserName, user.Email, user.FirstName, user.LastName, roles));
+    }
+
+    private static async Task<IResult> CreateUser(CreateUserDto dto, HttpContext httpContext)
+    {
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = httpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+
+        var user = new ApplicationUser { UserName = dto.UserName, Email = dto.Email, FirstName = dto.FirstName, LastName = dto.LastName };
+        var result = await userManager.CreateAsync(user, dto.Password);
+        if (!result.Succeeded) return Results.ValidationProblem(result.Errors.ToDictionary(e => e.Code, e => new[] { e.Description }));
+
+        if (dto.Roles != null && dto.Roles.Count > 0)
+        {
+            // ensure roles exist
+            foreach (var roleNameOrId in dto.Roles)
+            {
+                var role = await roleManager.FindByIdAsync(roleNameOrId) ?? await roleManager.FindByNameAsync(roleNameOrId);
+                if (role == null) continue; // skip unknown roles
+                await userManager.AddToRoleAsync(user, role.Name);
+            }
+        }
+
+        return Results.Created($"/api/users/{user.Id}", new UserDto(user.Id, user.UserName, user.Email, user.FirstName, user.LastName, await userManager.GetRolesAsync(user)));
+    }
+
+    private static async Task<IResult> UpdateUser(string id, UpdateUserDto dto, HttpContext httpContext)
+    {
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = httpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+
+        var user = await userManager.FindByIdAsync(id);
+        if (user == null) return Results.NotFound();
+
+        user.UserName = dto.UserName;
+        user.Email = dto.Email;
+        user.FirstName = dto.FirstName;
+        user.LastName = dto.LastName;
+        var updateResult = await userManager.UpdateAsync(user);
+        if (!updateResult.Succeeded) return Results.ValidationProblem(updateResult.Errors.ToDictionary(e => e.Code, e => new[] { e.Description }));
+
+        if (dto.Roles != null)
+        {
+            var currentRoles = await userManager.GetRolesAsync(user);
+            var rolesToRemove = currentRoles.Except(dto.Roles).ToList();
+            var rolesToAdd = dto.Roles.Except(currentRoles).ToList();
+
+            if (rolesToRemove.Any()) await userManager.RemoveFromRolesAsync(user, rolesToRemove);
+
+            foreach (var roleNameOrId in rolesToAdd)
+            {
+                var role = await roleManager.FindByIdAsync(roleNameOrId) ?? await roleManager.FindByNameAsync(roleNameOrId);
+                if (role == null) continue;
+                await userManager.AddToRoleAsync(user, role.Name);
+            }
+        }
+
+        return Results.NoContent();
+    }
+
+    private static async Task<IResult> DeleteUser(string id, HttpContext httpContext)
+    {
+        var userManager = httpContext.RequestServices.GetRequiredService<UserManager<IdentityUser>>();
+        var user = await userManager.FindByIdAsync(id);
+        if (user == null) return Results.NotFound();
+        try
+        {
+            var result = await userManager.DeleteAsync(user);
+            if (!result.Succeeded)
+            {
+                return Results.ValidationProblem(result.Errors.ToDictionary(e => e.Code, e => new[] { e.Description }));
+            }
+            return Results.NoContent();
+        }
+        catch (Exception ex)
+        {
+            // Return problem details with the exception message to help debugging in development
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+}

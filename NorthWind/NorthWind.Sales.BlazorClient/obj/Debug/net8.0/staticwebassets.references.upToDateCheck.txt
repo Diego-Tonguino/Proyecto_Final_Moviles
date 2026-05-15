@@ -1,0 +1,326 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json

@@ -1,0 +1,211 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.WebApiGateways.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWin.0F1538D8.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.IoC.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.IoC\obj\Debug\net8.0\NorthWind.Sales.Frontend.IoC.sourcelink.json

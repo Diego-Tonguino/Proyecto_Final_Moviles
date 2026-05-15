@@ -1,0 +1,162 @@
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http.Json;
+using System.Text.Json;
+using NorthWind.Membership.Backend.AspNetIdentity.Options;
+using NorthWind.Membership.Backend.Core.Options;
+using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
+using NorthWind.Sales.Backend.IoC;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using NorthWind.Sales.Backend.Controllers;
+
+namespace NorthWind.Sales.WebApi;
+
+//  El código expone dos métodos de extensión para configurar los servicios y agregar los
+//  middlewares y endpoints de la Web API.
+internal static class Startup
+{
+    //  Agregar soporte para documentación Swagger.
+    public static WebApplication CreateWebApplication(this WebApplicationBuilder builder)
+    {
+        // Esto registra los servicios necesarios para generar la documentación automática Swagger de la API.
+        // Configurar APIExplorer para descubrir y exponer los metadatos de los endpoints de la aplicación.    
+        builder.Services.AddEndpointsApiExplorer();
+
+        //  Habilita la documentación de la API.
+        builder.Services.AddSwaggerGenBearer();
+
+        //  Registrar servicios con Inyección de Dependencias.
+        //  Registrar los servicios de la aplicación.
+        //  Esto utiliza el contenedor de IoC (DependencyContainer) para registrar todas las dependencias
+        //  del dominio NorthWind Sales, incluyendo:
+        //  Use Cases, Repositories, Data Contexts, Presenters.
+        //  Aquí "DBOptions" representa un objeto que contiene el "ConnectionString" y se carga
+        //  desde "appsettings.json".
+        builder.Services.AddNorthWindSalesServices(
+            dbObtions =>
+            builder.Configuration.GetSection(DBOptions.SectionKey)
+            .Bind(dbObtions),
+            smtpOptions =>
+            builder.Configuration.GetSection(SmtpOptions.SectionKey)
+            .Bind(smtpOptions),
+            membershipDBOptions =>
+            builder.Configuration.GetSection(MembershipDBOptions.SectionKey)
+            .Bind(membershipDBOptions),
+            jwtOptions =>
+            builder.Configuration
+            .GetSection(JwtOptions.SectionKey).Bind(jwtOptions));
+
+        // Ensure Identity services are registered so UserManager/SignInManager are available
+        // Use the Membership DB connection configured in appsettings.json
+        var membershipConn = builder.Configuration.GetSection(MembershipDBOptions.SectionKey)?[nameof(MembershipDBOptions.ConnectionString)];
+        if (!string.IsNullOrEmpty(membershipConn))
+        {
+            // ensure ApplicationUser type is available
+            // ApplicationUser is defined in NorthWind.Sales.Backend.Controllers
+            // Use a custom ApplicationDbContext so extra user fields (FirstName/LastName) are persisted
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(membershipConn));
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                // Configuración ESTRICTA para el bloqueo de cuenta
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromHours(24); // 
+                options.Lockout.MaxFailedAccessAttempts = 3; // ¡Bloqueo exacto a los 3 intentos fallidos!
+                options.Lockout.AllowedForNewUsers = true; // OBLIGATORIO: Activa esta regla para todos los usuarios nuevos que crees
+            })
+                  .AddEntityFrameworkStores<ApplicationDbContext>()
+                  .AddDefaultTokenProviders();
+        }
+
+        //  Configurar CORS para permitir que Astro (http://localhost:4321) se conecte
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AstroDevPolicy", config =>
+            {
+                config.WithOrigins("http://localhost:4321")
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials();
+            });
+        });
+
+        // Asegurar que el JSON se serializa en camelCase para que sea más natural
+        // de consumir desde clientes JavaScript/TypeScript (como Astro/Svelte).
+        builder.Services.Configure<JsonOptions>(opts =>
+        {
+            opts.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        });
+
+        // Configuración CORREGIDA de Autenticación:
+        // Forzar a ASP.NET Core a usar SIEMPRE JWT Bearer y no buscar Cookies ni redirigir a /Login
+        builder.Services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(options =>
+        {
+            // Establecer la configuración del Token.
+            builder.Configuration.GetSection(JwtOptions.SectionKey)
+            .Bind(options.TokenValidationParameters);
+
+            // Establecer la llave para validación de la firma
+            string SecurityKey = builder.Configuration
+            .GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.SecurityKey)];
+
+            byte[] SecurityKeyBytes = Encoding.UTF8.GetBytes(SecurityKey);
+
+            options.TokenValidationParameters.IssuerSigningKey =
+            new SymmetricSecurityKey(SecurityKeyBytes);
+        });
+
+        builder.Services.AddAuthorization();
+
+        //  Construye la instancia "WebApplication" con todos los servicios configurados.
+        return builder.Build();
+    }
+
+    //  Este método se encarga de:
+    //  -Habilitar Swagger solo en desarrollo
+    //  -Mapear los endpoints de la aplicación
+    public static WebApplication ConfigureWebApplication(this WebApplication app)
+    {
+        // Mostrar página de excepción detallada en desarrollo para facilitar debugging
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+            //  Activar Swagger en desarrollo
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        else
+        {
+            app.UseExceptionHandler(builder => { });
+        }
+
+        // Redirigir HTTP a HTTPS para evitar problemas de mixed-content y asegurar
+        // que la UI de Swagger esté accesible en el puerto HTTPS configurado.
+        app.UseHttpsRedirection();
+
+        //  Agregar el Middleware CORS
+        //  Usar la política específica para Astro en desarrollo.
+        app.UseCors("AstroDevPolicy");
+
+        app.UseAuthentication();
+        app.UseAuthorization();
+
+        //  Registra todos los servicios necesarios usando Clean Architecture (casos de uso,
+        //  repositorios, presenters, etc.)
+        //  Mapea los controladores implementados, como el de crear órdenes "CreateOrders"
+        app.MapNorthWindSalesEndpoints();
+
+        // Redirigir la raíz al Swagger UI para facilitar pruebas desde el navegador.
+        app.MapGet("/", () => Results.Redirect("/swagger"));
+
+        return app;
+    }
+}

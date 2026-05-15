@@ -1,0 +1,115 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.sourcelink.json

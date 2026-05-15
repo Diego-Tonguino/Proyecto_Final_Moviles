@@ -1,0 +1,277 @@
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Noemi\Desktop\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Nueva carpeta (2)\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.staticwebassets.runtime.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.deps.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.RazorComponents.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Frontend.BusinessObjects.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CommonMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.Resources.CreateOrderMessages.resources
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.GenerateResource.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\bundle\NorthWind.Sales.Frontend.Views.styles.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\scopedcss\projectbundle\NorthWind.Sales.Frontend.Views.bundle.scp.css
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.NorthWind.Sales.Frontend.Views.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.build.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NorthWind.Sales.Frontend.Views.props
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWin.77468769.Up2Date
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\refint\NorthWind.Sales.Frontend.Views.dll
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.pdb
+C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\ref\NorthWind.Sales.Frontend.Views.dll
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\NorthWind.Sales.Frontend.Views.sourcelink.json
+C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Frontend.Views\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
