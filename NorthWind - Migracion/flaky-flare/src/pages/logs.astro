@@ -1,0 +1,295 @@
+---
+// src/pages/logs.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Auditoría de Sistema - Northwind">
+  <div class="page-content">
+    
+    <div class="header-section">
+      <h1 class="page-title">Registro de Actividades (Logs)</h1>
+      
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <div class="filter-group">
+            <span class="filter-label">Filtrar por:</span>
+            <select id="searchFilterLogs" class="search-select-dark">
+              <option value="Todo">Todo</option>
+              <option value="Id">ID</option>
+              <option value="Accion">Acción (Información)</option>
+              <option value="Usuario">Usuario</option>
+              <option value="Fecha">Fecha</option>
+            </select>
+          </div>
+          <div class="search-input-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchLogs" placeholder="Buscar desde el inicio..." autocomplete="off" class="search-input-dark" />
+            <input type="date" id="datePickerLogs" class="search-date-picker" style="display: none;" title="Seleccionar fecha de un calendario" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card table-card">
+      <div class="table-responsive">
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th style="width: 10%;">ID</th>
+              <th style="width: 25%;">FECHA Y HORA</th>
+              <th style="width: 40%;">ACCIÓN (INFORMACIÓN)</th>
+              <th style="width: 25%;">USUARIO</th>
+            </tr>
+          </thead>
+          <tbody id="logsTableBody">
+            <tr class="state-row">
+              <td colspan="4" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                <div class="spinner-small" style="margin: 0 auto 10px auto; border-top-color: var(--color-primary);"></div>
+                Cargando registros del sistema...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-footer">
+        <span id="registrosInfo">Mostrando 0 registros</span>
+        <div class="pagination-controls" id="paginationBtns">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</MainLayout>
+
+<style is:global>
+  :root {
+    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --color-primary: #7c3aed;
+  }
+
+  .page-content { padding: 0; width: 100%; box-sizing: border-box; }
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .page-title { color: var(--text-white); font-size: 1.5rem; font-weight: 600; margin: 0; }
+  
+  .search-wrapper { display: flex; align-items: center; gap: 12px; }
+  .filter-group { display: flex; align-items: center; gap: 8px; }
+  .filter-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
+  .search-input-container { position: relative; display: flex; align-items: center; }
+  .search-icon { position: absolute; left: 14px; width: 16px; height: 16px; color: var(--text-muted); z-index: 2; }
+  
+  .search-select-dark { padding: 10px 16px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; font-size: 0.95rem; outline: none; cursor: pointer; transition: border-color 0.3s ease; }
+  .search-select-dark:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+  .search-select-dark option { background-color: #1a103c; color: white; }
+
+  .search-input-dark { padding: 10px 16px 10px 40px !important; width: 350px; border-radius: 0.75rem !important; border: 1px solid var(--border-dark) !important; background-color: #1a103c !important; color: white !important; font-size: 0.95rem; outline: none; transition: border-color 0.3s ease; }
+  .search-input-dark:focus { border-color: var(--color-primary) !important; background-color: #2d1b63 !important; }
+
+  .search-date-picker { margin-left: 8px; padding: 10px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; outline: none; cursor: pointer; color-scheme: dark; font-family: inherit; transition: border-color 0.3s ease; }
+  .search-date-picker::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: opacity 0.2s;}
+  .search-date-picker::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+  .search-date-picker:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+
+  .glass-card { background: var(--bg-card-dark); backdrop-filter: blur(25px); border-radius: 1.25rem; border: 1px solid var(--border-dark); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+  .table-card { display: flex; flex-direction: column; overflow: hidden; }
+  .table-responsive { overflow-x: auto; max-height: calc(100vh - 250px); }
+  
+  .main-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .main-table thead th { background-color: #1a103c; color: var(--text-muted); font-size: 0.8rem; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border-dark); }
+  .main-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.03); transition: background-color 0.15s; }
+  .main-table tbody tr:hover { background: rgba(124, 58, 237, 0.15); }
+  .main-table td { padding: 1rem 1.5rem; font-size: 0.9rem; color: #cbd5e1; vertical-align: middle; }
+
+  .table-footer { padding: 1.2rem 1.5rem; background: rgba(0, 0, 0, 0.2); border-top: 1px solid var(--border-dark); display: flex; justify-content: space-between; align-items: center; }
+  #registrosInfo { color: var(--text-muted); font-size: 0.85rem; }
+  .pagination-controls { display: flex; gap: 6px; }
+  .page-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: white; padding: 0.3rem 0.8rem; border-radius: 0.4rem; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;}
+  .page-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); }
+  .page-btn.active { background: var(--color-primary); border-color: var(--color-primary); }
+
+  .spinner-small { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script>
+  // 1. GUARDIA DE SEGURIDAD FRONTEND: Expulsar si no es admin
+  const userRole = localStorage.getItem('northwind_user_role') || '';
+  if (!userRole.toLowerCase().includes('admin')) {
+      window.location.href = '/';
+  }
+
+  const API_LOGS = 'http://localhost:5033/api/logs';
+  
+  let todosLosLogs: any[] = [];
+  let logsFiltrados: any[] = [];
+  let paginaActual = 1;
+  const itemsPorPagina = 12; // Mostramos un poco más de items por ser logs
+
+  const tableBody = document.getElementById('logsTableBody');
+  const searchInput = document.getElementById('searchLogs') as HTMLInputElement;
+  const registrosInfo = document.getElementById('registrosInfo');
+  const paginationBtns = document.getElementById('paginationBtns');
+
+  async function cargarDatos() {
+    try {
+      const response = await fetch(API_LOGS, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${localStorage.getItem('northwind_token')}`
+          }
+      });
+      
+      if(!response.ok) throw new Error("Error al obtener los logs");
+      const data = await response.json();
+      
+      // Ordenamos los logs del más reciente al más antiguo (por ID)
+      todosLosLogs = data.sort((a: any, b: any) => b.id - a.id); 
+      logsFiltrados = [...todosLosLogs];
+      renderizarTabla();
+    } catch (error) {
+      if (tableBody) tableBody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:3rem; color:#ef4444;">No se pudo conectar con el servidor para obtener los logs.</td></tr>`;
+    }
+  }
+
+  function formatFechaHora(dateString: string) {
+      const date = new Date(dateString);
+      return date.toLocaleString('es-ES', { 
+          year: 'numeric', month: 'short', day: 'numeric',
+          hour: '2-digit', minute:'2-digit', second: '2-digit'
+      });
+  }
+
+  function renderizarTabla() {
+    if (!tableBody) return;
+    
+    const inicio = (paginaActual - 1) * itemsPorPagina;
+    const fin = inicio + itemsPorPagina;
+    const logsPagina = logsFiltrados.slice(inicio, fin);
+
+    if (registrosInfo) registrosInfo.textContent = `Mostrando ${logsPagina.length} de ${logsFiltrados.length} registros (Pág ${paginaActual})`;
+
+    if (logsPagina.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron registros.</td></tr>`;
+      renderizarPaginacion(0);
+      return;
+    }
+
+    tableBody.innerHTML = logsPagina.map(log => {
+      const id = log.id;
+      const info = log.information || '---';
+      const user = log.userName || 'Sistema';
+      const fecha = log.createdDate ? formatFechaHora(log.createdDate) : '---';
+
+      // Estilizamos ciertas palabras clave para que resalten
+      let infoHtml = info;
+      if (infoHtml.toLowerCase().includes('cancelada') || infoHtml.toLowerCase().includes('error')) {
+          infoHtml = `<span style="color: #fca5a5;">${info}</span>`;
+      } else if (infoHtml.toLowerCase().includes('creada') || infoHtml.toLowerCase().includes('éxito')) {
+          infoHtml = `<span style="color: #86efac;">${info}</span>`;
+      }
+
+      return `
+        <tr>
+          <td><span style="color:#a78bfa; font-weight:bold;">${id}</span></td>
+          <td style="color: #94a3b8; font-family: monospace;">${fecha}</td>
+          <td style="font-weight: 500;">${infoHtml}</td>
+          <td style="color: #cbd5e1;">${user}</td>
+        </tr>
+      `;
+    }).join('');
+
+    renderizarPaginacion(Math.ceil(logsFiltrados.length / itemsPorPagina));
+  }
+
+  function renderizarPaginacion(totalPaginas: number) {
+    if (!paginationBtns) return;
+    let html = `<button class="page-btn" id="btnPrevLog" ${paginaActual === 1 || totalPaginas===0 ? 'disabled style="opacity:0.5;"' : ''}>&laquo;</button>`;
+    
+    for (let i = 1; i <= totalPaginas; i++) {
+      html += `<button class="page-btn ${i === paginaActual ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+    
+    html += `<button class="page-btn" id="btnNextLog" ${paginaActual === totalPaginas || totalPaginas===0 ? 'disabled style="opacity:0.5;"' : ''}>&raquo;</button>`;
+    paginationBtns.innerHTML = html;
+
+    document.getElementById('btnPrevLog')?.addEventListener('click', () => { if(paginaActual>1){ paginaActual--; renderizarTabla();} });
+    document.getElementById('btnNextLog')?.addEventListener('click', () => { if(paginaActual<totalPaginas){ paginaActual++; renderizarTabla();} });
+    
+    paginationBtns.querySelectorAll('button[data-page]').forEach(btn => {
+      btn.addEventListener('click', (e) => { 
+          paginaActual = parseInt((e.target as HTMLElement).getAttribute('data-page') || '1'); 
+          renderizarTabla(); 
+      });
+    });
+  }
+
+  function aplicarFiltros() {
+    const term = searchInput?.value.toLowerCase().trim() || "";
+    const filterType = (document.getElementById('searchFilterLogs') as HTMLSelectElement)?.value || "Todo";
+
+    logsFiltrados = todosLosLogs.filter(log => {
+      const idStr = String(log.id || "").toLowerCase();
+      const info = (log.information || "").toLowerCase();
+      const user = (log.userName || "").toLowerCase();
+      
+      const rawDate = log.createdDate || new Date().toISOString();
+      const dateObj = new Date(rawDate);
+      const dia = String(dateObj.getDate()).padStart(2, '0');
+      const mes = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const anio = dateObj.getFullYear();
+      const dateSearchFormat = `${dia}/${mes}/${anio}`; // "dd/mm/yyyy"
+      const dateDisplayFormat = formatFechaHora(rawDate).toLowerCase(); // "5 may 2026..."
+
+      let matchText = false;
+      // === REGLA ESTRICTA DE BÚSQUEDA DESDE LA PRIMERA LETRA/NÚMERO ===
+      if (filterType === "Id") {
+        matchText = idStr.startsWith(term);
+      } else if (filterType === "Accion") {
+        matchText = info.startsWith(term);
+      } else if (filterType === "Usuario") {
+        matchText = user.startsWith(term);
+      } else if (filterType === "Fecha") {
+        matchText = dateSearchFormat.startsWith(term) || dateDisplayFormat.startsWith(term);
+      } else {
+        matchText = idStr.startsWith(term) || info.startsWith(term) || user.startsWith(term) || dateSearchFormat.startsWith(term) || dateDisplayFormat.startsWith(term);
+      }
+
+      return matchText;
+    });
+    paginaActual = 1;
+    renderizarTabla();
+  }
+
+  const searchFilter = document.getElementById('searchFilterLogs') as HTMLSelectElement;
+  const datePicker = document.getElementById('datePickerLogs') as HTMLInputElement;
+
+  searchInput?.addEventListener('input', aplicarFiltros);
+
+  searchFilter?.addEventListener('change', () => {
+      if (searchFilter.value === "Fecha") {
+          datePicker.style.display = 'block';
+      } else {
+          datePicker.style.display = 'none';
+          datePicker.value = '';
+      }
+      aplicarFiltros();
+  });
+
+  datePicker?.addEventListener('change', (e) => {
+      const dateVal = (e.target as HTMLInputElement).value;
+      if (dateVal) {
+          const [yyyy, mm, dd] = dateVal.split('-');
+          searchInput.value = `${dd}/${mm}/${yyyy}`;
+          aplicarFiltros();
+      } else {
+          searchInput.value = '';
+          aplicarFiltros();
+      }
+  });
+
+  document.addEventListener('DOMContentLoaded', cargarDatos);
+</script>

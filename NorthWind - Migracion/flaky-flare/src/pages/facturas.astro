@@ -1,0 +1,507 @@
+---
+// src/pages/facturas.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Historial de Facturas - Northwind">
+  <div class="page-content no-print">
+    
+    <div class="header-section">
+      <h1 class="page-title">Historial de Facturas Emitidas</h1>
+      
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <div class="filter-group">
+            <span class="filter-label">Filtrar por:</span>
+            <select id="searchFilterFacturas" class="search-select-dark">
+              <option value="Todo">Todo</option>
+              <option value="Id">ID Orden</option>
+              <option value="Cliente">Cédula Cliente</option>
+              <option value="Fecha">Fecha</option>
+              <option value="IdProducto">ID del Producto</option>
+            </select>
+          </div>
+          <div class="search-input-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchFacturas" placeholder="Buscar desde el inicio..." autocomplete="off" class="search-input-dark" />
+            <input type="date" id="datePickerFacturas" class="search-date-picker" style="display: none;" title="Seleccionar fecha de un calendario" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card table-card">
+      <div class="table-responsive">
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th style="width: 10%;">ID ORDEN</th>
+              <th style="width: 35%;">CÉDULA / CLIENTE</th>
+              <th style="width: 20%;">FECHA</th>
+              <th style="width: 20%;">PRODUCTOS (IDs)</th>
+              <th style="width: 15%; text-align: center;">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody id="facturasTableBody">
+            <tr class="state-row">
+              <td colspan="5" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                <div class="spinner-small" style="margin: 0 auto 10px auto; border-top-color: var(--color-primary);"></div>
+                Cargando historial de facturas...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-footer">
+        <span id="registrosInfo">Mostrando 0 facturas</span>
+        <div class="pagination-controls" id="paginationBtns">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="invoicePrintArea" class="print-only">
+     </div>
+
+</MainLayout>
+
+<style is:global>
+  :root {
+    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --color-primary: #7c3aed;
+  }
+
+  .page-content { padding: 0; width: 100%; box-sizing: border-box; }
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .page-title { color: var(--text-white); font-size: 1.5rem; font-weight: 600; margin: 0; }
+  
+  .search-wrapper { display: flex; align-items: center; gap: 12px; }
+  .filter-group { display: flex; align-items: center; gap: 8px; }
+  .filter-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
+  .search-input-container { position: relative; display: flex; align-items: center; }
+  .search-icon { position: absolute; left: 14px; width: 16px; height: 16px; color: var(--text-muted); z-index: 2; }
+  
+  .search-select-dark { padding: 10px 16px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; font-size: 0.95rem; outline: none; cursor: pointer; transition: border-color 0.3s ease; }
+  .search-select-dark:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+  .search-select-dark option { background-color: #1a103c; color: white; }
+
+  .search-input-dark { padding: 10px 16px 10px 40px !important; width: 300px; border-radius: 0.75rem !important; border: 1px solid var(--border-dark) !important; background-color: #1a103c !important; color: white !important; font-size: 0.95rem; outline: none; transition: border-color 0.3s ease; }
+  .search-input-dark:focus { border-color: var(--color-primary) !important; background-color: #2d1b63 !important; }
+
+  .search-date-picker { margin-left: 8px; padding: 10px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; outline: none; cursor: pointer; color-scheme: dark; font-family: inherit; transition: border-color 0.3s ease; }
+  .search-date-picker::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.8; transition: opacity 0.2s; }
+  .search-date-picker::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+  .search-date-picker:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+
+  .glass-card { background: var(--bg-card-dark); backdrop-filter: blur(25px); border-radius: 1.25rem; border: 1px solid var(--border-dark); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+  .table-card { display: flex; flex-direction: column; overflow: hidden; }
+  .table-responsive { overflow-x: auto; max-height: calc(100vh - 250px); }
+  .main-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .main-table thead th { background: rgba(255, 255, 255, 0.03); color: var(--text-muted); font-size: 0.8rem; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 1; }
+  .main-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.03); transition: background-color 0.15s; }
+  .main-table tbody tr:hover { background: rgba(124, 58, 237, 0.15); }
+  .main-table td { padding: 1.2rem 1.5rem; font-size: 0.95rem; color: #cbd5e1; vertical-align: middle; }
+
+  .btn-download { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(124, 58, 237, 0.2); border: 1px solid rgba(124, 58, 237, 0.4); color: #c4b5fd; padding: 8px 12px; border-radius: 0.5rem; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; font-weight: 600;}
+  .btn-download:hover { background: var(--color-primary); color: white; transform: translateY(-1px); }
+
+  .table-footer { padding: 1.2rem 1.5rem; background: rgba(0, 0, 0, 0.2); border-top: 1px solid var(--border-dark); display: flex; justify-content: space-between; align-items: center; }
+  #registrosInfo { color: var(--text-muted); font-size: 0.85rem; }
+  .pagination-controls { display: flex; gap: 6px; }
+  .page-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: white; padding: 0.3rem 0.8rem; border-radius: 0.4rem; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;}
+  .page-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); }
+  .page-btn.active { background: var(--color-primary); border-color: var(--color-primary); }
+  .spinner-small { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* MODO IMPRESIÓN (Idéntico a crear-orden.astro) */
+  .print-only { display: none; }
+  @media print {
+      @page { size: A4; margin: 20mm; }
+      body { background: white !important; }
+      .sidebar, .topbar, .no-print { display: none !important; }
+      .print-only { display: block !important; color: black !important; font-family: 'Arial', sans-serif !important; width: 100% !important; position: absolute; left: 0; top: 0; padding: 20px; box-sizing: border-box; }
+      
+      .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid #333; padding-bottom: 20px; margin-bottom: 30px; }
+      .invoice-logo h2 { margin: 0; font-size: 24px; color: #2d1b63 !important; }
+      .invoice-logo p { margin: 5px 0 0 0; color: #666 !important; font-size: 14px; }
+      .invoice-details { text-align: right; }
+      .invoice-details p { margin: 3px 0; font-size: 14px; }
+      .invoice-billing { display: flex; justify-content: space-between; margin-bottom: 40px; }
+      .invoice-billing h3 { margin: 0 0 10px 0; font-size: 16px; color: #333 !important; border-bottom: 1px solid #ccc; padding-bottom: 5px;}
+      .invoice-billing p { margin: 3px 0; font-size: 14px; }
+      .invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+      .invoice-table th { background-color: #f3f4f6 !important; color: #333 !important; font-weight: bold; padding: 12px 8px; border-bottom: 2px solid #ccc; font-size: 14px; text-align: left;}
+      .invoice-table td { padding: 10px 8px; border-bottom: 1px solid #eee; font-size: 14px; }
+      .invoice-totals { width: 50%; float: right; margin-bottom: 40px; }
+      .totals-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; }
+      .totals-grand { font-size: 18px; font-weight: bold; border-top: 2px solid #333; padding-top: 10px; margin-top: 5px;}
+      .invoice-footer { clear: both; text-align: center; color: #666 !important; font-size: 13px; border-top: 1px solid #ccc; padding-top: 20px; }
+  }
+</style>
+
+<script>
+  const API_ORDERS = 'http://localhost:5033/api/orders';
+  const API_CUSTOMERS = 'http://localhost:5033/api/customers';
+  
+  let todasLasFacturas: any[] = [];
+  let facturasFiltradas: any[] = [];
+  let paginaActual = 1;
+  const itemsPorPagina = 10;
+
+  const tableBody = document.getElementById('facturasTableBody');
+  const searchInput = document.getElementById('searchFacturas') as HTMLInputElement;
+  const registrosInfo = document.getElementById('registrosInfo');
+  const paginationBtns = document.getElementById('paginationBtns');
+
+  async function cargarDatos() {
+    try {
+      const token = localStorage.getItem('northwind_token') || '';
+      const headers = {
+          'Content-Type': 'application/json',
+          'Authorization': token ? `Bearer ${token}` : ''
+      };
+
+      // Hacemos las llamadas en paralelo a Órdenes y a Clientes para cruzar la información
+      const [resOrders, resCustomers] = await Promise.all([
+          fetch(API_ORDERS, { headers }),
+          fetch(API_CUSTOMERS, { headers })
+      ]);
+
+      if(!resOrders.ok) throw new Error("No hay datos de órdenes");
+      
+      const dataOrders = await resOrders.json();
+      const dataCustomers = resCustomers.ok ? await resCustomers.json() : [];
+
+      // Creamos un diccionario rápido de clientes para mapearlos por ID
+      const clientesMap: {[key: string]: any} = {};
+      dataCustomers.forEach((c: any) => {
+          clientesMap[c.id || c.Id] = c;
+      });
+
+      // Cruzamos la información: Si la orden no tiene el cliente completo, se lo inyectamos
+      todasLasFacturas = dataOrders.map((o: any) => {
+          const custId = o.customerId || o.CustomerId;
+          if (!o.customer && custId && clientesMap[custId]) {
+              o.customer = clientesMap[custId];
+          }
+          return o;
+      }).sort((a: any, b: any) => (b.orderId || b.id) - (a.orderId || a.id)); 
+      
+      facturasFiltradas = [...todasLasFacturas];
+      renderizarTabla();
+    } catch (error) {
+      if (tableBody) tableBody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:3rem; color:#ef4444;">Aún no existen facturas o no se pudo conectar al servidor.</td></tr>`;
+    }
+  }
+
+  function renderizarTabla() {
+    if (!tableBody) return;
+    
+    const inicio = (paginaActual - 1) * itemsPorPagina;
+    const fin = inicio + itemsPorPagina;
+    const facturasPagina = facturasFiltradas.slice(inicio, fin);
+
+    if (registrosInfo) registrosInfo.textContent = `Mostrando ${facturasPagina.length} de ${facturasFiltradas.length} facturas (Pág ${paginaActual})`;
+
+    if (facturasPagina.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron facturas.</td></tr>`;
+      renderizarPaginacion(0);
+      return;
+    }
+
+    tableBody.innerHTML = facturasPagina.map(f => {
+      const id = f.orderId || f.id || '---';
+      
+      // Ahora extraemos con seguridad la cédula desde el objeto cruzado
+      const clienteCedula = f.customer?.cedula || f.customer?.Cedula || f.customerId || f.shipName || '---';
+      
+      const rawDate = f.orderDate || f.OrderDate || new Date().toISOString();
+      const fechaObj = new Date(rawDate);
+      const dia = String(fechaObj.getDate()).padStart(2, '0');
+      const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
+      const anio = fechaObj.getFullYear();
+      const fechaStr = `${dia}/${mes}/${anio}`;
+
+      const detalles = f.orderDetails || f.OrderDetails || [];
+      const productIdsStr = detalles.length > 0 
+        ? detalles.map((d: any) => d.productId || d.ProductId || '?').join(', ')
+        : '---';
+
+      // Pasamos los datos como un string Seguro para JS
+      const encodedData = encodeURIComponent(JSON.stringify(f)).replace(/'/g, "%27");
+
+      return `
+        <tr>
+          <td><span style="color:#a78bfa; font-weight:bold; font-size:1.1rem;">#${id}</span></td>
+          <td style="font-weight: 500;">${clienteCedula}</td>
+          <td style="color: #94a3b8;">${fechaStr}</td>
+          <td style="color: #86efac; font-weight: 500; font-size: 0.9rem;">${productIdsStr}</td>
+          <td style="text-align:center;">
+            <button class="btn-download" onclick="imprimirFacturaPrevia('${encodedData}')" title="Ver e Imprimir Factura">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    renderizarPaginacion(Math.ceil(facturasFiltradas.length / itemsPorPagina));
+  }
+
+  function renderizarPaginacion(totalPaginas: number) {
+    if (!paginationBtns) return;
+    let html = `<button class="page-btn" id="btnPrevFact" ${paginaActual === 1 || totalPaginas===0 ? 'disabled style="opacity:0.5;"' : ''}>&laquo;</button>`;
+    
+    for (let i = 1; i <= totalPaginas; i++) {
+      html += `<button class="page-btn ${i === paginaActual ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+    
+    html += `<button class="page-btn" id="btnNextFact" ${paginaActual === totalPaginas || totalPaginas===0 ? 'disabled style="opacity:0.5;"' : ''}>&raquo;</button>`;
+    paginationBtns.innerHTML = html;
+
+    document.getElementById('btnPrevFact')?.addEventListener('click', () => { if(paginaActual>1){ paginaActual--; renderizarTabla();} });
+    document.getElementById('btnNextFact')?.addEventListener('click', () => { if(paginaActual<totalPaginas){ paginaActual++; renderizarTabla();} });
+    
+    paginationBtns.querySelectorAll('button[data-page]').forEach(btn => {
+      btn.addEventListener('click', (e) => { 
+          paginaActual = parseInt((e.target as HTMLElement).getAttribute('data-page') || '1'); 
+          renderizarTabla(); 
+      });
+    });
+  }
+
+  function aplicarFiltros() {
+    const term = searchInput?.value.toLowerCase().trim() || "";
+    const filterType = (document.getElementById('searchFilterFacturas') as HTMLSelectElement)?.value || "Todo";
+
+    facturasFiltradas = todasLasFacturas.filter(f => {
+      const id = String(f.orderId || f.id || "").toLowerCase();
+      // Buscamos específicamente por la Cédula extraída del objeto cruzado
+      const clienteCedula = String(f.customer?.cedula || f.customer?.Cedula || f.customerId || f.shipName || "").toLowerCase();
+      
+      const rawDate = f.orderDate || f.OrderDate || new Date().toISOString();
+      const fechaObj = new Date(rawDate);
+      const dia = String(fechaObj.getDate()).padStart(2, '0');
+      const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
+      const anio = fechaObj.getFullYear();
+      const fecha = `${dia}/${mes}/${anio}`;
+
+      const detalles = f.orderDetails || f.OrderDetails || [];
+      // Extraemos en un array para poder comparar exactamente si algún ID de producto inicia con el texto
+      const productIdsArray = detalles.map((d: any) => String(d.productId || d.ProductId || '?'));
+
+      let matchText = false;
+
+      // === SE UTILIZA .startsWith() PARA BUSCAR DESDE LA PRIMERA LETRA EXCLUSIVAMENTE ===
+      if (filterType === "Id") {
+        matchText = id.startsWith(term);
+      } else if (filterType === "Cliente") {
+        matchText = clienteCedula.startsWith(term);
+      } else if (filterType === "Fecha") {
+        matchText = fecha.startsWith(term);
+      } else if (filterType === "IdProducto") {
+        // Verifica si AL MENOS UN producto inicia con el término buscado
+        matchText = productIdsArray.some((pid: string) => pid.startsWith(term));
+      } else {
+        // Búsqueda global (Todo) priorizando el inicio de la cadena en cualquier campo
+        matchText = id.startsWith(term) || 
+                    clienteCedula.startsWith(term) || 
+                    fecha.startsWith(term) || 
+                    productIdsArray.some((pid: string) => pid.startsWith(term));
+      }
+
+      return matchText;
+    });
+    paginaActual = 1;
+    renderizarTabla();
+  }
+
+  const searchFilter = document.getElementById('searchFilterFacturas') as HTMLSelectElement;
+  const datePicker = document.getElementById('datePickerFacturas') as HTMLInputElement;
+
+  searchInput?.addEventListener('input', aplicarFiltros);
+  
+  searchFilter?.addEventListener('change', () => {
+      if (searchFilter.value === "Fecha") {
+          datePicker.style.display = 'block';
+      } else {
+          datePicker.style.display = 'none';
+          datePicker.value = '';
+      }
+      aplicarFiltros();
+  });
+
+  datePicker?.addEventListener('change', (e) => {
+      const dateVal = (e.target as HTMLInputElement).value;
+      if (dateVal) {
+          const [yyyy, mm, dd] = dateVal.split('-');
+          searchInput.value = `${dd}/${mm}/${yyyy}`;
+          aplicarFiltros();
+      } else {
+          searchInput.value = '';
+          aplicarFiltros();
+      }
+  });
+
+  // --- LÓGICA PARA RE-GENERAR PDF ---
+  (window as any).imprimirFacturaPrevia = async (encodedData: string) => {
+      const order = JSON.parse(decodeURIComponent(encodedData));
+      const printArea = document.getElementById('invoicePrintArea');
+      if (!printArea) return;
+      
+      const rawDate = order.orderDate || order.OrderDate || new Date().toISOString();
+      const fechaFormato = new Date(rawDate).toLocaleDateString();
+      const detalles = order.orderDetails || order.OrderDetails || [];
+
+      // Extraer datos del emisor desde el JWT y LocalStorage
+      const token = localStorage.getItem('northwind_token');
+      const userName = localStorage.getItem('northwind_user_name') || 'Usuario del Sistema';
+      let userEmail = '';
+      
+      if (token) {
+          try {
+              const base64Url = token.split('.')[1];
+              const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+              const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                  return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+              }).join(''));
+              const payloadObj = JSON.parse(jsonPayload);
+              userEmail = payloadObj.email || 
+                          payloadObj["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] || 
+                          payloadObj["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || 
+                          '';
+          } catch(e) {
+              console.error("No se pudo decodificar el token para el correo.");
+          }
+      }
+
+      let emailHtml = userEmail ? `<p>${userEmail}</p>` : '';
+
+      let rowsHTML = '';
+      let subtotal = 0;
+      
+      // Caché de productos para evitar múltiples llamadas
+      const productosCache: {[key: string]: string} = {};
+      
+      if(detalles.length > 0) {
+          for (const d of detalles) {
+              const precio = d.unitPrice || d.UnitPrice || 0;
+              const cant = d.quantity || d.Quantity || 1;
+              const prodId = d.productId || d.ProductId || '-';
+              
+              let name = d.productName || d.ProductName || d.product?.productName || d.Product?.ProductName || '';
+              
+              if (!name && prodId !== '-' && !productosCache[prodId]) {
+                  try {
+                      const prodResponse = await fetch(`http://localhost:5033/api/products/${prodId}`);
+                      if (prodResponse.ok) {
+                          const prod = await prodResponse.json();
+                          name = prod.name || prod.Name || prod.productName || prod.ProductName || `Producto #${prodId}`;
+                          productosCache[prodId] = name;
+                      } else {
+                          name = `Producto #${prodId}`;
+                      }
+                  } catch (err) {
+                      name = `Producto #${prodId}`;
+                  }
+              } else if (productosCache[prodId]) {
+                  name = productosCache[prodId];
+              } else if (!name) {
+                  name = `Producto #${prodId}`;
+              }
+              
+              const sub = precio * cant;
+              subtotal += sub;
+              
+              rowsHTML += `<tr><td style="text-align: left;">${prodId}</td><td style="text-align: left;">${name}</td><td style="text-align: center;">${cant}</td><td style="text-align: right;">$${precio.toFixed(2)}</td><td style="text-align: right;">$${sub.toFixed(2)}</td></tr>`;
+          }
+      } else {
+          // Si la API general no incluye los detalles (lazy loading), simulamos la fila final
+          const precioTotal = order.freight || order.Total || 0; 
+          rowsHTML += `<tr><td colspan="4" style="text-align: left;">Total de Compra (Detalles ocultos por API)</td><td style="text-align: right;">$${precioTotal.toFixed(2)}</td></tr>`;
+          subtotal = precioTotal / 1.15; 
+      }
+
+      const ivaPorcentaje = 0.15;
+      const iva = subtotal * ivaPorcentaje;
+      const total = subtotal + iva;
+
+      // Recuperar el nombre y cédula para la factura impresa usando los datos inyectados del cliente
+      const nombreFactura = order.customer?.firstName 
+          ? `${order.customer.firstName} ${order.customer.lastName}` 
+          : (order.shipName || 'Cliente Estándar');
+      
+      const cedulaFactura = order.customer?.cedula || order.customer?.Cedula || order.customerId || 'N/A';
+
+      printArea.innerHTML = `
+        <div class="invoice-header">
+            <div class="invoice-logo">
+                <h2>NORTHWIND TRADERS</h2>
+                <p>Tu socio de negocios global</p>
+            </div>
+            <div class="invoice-details">
+                <h1 style="color: #333; margin-bottom: 5px;">FACTURA</h1>
+                <p><strong>N° Factura:</strong> ${order.orderId || order.id || 'N/A'}</p>
+                <p><strong>Fecha:</strong> ${fechaFormato}</p>
+                <p><strong>Estado:</strong> Pagado / Completado</p>
+            </div>
+        </div>
+
+        <div class="invoice-billing">
+            <div>
+                <h3>Facturar a:</h3>
+                <p><strong>${nombreFactura}</strong> (CI: ${cedulaFactura})</p>
+                <p>${order.shipAddress || 'Dirección no registrada'}</p>
+                <p>${order.shipCity || ''}, ${order.shipCountry || ''}</p>
+            </div>
+            <div style="text-align: right;">
+                <h3>Emitido por:</h3>
+                <p><strong>${userName}</strong></p>
+                ${emailHtml}
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th style="text-align: left;">ID</th>
+                    <th style="text-align: left;">Descripción del Producto</th>
+                    <th style="text-align: center;">Cant.</th>
+                    <th style="text-align: right;">Precio Unit.</th>
+                    <th style="text-align: right;">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>${rowsHTML}</tbody>
+        </table>
+
+        <div class="invoice-totals">
+            <div class="totals-row">
+                <span>Subtotal:</span>
+                <span>$${subtotal.toFixed(2)}</span>
+            </div>
+            <div class="totals-row">
+                <span>IVA (15%):</span>
+                <span>$${iva.toFixed(2)}</span>
+            </div>
+            <div class="totals-row totals-grand">
+                <span>TOTAL A PAGAR:</span>
+                <span>$${total.toFixed(2)}</span>
+            </div>
+        </div>
+
+        <div class="invoice-footer">
+            <p>¡Gracias por su compra!</p>
+        </div>
+      `;
+
+      // Llamar al diálogo de impresión del navegador
+      setTimeout(() => { window.print(); }, 200);
+  };
+
+  document.addEventListener('DOMContentLoaded', cargarDatos);
+</script>

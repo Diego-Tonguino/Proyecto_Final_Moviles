@@ -1,0 +1,194 @@
+---
+// src/pages/index.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Inicio - Northwind">
+  <div class="page-content animate-fade-in">
+    
+    <div class="welcome-header glass-panel">
+      <div class="welcome-text">
+        <h1 class="page-title">Bienvenido a <span class="text-gradient">NORTHWIND</span></h1>
+        <p class="welcome-subtitle" id="userGreeting">Tu panel de control y resumen del sistema.</p>
+      </div>
+      <div class="welcome-date">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-date"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span id="currentDate">Cargando fecha...</span>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card glass-card">
+        <div class="stat-icon" style="background: rgba(124, 58, 237, 0.2); color: #a78bfa;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div class="stat-details">
+          <h3>Total Clientes</h3>
+          <h2 id="countClientes">-</h2>
+        </div>
+      </div>
+
+      <div class="stat-card glass-card">
+        <div class="stat-icon" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </div>
+        <div class="stat-details">
+          <h3>Productos en Catálogo</h3>
+          <h2 id="countProductos">-</h2>
+        </div>
+      </div>
+
+      <div class="stat-card glass-card">
+        <div class="stat-icon" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <div class="stat-details">
+          <h3>Facturas Emitidas</h3>
+          <h2 id="countFacturas">-</h2>
+        </div>
+      </div>
+
+      <div class="stat-card glass-card">
+        <div class="stat-icon" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <div class="stat-details">
+          <h3>Usuarios del Sistema</h3>
+          <h2 id="countUsuarios">-</h2>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title mt-4">Accesos Rápidos</h3>
+    <div class="quick-actions">
+      <a href="/crear-orden" class="action-card">
+        <div class="action-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+        <h4>Nueva Orden</h4>
+        <p>Facturar e imprimir comprobante</p>
+      </a>
+      
+      <a href="/clientes" class="action-card">
+        <div class="action-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+        <h4>Directorio de Clientes</h4>
+        <p>Administrar cartera de clientes</p>
+      </a>
+
+      <a href="/productos" class="action-card">
+        <div class="action-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+        <h4>Inventario</h4>
+        <p>Revisar stock de productos</p>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
+
+<style is:global>
+  :root {
+    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --color-primary: #7c3aed;
+  }
+
+  .page-content { padding: 0; width: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 2rem; }
+
+  /* --- ANIMACIÓN SUAVE DE ENTRADA --- */
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Elementos Glassmorphism Generales */
+  .glass-card { background: var(--bg-card-dark); backdrop-filter: blur(25px); border: 1px solid var(--border-dark); border-radius: 1.25rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+  .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1rem; padding: 1.5rem; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3); }
+
+  /* Encabezado */
+  .welcome-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .page-title { color: var(--text-white); font-size: 2rem; font-weight: 800; margin: 0 0 0.5rem 0; letter-spacing: -0.02em; }
+  .text-gradient { background: linear-gradient(to right, #a78bfa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .welcome-subtitle { color: var(--text-muted); font-size: 1rem; margin: 0; }
+  
+  .welcome-date { display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.3); padding: 0.8rem 1.2rem; border-radius: 0.75rem; border: 1px solid var(--border-dark); color: #cbd5e1; font-weight: 500; font-size: 0.95rem; }
+  .icon-date { color: var(--color-primary); }
+
+  /* Grid Estadísticas */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .stat-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; transition: transform 0.2s; }
+  .stat-card:hover { transform: translateY(-5px); }
+  .stat-icon { width: 60px; height: 60px; border-radius: 1rem; display: flex; justify-content: center; align-items: center; }
+  
+  .stat-details h3 { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.5rem 0; }
+  .stat-details h2 { font-size: 2rem; color: white; font-weight: 700; margin: 0; }
+
+  /* Accesos Rápidos */
+  .section-title { color: white; font-size: 1.25rem; font-weight: 600; border-bottom: 1px solid var(--border-dark); padding-bottom: 0.8rem; margin: 1rem 0 0 0; }
+  .quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .action-card { background: rgba(30, 20, 60, 0.6); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 1rem; text-decoration: none; display: flex; flex-direction: column; gap: 0.8rem; transition: all 0.3s; }
+  .action-card:hover { background: rgba(124, 58, 237, 0.1); border-color: rgba(124, 58, 237, 0.3); transform: translateY(-3px); }
+  .action-icon { width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 0.75rem; display: flex; justify-content: center; align-items: center; color: white; }
+  
+  .action-card h4 { color: white; font-size: 1.1rem; margin: 0; }
+  .action-card p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Mostrar fecha actual
+    const dateElement = document.getElementById('currentDate');
+    if (dateElement) {
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      dateElement.textContent = new Date().toLocaleDateString('es-ES', opciones);
+    }
+
+    // 2. Obtener Token y cabeceras
+    const token = localStorage.getItem('northwind_token');
+    if (!token) {
+        window.location.href = '/login';
+        return;
+    }
+    const headers = { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
+
+    // 3. Saludo dinámico
+  const userRole = localStorage.getItem('northwind_user_role') || 'Vendedor';
+    const subtitle = document.getElementById('userGreeting');
+    if (subtitle) subtitle.textContent = `Panel de control principal - Sesión iniciada como ${userRole}`;
+
+    // 4. Cargar estadísticas reales desde las APIs
+    const API_BASE = 'http://localhost:5033/api';
+
+    // Cargar Clientes
+    fetch(`${API_BASE}/customers`, { headers })
+      .then(res => res.json())
+      .then(data => { document.getElementById('countClientes').textContent = data.length || 0; })
+      .catch(() => { document.getElementById('countClientes').textContent = 'Error'; });
+
+    // Cargar Productos
+    fetch(`${API_BASE}/products`, { headers })
+      .then(res => res.json())
+      .then(data => { document.getElementById('countProductos').textContent = data.length || 0; })
+      .catch(() => { document.getElementById('countProductos').textContent = 'Error'; });
+
+    // Cargar Órdenes (Facturas)
+    fetch(`${API_BASE}/orders`, { headers })
+      .then(res => res.json())
+      .then(data => { document.getElementById('countFacturas').textContent = data.length || 0; })
+      .catch(() => { document.getElementById('countFacturas').textContent = 'Error'; });
+
+    // Cargar Usuarios
+    fetch(`${API_BASE}/users`, { headers })
+      .then(res => {
+        if(res.status === 401 || res.status === 403) throw new Error('No autorizado');
+        return res.json();
+      })
+      .then(data => { document.getElementById('countUsuarios').textContent = data.length || 0; })
+      .catch(() => { document.getElementById('countUsuarios').textContent = 'N/A'; });
+  });
+</script>

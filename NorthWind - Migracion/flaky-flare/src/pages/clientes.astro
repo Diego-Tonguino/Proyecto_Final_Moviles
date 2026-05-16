@@ -1,0 +1,1111 @@
+---
+// src/pages/clientes.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Directorio de Clientes - Northwind">
+  <div class="page-content">
+    
+    <div class="header-section">
+      <h1 class="page-title">Directorio de Clientes</h1>
+      
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <div class="filter-group">
+            <span class="filter-label">Filtrar por:</span>
+            <select id="searchFilterClientes" class="search-select-dark">
+              <option value="Todo">Todo</option>
+              <option value="Cedula">Cédula</option>
+              <option value="Nombre">Nombre</option>
+              <option value="Apellido">Apellido</option>
+              <option value="Email">Email</option>
+              <option value="Telefono">Teléfono</option>
+              <option value="Ciudad">Ciudad</option>
+            </select>
+          </div>
+          <div class="search-input-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchPageClientes" placeholder="Buscar desde el inicio..." autocomplete="off" class="search-input-dark" maxlength="50" />
+          </div>
+        </div>
+        
+        <button class="btn-primary" onclick="abrirModalCliente()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          Insertar Cliente
+        </button>
+      </div>
+    </div>
+
+    <div class="glass-card table-card">
+      <div class="table-responsive">
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th class="col-cedula">CÉDULA</th>
+              <th class="col-nombre">NOMBRE</th>
+              <th class="col-apellido">APELLIDO</th>
+              <th class="col-email">CORREO ELECTRÓNICO</th>
+              <th class="col-telefono">TELÉFONO</th>
+              <th class="col-ciudad">CIUDAD</th>
+              <th class="col-balance">BALANCE ACTUAL</th>
+              <th class="col-acciones" style="text-align: center;">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody id="clientesTableBody">
+            <tr class="state-row">
+              <td colspan="8" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                <div class="spinner-small" style="margin: 0 auto 10px auto; border-top-color: var(--color-primary);"></div>
+                Cargando datos de clientes...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-footer">
+        <span id="registrosInfo">Mostrando 0 clientes</span>
+        <div class="pagination-controls" id="paginationBtns">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="formClienteModal" class="modal-overlay" style="display: none;">
+    <div class="registro-card" style="max-width: 650px;">
+      <button class="btn-close-registro" onclick="cerrarModalCliente()">&times;</button>
+      
+      <div class="registro-header">
+        <h2 id="modalTitle">Nuevo Cliente</h2>
+        <p id="modalSubtitle">Registra un nuevo cliente en el sistema</p>
+      </div>
+      
+      <div class="registro-body">
+        
+        <div id="clientePicSection" style="text-align: center; margin-bottom: 2.5rem;">
+            <div class="avatar-wrapper mx-auto" style="width: 100px; height: 100px; border-radius: 50%; background: rgba(124, 58, 237, 0.1); border: 3px solid rgba(124, 58, 237, 0.3); margin: 0 auto 1.5rem auto; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                <img id="clienteProfileImg" src="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+                <div id="clienteProfileFallback" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#a78bfa;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px;">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; max-width: 380px; margin: 0 auto;">
+                <input type="file" id="clienteFileUpload" accept="image/jpeg, image/png, image/webp" style="display: none;" />
+                
+                <button type="button" class="btn-perfil-purple-large" onclick="document.getElementById('clienteFileUpload').click()" style="flex: 1; padding: 0.6rem 1rem; font-size: 0.9rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10l0 4"></path><path d="M10 12l4 0"></path></svg>
+                    Cambiar Foto
+                </button>
+                
+                <button type="button" class="btn-perfil-red-outline-large" id="btnClienteDeletePic" style="display:none; flex: 1; padding: 0.6rem 1rem; font-size: 0.9rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>
+                    Eliminar Foto
+                </button>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.75rem; font-weight: 500;">JPG, PNG. Máx 5MB.</p>
+        </div>
+
+        <form id="clienteForm">
+          <input type="hidden" id="formMode" value="create">
+          <input type="hidden" id="formInternalId">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formCedula">Cédula</label>
+                <input type="text" id="formCedula" required maxlength="10" placeholder="Ej: 1723456789" class="reg-input" oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^0-9]/g, '');">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formFirstName">Nombre</label>
+                <input type="text" id="formFirstName" required maxlength="15" placeholder="Nombre" class="reg-input" 
+                  onkeydown="if(event.key === ' ') { event.preventDefault(); return false; }" 
+                  oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, ''); if(this.value.length > 0) this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1).toLowerCase();">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formLastName">Apellido</label>
+                <input type="text" id="formLastName" required maxlength="15" placeholder="Apellidos" class="reg-input" 
+                  onkeydown="if(event.key === ' ') { event.preventDefault(); return false; }" 
+                  oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, ''); if(this.value.length > 0) this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1).toLowerCase();">
+              </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formEmail">Correo Electrónico</label>
+                <input type="email" id="formEmail" maxlength="100" placeholder="cliente@correo.com" class="reg-input" style="color: #93c5fd;" onkeydown="if(event.key === ' ') { event.preventDefault(); return false; }" oninput="this.setCustomValidity(''); this.value = this.value.replace(/\s/g, '');">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formPhone">Teléfono</label>
+                <input type="text" id="formPhone" required maxlength="10" placeholder="Ej: 0999123456" class="reg-input" oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^0-9]/g, '');">
+              </div>
+          </div>
+
+          <div id="passwordSection" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formPassword">Contraseña</label>
+                <div class="password-wrapper">
+                    <input type="password" id="formPassword" placeholder="••••••••" class="reg-input" oninput="this.setCustomValidity('');">
+                    <button type="button" class="btn-eye" onclick="togglePassword('formPassword')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </button>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formConfirmPassword">Confirmar Contraseña</label>
+                <div class="password-wrapper">
+                    <input type="password" id="formConfirmPassword" placeholder="••••••••" class="reg-input" oninput="this.setCustomValidity('');">
+                    <button type="button" class="btn-eye" onclick="togglePassword('formConfirmPassword')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </button>
+                </div>
+              </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formCity">Ciudad</label>
+                <input type="text" id="formCity" maxlength="60" placeholder="Ej: Ambato" class="reg-input" oninput="this.setCustomValidity('');">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="formBalance">Balance Actual</label>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-weight: bold;">$</span>
+                    <input type="number" id="formBalance" step="0.01" min="0" max="99999999.99" placeholder="0.00" class="reg-input" style="padding-left: 28px;" onkeydown="if(['e', 'E', '+', '-'].includes(event.key)) event.preventDefault();" oninput="this.setCustomValidity(''); if(Number(this.value) > 99999999.99) this.value = this.value.toString().slice(0, -1);">
+                </div>
+              </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <button type="button" class="btn-modal btn-cancel" onclick="cerrarModalCliente()" style="flex: 1; margin: 0; padding: 12px; border-radius: 0.5rem;">
+              Cancelar
+            </button>
+            <button type="submit" class="btn-registro-submit" id="btnGuardarForm" style="flex: 1; margin: 0;">
+              <span id="btnGuardarText">Guardar Cliente</span>
+              <div id="btnSpinner" class="spinner-small" style="display:none; margin: 0 auto;"></div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modales de Confirmación y Eliminación -->
+  <div id="deleteConfirmModal" class="modal-overlay" style="display: none; z-index: 2000;">
+    <div class="modal-card">
+      <div class="modal-icon-container" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon-svg" style="color: #ef4444;">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Eliminar Cliente?</h2>
+      <p class="modal-text">
+        Estás a punto de eliminar permanentemente al cliente con cédula <strong id="deleteClienteCedula" style="color: white;"></strong>. Esta acción no se puede deshacer.
+      </p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarModalDelete()">Cancelar</button>
+        <button class="btn-modal btn-confirm" id="btnConfirmDelete" style="background: #ef4444;">
+          <span id="btnDeleteText">Sí, eliminar</span>
+          <div id="btnDeleteSpinner" class="spinner-small" style="display:none;"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirmDeletePhotoModal" class="modal-overlay" style="display: none; z-index: 2000;">
+    <div class="modal-card">
+      <div class="modal-icon-container" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="modal-icon-svg" style="color: #ef4444;">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Eliminar Foto?</h2>
+      <p class="modal-text">La foto se marcará para eliminación. Esta acción se aplicará al hacer clic en <strong>Guardar/Actualizar</strong>.</p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarConfirmDeletePhoto()">Cancelar</button>
+        <button class="btn-modal btn-confirm" id="btnConfirmDeletePhotoConfirm" style="background: #ef4444;">
+          <span id="btnDeletePhotoText">Sí, eliminar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: DESCARTAR CAMBIOS -->
+  <div id="unsavedChangesModal" class="modal-overlay" style="display: none; z-index: 3000;">
+    <div class="modal-card">
+      <div class="modal-icon-container" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon-svg" style="color: #ef4444;">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Descartar cambios?</h2>
+      <p class="modal-text">Tienes datos sin guardar. Si cierras ahora, <strong>todos tus cambios se perderán</strong>.</p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarUnsavedModal()">No, seguir editando</button>
+        <button class="btn-modal btn-confirm" style="background: #ef4444;" onclick="confirmDiscardChanges()">Sí, descartar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastNotif" class="toast-notif" style="display: none;">
+    <span id="toastMsg">Operación exitosa</span>
+  </div>
+
+</MainLayout>
+
+<style is:global>
+  :root {
+    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --bg-input-dark: rgba(0, 0, 0, 0.3);
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --color-id: #a78bfa; 
+    --color-balance: #86efac; 
+    --color-primary: #7c3aed; 
+    --color-primary-hover: #6d28d9;
+    --color-danger: #ef4444; 
+    --color-danger-hover: #dc2626;
+    --color-warning: #eab308; 
+    --color-success: #10b981;
+    --bg-registro: #1f163f; 
+    --bg-input-reg: #160f2e;
+  }
+
+  .page-content { padding: 0; width: 100%; box-sizing: border-box; }
+
+  .glass-card { background: var(--bg-card-dark); backdrop-filter: blur(25px); border-radius: 1.25rem; border: 1px solid var(--border-dark); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+  .search-wrapper { display: flex; align-items: center; gap: 12px; }
+  .filter-group { display: flex; align-items: center; gap: 8px; }
+  .filter-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
+  .search-input-container { position: relative; display: flex; align-items: center; }
+  .search-icon { position: absolute; left: 14px; width: 16px; height: 16px; color: var(--text-muted); z-index: 2; }
+  
+  .search-select-dark { padding: 10px 16px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; font-size: 0.95rem; outline: none; cursor: pointer; transition: border-color 0.3s ease; }
+  .search-select-dark:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+  .search-select-dark option { background-color: #1a103c; color: white; }
+
+  .search-input-dark { padding: 10px 16px 10px 40px !important; width: 300px; border-radius: 0.75rem !important; border: 1px solid var(--border-dark) !important; background-color: #1a103c !important; color: white !important; font-size: 0.95rem; outline: none; box-sizing: border-box; transition: border-color 0.3s ease; }
+  .search-input-dark::placeholder { color: #64748b !important; }
+  .search-input-dark:focus { border-color: var(--color-primary) !important; background-color: #2d1b63 !important; }
+
+  input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #1a103c inset !important; -webkit-text-fill-color: white !important; }
+
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-primary); color: white; border: none; padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; height: fit-content; white-space: nowrap; }
+  .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.7; cursor: not-allowed; }
+  .btn-primary svg { width: 18px; height: 18px; }
+
+  .btn-danger { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-danger); color: white; border: none; padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-danger:hover { background: var(--color-danger-hover); transform: translateY(-1px); }
+  .btn-danger:disabled { opacity: 0.7; cursor: not-allowed; }
+
+  .btn-secondary { background: rgba(255,255,255,0.05); color: white; border: 1px solid var(--border-dark); padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+  .page-title { color: var(--text-white); font-size: 1.5rem; font-weight: 600; margin: 0; }
+  .header-actions { display: flex; gap: 16px; align-items: center; }
+
+  .table-card { display: flex; flex-direction: column; overflow: hidden; }
+  .table-responsive { overflow-x: auto; max-height: calc(100vh - 250px); }
+  .main-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .main-table thead th { background: rgba(255, 255, 255, 0.03); color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 1; }
+  .main-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.03); transition: background-color 0.15s ease; }
+  .main-table tbody tr:hover { background: rgba(124, 58, 237, 0.15); }
+  .main-table td { padding: 1.2rem 1.5rem; font-size: 0.95rem; color: #cbd5e1; vertical-align: middle; }
+
+  .table-avatar-container { display: flex; align-items: center; gap: 12px; }
+  .table-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(124, 58, 237, 0.3); }
+  .table-avatar-fallback { width: 36px; height: 36px; border-radius: 50%; background: rgba(124, 58, 237, 0.2); color: #a78bfa; display: flex; align-items: center; justify-content: center; border: 2px solid rgba(124, 58, 237, 0.3); }
+
+  .action-buttons { display: flex; gap: 8px; justify-content: center; }
+  .btn-icon { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); cursor: pointer; padding: 8px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .btn-edit { color: #cbd5e1; }
+  .btn-edit:hover { background: rgba(234, 179, 8, 0.2); color: var(--color-warning); border-color: var(--color-warning); }
+  .btn-delete { color: #cbd5e1; }
+  .btn-delete:hover { background: rgba(239, 68, 68, 0.2); color: var(--color-danger); border-color: var(--color-danger); }
+  .btn-icon svg { width: 16px; height: 16px; }
+
+  .table-footer { padding: 1.2rem 1.5rem; background: rgba(0, 0, 0, 0.2); border-top: 1px solid var(--border-dark); display: flex; justify-content: space-between; align-items: center; }
+  #registrosInfo { color: var(--text-muted); font-size: 0.85rem; }
+  .pagination-controls { display: flex; gap: 6px; }
+  .page-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: white; padding: 0.3rem 0.8rem; border-radius: 0.4rem; cursor: pointer; font-size: 0.9rem; transition: all 0.2s;}
+  .page-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); }
+  .page-btn.active { background: var(--color-primary); border-color: var(--color-primary); }
+
+  .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.2s ease-out; }
+  
+  .registro-card { background: var(--bg-registro); border-radius: 1.25rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7); width: 90%; max-width: 500px; padding: 2.5rem; position: relative; animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+  .btn-close-registro { position: absolute; top: 1rem; right: 1.5rem; background: transparent; border: none; color: #a59fc4; font-size: 2rem; cursor: pointer; transition: color 0.2s; padding: 0; line-height: 1; }
+  .btn-close-registro:hover { color: white; }
+  
+  .registro-header { text-align: center; margin-bottom: 2rem; }
+  .registro-header h2 { color: white; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.5rem 0; letter-spacing: -0.025em; }
+  .registro-header p { color: #a59fc4; font-size: 0.95rem; margin: 0; }
+  
+  .form-group label { display: block; color: #a59fc4; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
+  
+  .reg-input { width: 100%; padding: 12px 16px; border-radius: 0.5rem; background: var(--bg-input-reg); border: 1px solid #36295e; color: white; font-size: 0.95rem; outline: none; box-sizing: border-box; transition: border-color 0.2s; }
+  .reg-input::placeholder { color: #5a4b86; }
+  .reg-input:focus { border-color: var(--color-primary); }
+  
+  .password-wrapper { position: relative; display: flex; align-items: center; }
+  .password-wrapper input { padding-right: 40px; }
+  .btn-eye { position: absolute; right: 10px; background: transparent; border: none; color: #a59fc4; cursor: pointer; padding: 4px; display: flex; }
+  .btn-eye:hover { color: white; }
+  .btn-eye svg { width: 18px; height: 18px; }
+  
+  .btn-registro-submit { width: 100%; background: var(--color-primary); color: white; border: none; padding: 14px; border-radius: 0.5rem; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; justify-content: center; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
+  .btn-registro-submit:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+  .btn-registro-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+  .modal-card { width: 90%; max-width: 420px; background: #1f163f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.25rem; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+  
+  .modal-icon-container { width: 64px; height: 64px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; }
+  .modal-icon-svg { width: 32px; height: 32px; color: #ef4444; }
+  
+  .modal-title { color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 0; }
+  .modal-text { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
+  
+  .modal-actions { display: flex; gap: 1rem; justify-content: center; }
+  .btn-modal { flex: 1; padding: 0.875rem 1rem; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  
+  .btn-cancel { background: #2a204d; color: white; border: 1px solid rgba(255, 255, 255, 0.1); }
+  .btn-cancel:hover { background: #36295e; border-color: rgba(255, 255, 255, 0.2); }
+  
+  .btn-confirm { background: #ef4444; color: white; border: none; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3); }
+  .btn-confirm:hover { background: #dc2626; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4); }
+  .btn-confirm:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  .btn-perfil-purple-large { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-primary); color: white; border: none; border-radius: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
+  .btn-perfil-purple-large:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+  .btn-perfil-purple-large svg { width: 16px; height: 16px; }
+
+  .btn-perfil-red-outline-large { display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-perfil-red-outline-large:hover { background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: white; transform: translateY(-1px); }
+  .btn-perfil-red-outline-large svg { width: 16px; height: 16px; }
+
+  .spinner-small { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .toast-notif { position: fixed; bottom: 30px; right: 30px; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 3000; animation: slideInUp 0.3s ease; }
+  @keyframes slideInUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleUp { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+</style>
+
+<script is:inline>
+  window.togglePassword = function(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+        field.type = field.type === 'password' ? 'text' : 'password';
+    }
+  };
+</script>
+
+<script>
+  const API_URL = 'http://localhost:5033/api/customers';
+  
+  interface Cliente {
+    id?: string; Id?: string; customerId?: string; CustomerId?: string;
+    cedula?: string; Cedula?: string; 
+    firstName?: string; FirstName?: string; 
+    lastName?: string; LastName?: string; 
+    companyName?: string; CompanyName?: string; 
+    email?: string; Email?: string;
+    phone?: string; Phone?: string;
+    city?: string; City?: string;
+    country?: string; Country?: string;
+    currentBalance?: number; CurrentBalance?: number;
+  }
+
+  let todosLosClientes: Cliente[] = [];
+  let clienteIdAEliminar: string | null = null;
+  let paginaActual = 1;
+  const itemsPorPagina = 10;
+  let clientesFiltrados: Cliente[] = [];
+
+  let fileToUpload: File | null = null;
+  let deletePicFlag: boolean = false;
+  
+  // Control de cambios sin guardar
+  let isFormDirty = false;
+
+  const isAdmin = (localStorage.getItem('northwind_user_role') || '').toLowerCase().includes('admin');
+  const tokenLocal = localStorage.getItem('northwind_token') || '';
+
+  function getAuthHeaders() {
+    return {
+      'Content-Type': 'application/json',
+      'Authorization': tokenLocal ? `Bearer ${tokenLocal}` : ''
+    };
+  }
+
+  const tableBody = document.getElementById('clientesTableBody');
+  const searchInput = document.getElementById('searchPageClientes') as HTMLInputElement;
+  const searchFilter = document.getElementById('searchFilterClientes') as HTMLSelectElement;
+  const registrosInfo = document.getElementById('registrosInfo');
+  const paginationBtns = document.getElementById('paginationBtns');
+  const formElement = document.getElementById('clienteForm') as HTMLFormElement;
+  
+  if (sessionStorage.getItem('cliente_photo_changed') === 'true') {
+      setTimeout(() => showToast("Cliente y foto actualizados exitosamente"), 100);
+      sessionStorage.removeItem('cliente_photo_changed');
+  }
+
+  // Detectar cambios en los inputs para activar el estado "sucio"
+  if (formElement) {
+      const formInputs = formElement.querySelectorAll('input');
+      formInputs.forEach(input => {
+          input.addEventListener('input', () => {
+              isFormDirty = true;
+          });
+      });
+  }
+
+  const btnFileUpload = document.getElementById('clienteFileUpload');
+  if (btnFileUpload) {
+    btnFileUpload.onchange = (e: any) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        fileToUpload = file;
+        deletePicFlag = false; 
+        isFormDirty = true; // Activar cambios sin guardar
+        
+        const url = URL.createObjectURL(file);
+        const img = document.getElementById('clienteProfileImg');
+        const fallback = document.getElementById('clienteProfileFallback');
+        const btnDelete = document.getElementById('btnClienteDeletePic');
+        
+        if(img && fallback && btnDelete) {
+            img.setAttribute('src', url);
+            img.style.display = 'block';
+            fallback.style.display = 'none';
+            btnDelete.style.display = 'flex';
+        }
+        
+        showToast("Foto cargada, dale en guardar/actualizar para confirmar los cambios");
+        e.target.value = ''; 
+    };
+  }
+
+  const btnClienteDelete = document.getElementById('btnClienteDeletePic');
+  if (btnClienteDelete) {
+    btnClienteDelete.onclick = () => {
+        const modalConfirm = document.getElementById('confirmDeletePhotoModal') as HTMLElement;
+        if(modalConfirm) modalConfirm.style.display = 'flex';
+    };
+  }
+
+  const btnConfirmDeletePhoto = document.getElementById('btnConfirmDeletePhotoConfirm');
+  if (btnConfirmDeletePhoto) {
+    btnConfirmDeletePhoto.onclick = () => {
+        deletePicFlag = true;
+        fileToUpload = null;
+        isFormDirty = true; // Activar cambios sin guardar
+        
+        const fileInput = document.getElementById('clienteFileUpload') as HTMLInputElement;
+        if(fileInput) fileInput.value = '';
+        
+        const img = document.getElementById('clienteProfileImg');
+        const fallback = document.getElementById('clienteProfileFallback');
+        const btnDelete = document.getElementById('btnClienteDeletePic');
+        
+        if(img && fallback && btnDelete) {
+            img.style.display = 'none';
+            fallback.style.display = 'flex';
+            btnDelete.style.display = 'none';
+        }
+        
+        showToast("Foto eliminada, dale en guardar/actualizar para confirmar los cambios");
+        (window as any).cerrarConfirmDeletePhoto();
+    };
+  }
+
+  (window as any).cerrarConfirmDeletePhoto = () => {
+      const modalConfirm = document.getElementById('confirmDeletePhotoModal') as HTMLElement;
+      if(modalConfirm) modalConfirm.style.display = 'none';
+  };
+
+  async function cargarDatos() {
+    try {
+      const respuesta = await fetch(API_URL, { headers: getAuthHeaders() });
+      if (!respuesta.ok) throw new Error('Error al conectar');
+      const data = await respuesta.json();
+      todosLosClientes = data;
+      clientesFiltrados = data;
+      renderizarTabla();
+    } catch (error) {
+      if (tableBody) tableBody.innerHTML = `<tr><td colspan="${isAdmin ? '8' : '7'}" style="text-align:center; padding:3rem; color:#ef4444;">Error al conectar con la API de clientes</td></tr>`;
+    }
+  }
+
+  function renderizarTabla() {
+    if (!tableBody) return;
+    const inicio = (paginaActual - 1) * itemsPorPagina;
+    const fin = inicio + itemsPorPagina;
+    const clientesPagina = clientesFiltrados.slice(inicio, fin);
+
+    if (registrosInfo) registrosInfo.textContent = `Mostrando ${clientesPagina.length} de ${clientesFiltrados.length} clientes (Pág ${paginaActual})`;
+
+    if (clientesPagina.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="${isAdmin ? '8' : '7'}" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron clientes</td></tr>`;
+      renderizarControlesPaginacion(0);
+      return;
+    }
+
+    tableBody.innerHTML = clientesPagina.map(c => {
+      const internalId = c.id || c.Id || c.customerId || c.CustomerId || '';
+      const cedula = c.cedula || c.Cedula || 'N/A';
+      const firstName = c.firstName || c.FirstName || '';
+      const lastName = c.lastName || c.LastName || '';
+      const company = c.companyName || c.CompanyName || '';
+      const email = c.email || c.Email || 'No registrado';
+      const phone = c.phone || c.Phone || 'Sin teléfono';
+      const city = c.city || c.City || 'Sin ciudad';
+      const country = c.country || c.Country || '';
+      const balance = Number(c.currentBalance ?? c.CurrentBalance ?? 0);
+      const balanceColor = balance > 0 ? 'var(--color-danger)' : 'var(--color-balance)';
+
+      const timestamp = new Date().getTime();
+      const avatarUrl = `${API_URL}/${internalId}/profile-picture?t=${timestamp}`;
+      const tableSvgIcon = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+      `;
+
+      const clienteJson = encodeURIComponent(JSON.stringify({ 
+          id: internalId, cedula, firstName, lastName, companyName: company, email, phone, city, country, balance 
+      })).replace(/'/g, "%27");
+
+      const accionesHTML = isAdmin ? `
+        <td>
+          <div class="action-buttons">
+            <button class="btn-icon btn-edit" title="Editar" onclick="prepararEdicion('${clienteJson}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </button>
+            <button class="btn-icon btn-delete" title="Eliminar" onclick="abrirModalDelete('${internalId}', '${cedula}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button>
+          </div>
+        </td>` : '';
+
+      return `
+        <tr>
+          <td><span style="color: var(--color-id); font-weight: 700; letter-spacing: 0.5px;">${cedula}</span></td>
+          <td>
+            <div class="table-avatar-container">
+                <img src="${avatarUrl}" class="table-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="table-avatar-fallback" style="display:none;">${tableSvgIcon}</div>
+                <span style="font-weight: 600; color: white;">${firstName}</span>
+            </div>
+          </td>
+          <td style="font-weight: 600; color: white;">${lastName}</td>
+          <td style="color: #93c5fd;">${email}</td>
+          <td style="color: #cbd5e1;">${phone}</td>
+          <td style="color: #cbd5e1; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${city}">${city}</td>
+          <td style="color: ${balanceColor}; font-weight: 600;">$${balance.toFixed(2)}</td>
+          ${accionesHTML}
+        </tr>
+      `;
+    }).join('');
+    renderizarControlesPaginacion(Math.ceil(clientesFiltrados.length / itemsPorPagina));
+  }
+
+  function renderizarControlesPaginacion(totalPaginas: number) {
+    if (!paginationBtns) return;
+    let html = `<button class="page-btn" id="btnPrevPage" ${paginaActual === 1 || totalPaginas === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}>&laquo;</button>`;
+    for (let i = 1; i <= totalPaginas; i++) {
+      html += `<button class="page-btn ${i === paginaActual ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+    html += `<button class="page-btn" id="btnNextPage" ${paginaActual === totalPaginas || totalPaginas === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}>&raquo;</button>`;
+    paginationBtns.innerHTML = html;
+
+    document.getElementById('btnPrevPage')?.addEventListener('click', () => { if (paginaActual > 1) { paginaActual--; renderizarTabla(); }});
+    document.getElementById('btnNextPage')?.addEventListener('click', () => { if (paginaActual < totalPaginas) { paginaActual++; renderizarTabla(); }});
+    paginationBtns.querySelectorAll('button[data-page]').forEach(btn => {
+      btn.addEventListener('click', (e) => { paginaActual = parseInt((e.target as HTMLElement).getAttribute('data-page') || '1'); renderizarTabla(); });
+    });
+  }
+
+  function aplicarFiltros() {
+    const term = searchInput?.value.toLowerCase().trim() || "";
+    const filterType = searchFilter?.value || "Todo";
+
+    clientesFiltrados = todosLosClientes.filter(c => {
+      const cedulaStr = String(c.cedula || c.Cedula || "").toLowerCase();
+      const firstName = String(c.firstName || c.FirstName || "").toLowerCase();
+      const lastName = String(c.lastName || c.LastName || "").toLowerCase();
+      const email = String(c.email || c.Email || "").toLowerCase();
+      const phone = String(c.phone || c.Phone || "").toLowerCase();
+      const city = String(c.city || c.City || "").toLowerCase();
+
+      let matchText = false;
+      
+      // === REGLA ESTRICTA DE BÚSQUEDA DESDE LA PRIMERA LETRA/NÚMERO ===
+      if (filterType === "Cedula") {
+        matchText = cedulaStr.startsWith(term);
+      } else if (filterType === "Nombre") {
+        matchText = firstName.startsWith(term);
+      } else if (filterType === "Apellido") {
+        matchText = lastName.startsWith(term);
+      } else if (filterType === "Email") {
+        matchText = email.startsWith(term);
+      } else if (filterType === "Telefono") {
+        matchText = phone.startsWith(term);
+      } else if (filterType === "Ciudad") {
+        matchText = city.startsWith(term);
+      } else {
+        matchText = cedulaStr.startsWith(term) || 
+                    firstName.startsWith(term) || 
+                    lastName.startsWith(term) || 
+                    email.startsWith(term) || 
+                    phone.startsWith(term) || 
+                    city.startsWith(term);
+      }
+
+      return matchText;
+    });
+    
+    paginaActual = 1;
+    renderizarTabla();
+  }
+
+  searchInput?.addEventListener('input', aplicarFiltros);
+  searchFilter?.addEventListener('change', aplicarFiltros);
+
+  (window as any).abrirModalCliente = () => {
+    const modal = document.getElementById('formClienteModal') as HTMLElement;
+    if (modal) {
+      isFormDirty = false; // Resetear al abrir
+      document.getElementById('formMode')!.value = 'create';
+      
+      (document.getElementById('formInternalId') as HTMLInputElement).value = '';
+      
+      // Asegurarse de que esté desbloqueada para un nuevo cliente
+      const inputCedula = document.getElementById('formCedula') as HTMLInputElement;
+      inputCedula.value = '';
+      inputCedula.readOnly = false;
+      inputCedula.style.opacity = '1';
+      inputCedula.style.cursor = 'text';
+      
+      (document.getElementById('formFirstName') as HTMLInputElement).value = '';
+      (document.getElementById('formLastName') as HTMLInputElement).value = '';
+      (document.getElementById('formEmail') as HTMLInputElement).value = '';
+      (document.getElementById('formPhone') as HTMLInputElement).value = '';
+      (document.getElementById('formCity') as HTMLInputElement).value = '';
+      (document.getElementById('formBalance') as HTMLInputElement).value = '';
+      
+      const pwdSection = document.getElementById('passwordSection');
+      if (pwdSection) pwdSection.style.display = 'grid';
+      
+      const pwdInput = document.getElementById('formPassword') as HTMLInputElement;
+      const pwdConfirmInput = document.getElementById('formConfirmPassword') as HTMLInputElement;
+      
+      pwdInput.value = '';
+      pwdConfirmInput.value = '';
+      pwdInput.required = true;
+      pwdConfirmInput.required = true;
+      pwdInput.placeholder = '••••••••';
+      pwdConfirmInput.placeholder = '••••••••';
+      
+      document.getElementById('modalTitle')!.textContent = 'Nuevo Cliente';
+      document.getElementById('modalSubtitle')!.textContent = 'Registra un nuevo cliente en el sistema';
+      document.getElementById('btnGuardarText')!.textContent = 'Guardar Cliente';
+      
+      fileToUpload = null;
+      deletePicFlag = false;
+      const fileInput = document.getElementById('clienteFileUpload') as HTMLInputElement;
+      if(fileInput) fileInput.value = '';
+      
+      document.getElementById('clienteProfileImg')!.style.display = 'none';
+      document.getElementById('clienteProfileFallback')!.style.display = 'flex';
+      document.getElementById('btnClienteDeletePic')!.style.display = 'none';
+      
+      modal.style.display = 'flex';
+    }
+  };
+
+  (window as any).cerrarModalCliente = () => {
+    if (isFormDirty) {
+        // Mostrar advertencia si el formulario está sucio
+        const modal = document.getElementById('unsavedChangesModal') as HTMLElement;
+        if (modal) modal.style.display = 'flex';
+    } else {
+        // Cerrar directamente
+        (window as any).forceCloseClienteModal();
+    }
+  };
+
+  (window as any).forceCloseClienteModal = () => {
+    const modal = document.getElementById('formClienteModal') as HTMLElement;
+    if (modal) modal.style.display = 'none';
+    isFormDirty = false; // Resetear
+  };
+
+  (window as any).cerrarUnsavedModal = () => {
+    const modal = document.getElementById('unsavedChangesModal') as HTMLElement;
+    if (modal) modal.style.display = 'none';
+  };
+
+  (window as any).confirmDiscardChanges = () => {
+    const unsavedModal = document.getElementById('unsavedChangesModal') as HTMLElement;
+    if (unsavedModal) unsavedModal.style.display = 'none';
+    (window as any).forceCloseClienteModal();
+  };
+
+  (window as any).prepararEdicion = (dataEncoded: string) => {
+    const data = JSON.parse(decodeURIComponent(dataEncoded));
+    const modal = document.getElementById('formClienteModal') as HTMLElement;
+    if (modal) {
+      isFormDirty = false; // Resetear al abrir
+      document.getElementById('formMode')!.value = 'edit';
+      
+      (document.getElementById('formInternalId') as HTMLInputElement).value = data.id || '';
+      
+      const inputCedula = document.getElementById('formCedula') as HTMLInputElement;
+      inputCedula.value = data.cedula === 'N/A' ? '' : data.cedula;
+      // BLOQUEAR CÉDULA AL EDITAR
+      inputCedula.readOnly = true;
+      inputCedula.style.opacity = '0.6';
+      inputCedula.style.cursor = 'not-allowed';
+
+      (document.getElementById('formFirstName') as HTMLInputElement).value = data.firstName || '';
+      (document.getElementById('formLastName') as HTMLInputElement).value = data.lastName || '';
+      (document.getElementById('formEmail') as HTMLInputElement).value = data.email === 'No registrado' ? '' : data.email;
+      (document.getElementById('formPhone') as HTMLInputElement).value = data.phone === 'Sin teléfono' ? '' : data.phone;
+      (document.getElementById('formCity') as HTMLInputElement).value = data.city === 'Sin ciudad' ? '' : data.city;
+      (document.getElementById('formBalance') as HTMLInputElement).value = data.balance || 0;
+      
+      const pwdSection = document.getElementById('passwordSection');
+      if (pwdSection) pwdSection.style.display = 'grid';
+      
+      const pwdInput = document.getElementById('formPassword') as HTMLInputElement;
+      const pwdConfirmInput = document.getElementById('formConfirmPassword') as HTMLInputElement;
+      
+      pwdInput.value = '';
+      pwdConfirmInput.value = '';
+      pwdInput.required = false;
+      pwdConfirmInput.required = false;
+      pwdInput.placeholder = 'Nueva (opcional)';
+      pwdConfirmInput.placeholder = 'Confirmar nueva';
+      
+      document.getElementById('modalTitle')!.textContent = 'Editar Cliente';
+      document.getElementById('modalSubtitle')!.textContent = 'Actualiza los datos del cliente';
+      document.getElementById('btnGuardarText')!.textContent = 'Actualizar Cliente';
+      
+      fileToUpload = null;
+      deletePicFlag = false;
+      const fileInput = document.getElementById('clienteFileUpload') as HTMLInputElement;
+      if(fileInput) fileInput.value = '';
+      
+      const img = document.getElementById('clienteProfileImg') as HTMLImageElement;
+      const fallback = document.getElementById('clienteProfileFallback');
+      const btnDelete = document.getElementById('btnClienteDeletePic');
+      
+      if(img && fallback && btnDelete) {
+          const timestamp = new Date().getTime();
+          img.src = `${API_URL}/${data.id}/profile-picture?t=${timestamp}`;
+          
+          img.onload = () => { 
+              img.style.display = 'block'; 
+              fallback.style.display = 'none'; 
+              btnDelete.style.display = 'flex'; 
+          };
+          
+          img.onerror = () => { 
+              img.style.display = 'none'; 
+              fallback.style.display = 'flex'; 
+              btnDelete.style.display = 'none'; 
+          };
+      }
+      
+      modal.style.display = 'flex';
+    }
+  };
+
+  (window as any).abrirModalDelete = (id: string, cedula: string) => {
+    clienteIdAEliminar = id;
+    const deleteModal = document.getElementById('deleteConfirmModal') as HTMLElement;
+    const deleteClienteCedula = document.getElementById('deleteClienteCedula');
+    if (deleteClienteCedula) deleteClienteCedula.textContent = cedula || 'Desconocida';
+    if (deleteModal) deleteModal.style.display = 'flex';
+  };
+
+  (window as any).cerrarModalDelete = () => {
+    const deleteModal = document.getElementById('deleteConfirmModal') as HTMLElement;
+    if (deleteModal) deleteModal.style.display = 'none';
+    clienteIdAEliminar = null;
+  };
+
+  // ==========================================
+  // EVENTO SUBMIT CON VALIDACIÓN VÍA JAVASCRIPT Y BURBUJAS NATIVAS
+  // ==========================================
+  formElement?.addEventListener('submit', async (e) => {
+    e.preventDefault(); 
+    
+    const mode = (document.getElementById('formMode') as HTMLInputElement).value;
+    const internalId = (document.getElementById('formInternalId') as HTMLInputElement).value;
+    const cedula = (document.getElementById('formCedula') as HTMLInputElement).value.trim();
+    const firstName = (document.getElementById('formFirstName') as HTMLInputElement).value.trim();
+    const lastName = (document.getElementById('formLastName') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('formEmail') as HTMLInputElement).value.trim();
+    const phone = (document.getElementById('formPhone') as HTMLInputElement).value.trim();
+    const city = (document.getElementById('formCity') as HTMLInputElement).value.trim();
+    
+    const inputCedula = document.getElementById('formCedula') as HTMLInputElement;
+    const inputFirstName = document.getElementById('formFirstName') as HTMLInputElement;
+    const inputLastName = document.getElementById('formLastName') as HTMLInputElement;
+    const inputEmail = document.getElementById('formEmail') as HTMLInputElement;
+    const inputPhone = document.getElementById('formPhone') as HTMLInputElement;
+    
+    const inputPassword = document.getElementById('formPassword') as HTMLInputElement;
+    const inputConfirm = document.getElementById('formConfirmPassword') as HTMLInputElement;
+    const password = inputPassword.value;
+    const confirmPassword = inputConfirm.value;
+    const balance = parseFloat((document.getElementById('formBalance') as HTMLInputElement).value) || 0;
+
+    // VALIDACIONES USANDO GLOBOS NATIVOS
+    const regexCedula = /^\d{10}$/;
+    if (!regexCedula.test(cedula)) {
+      inputCedula.setCustomValidity('La cédula debe tener exactamente 10 dígitos numéricos.');
+      inputCedula.reportValidity();
+      return;
+    }
+
+    const regexNombres = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/;
+    if (!regexNombres.test(firstName)) {
+      inputFirstName.setCustomValidity('Solo debe contener letras (sin espacios).');
+      inputFirstName.reportValidity();
+      return;
+    }
+    if (!regexNombres.test(lastName)) {
+      inputLastName.setCustomValidity('Solo debe contener letras (sin espacios).');
+      inputLastName.reportValidity();
+      return;
+    }
+
+    if (email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        inputEmail.setCustomValidity('El correo electrónico debe tener un formato válido.');
+        inputEmail.reportValidity();
+        return;
+      }
+    }
+
+    const regexPhone = /^09\d{8}$/;
+    if (!regexPhone.test(phone)) {
+      inputPhone.setCustomValidity('El teléfono debe tener exactamente 10 dígitos y empezar con "09".');
+      inputPhone.reportValidity();
+      return;
+    }
+
+    if (mode === 'create') {
+        if (password.length > 0 && password.length < 6) {
+            inputPassword.setCustomValidity('La contraseña debe tener al menos 6 caracteres.');
+            inputPassword.reportValidity();
+            return;
+        }
+        if (password !== confirmPassword) {
+            inputConfirm.setCustomValidity('Las contraseñas no coinciden.');
+            inputConfirm.reportValidity();
+            return;
+        }
+    } else if (password || confirmPassword) {
+        if (password.length > 0 && password.length < 6) {
+            inputPassword.setCustomValidity('La contraseña debe tener al menos 6 caracteres.');
+            inputPassword.reportValidity();
+            return;
+        }
+        if (password !== confirmPassword) {
+            inputConfirm.setCustomValidity('Las contraseñas no coinciden.');
+            inputConfirm.reportValidity();
+            return;
+        }
+    }
+
+    const btnGuardar = formElement.querySelector('#btnGuardarForm') as HTMLElement;
+    const btnText = document.getElementById('btnGuardarText');
+    const btnSpinner = document.getElementById('btnSpinner');
+
+    if (btnGuardar) (btnGuardar as HTMLButtonElement).disabled = true;
+    if (btnSpinner) btnSpinner.style.display = 'inline-block';
+    if (btnText) btnText.style.display = 'none';
+
+    try {
+      const url = mode === 'create' ? API_URL : `${API_URL}/${internalId}`;
+      const method = mode === 'create' ? 'POST' : 'PUT';
+
+      const payload: any = { 
+          cedula: cedula,
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          phone: phone,
+          city: city,
+          currentBalance: balance
+      };
+      
+      if (mode === 'edit' && internalId) {
+          payload.id = internalId;
+      }
+
+      if (password) {
+          payload.password = password;
+          payload.passwordConfirm = confirmPassword;
+      }
+
+      const respuesta = await fetch(url, {
+        method: method,
+        headers: getAuthHeaders(),
+        body: JSON.stringify(payload)
+      });
+
+      if (!respuesta.ok) {
+        let errorMsg = `Error ${respuesta.status}`;
+        try {
+          const errData = await respuesta.json();
+          if (errData.errors) {
+              const primerCampo = Object.keys(errData.errors)[0];
+              errorMsg = errData.errors[primerCampo][0];
+          } else {
+              errorMsg = errData.message || errData.title || errData.error || errorMsg;
+          }
+        } catch (e) {}
+
+        const lowerError = errorMsg.toLowerCase();
+        
+        if (lowerError.includes('correo') || lowerError.includes('email')) {
+            inputEmail.setCustomValidity(errorMsg);
+            inputEmail.reportValidity();
+        } else if (lowerError.includes('teléfono') || lowerError.includes('telefono')) {
+            inputPhone.setCustomValidity(errorMsg);
+            inputPhone.reportValidity();
+        } else if (lowerError.includes('cédula') || lowerError.includes('cedula')) {
+            inputCedula.setCustomValidity(errorMsg);
+            inputCedula.reportValidity();
+        } else {
+            showToast(errorMsg, true); 
+        }
+        
+        throw new Error("Validation failed from backend"); 
+      }
+      
+      let finalCustomerId = internalId;
+      if (mode === 'create') {
+          try {
+              const createdCustomer = await respuesta.json();
+              finalCustomerId = createdCustomer.id || createdCustomer.Id || createdCustomer.customerId || createdCustomer.CustomerId;
+          } catch(e) { } 
+      }
+      
+      if (finalCustomerId) {
+          const picUrl = `${API_URL}/${finalCustomerId}/profile-picture`;
+          if (deletePicFlag) {
+              await fetch(picUrl, { method: 'DELETE', headers: { 'Authorization': `Bearer ${tokenLocal}` } });
+          } else if (fileToUpload) {
+              const formData = new FormData();
+              formData.append('image', fileToUpload);
+              await fetch(picUrl, { method: 'POST', headers: { 'Authorization': `Bearer ${tokenLocal}` }, body: formData });
+          }
+      }
+      
+      // Forzar cierre directo sin preguntar (ya que guardó con éxito)
+      (window as any).forceCloseClienteModal();
+      
+      if (deletePicFlag || fileToUpload) {
+          sessionStorage.setItem('cliente_photo_changed', 'true');
+          window.location.reload();
+      } else {
+          showToast(`Cliente ${mode === 'create' ? 'creado' : 'actualizado'} exitosamente`);
+          cargarDatos();
+      }
+    } catch (error: any) {
+        // El error ya fue reportado visualmente o vía Toast
+    } finally {
+      if (btnGuardar) (btnGuardar as HTMLButtonElement).disabled = false;
+      if (btnSpinner) btnSpinner.style.display = 'none';
+      if (btnText) btnText.style.display = 'inline';
+    }
+  });
+
+  const btnConfirmDelete = document.getElementById('btnConfirmDelete');
+  btnConfirmDelete?.addEventListener('click', async () => {
+    if (!clienteIdAEliminar) return;
+    
+    const btnText = document.getElementById('btnDeleteText');
+    const btnSpinner = document.getElementById('btnDeleteSpinner');
+    const btn = btnConfirmDelete as HTMLButtonElement;
+
+    if (btn) btn.disabled = true;
+    if (btnSpinner) btnSpinner.style.display = 'inline-block';
+    if (btnText) btnText.style.display = 'none';
+
+    try {
+      const respuesta = await fetch(`${API_URL}/${clienteIdAEliminar}`, {
+        method: 'DELETE',
+        headers: getAuthHeaders()
+      });
+
+      if (!respuesta.ok) {
+        let errorMsg = `Error ${respuesta.status}`;
+        try {
+          const errData = await respuesta.json();
+          errorMsg = errData.message || errData.error || errData.title || errorMsg;
+        } catch (e) { }
+        throw new Error(errorMsg); 
+      }
+      
+      showToast('Cliente eliminado exitosamente');
+      (window as any).cerrarModalDelete();
+      cargarDatos();
+    } catch (error: any) {
+      showToast(error.message, true);
+      (window as any).cerrarModalDelete();
+    } finally {
+      if (btn) btn.disabled = false;
+      if (btnSpinner) btnSpinner.style.display = 'none';
+      if (btnText) btnText.style.display = 'inline';
+    }
+  });
+
+  function showToast(message: string, isError: boolean = false) {
+    const toast = document.getElementById('toastNotif') as HTMLElement;
+    const toastMsg = document.getElementById('toastMsg');
+    if (toast && toastMsg) {
+      toastMsg.textContent = message;
+      toast.style.background = isError ? 'var(--color-danger)' : 'var(--color-success)';
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 5000);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+      if (!isAdmin) {
+          const btnInsertar = document.querySelector('.header-actions .btn-primary');
+          if (btnInsertar) (btnInsertar as HTMLElement).style.display = 'none';
+          
+          const colAcciones = document.querySelector('.col-acciones');
+          if (colAcciones) (colAcciones as HTMLElement).style.display = 'none';
+      }
+      cargarDatos();
+  });
+</script>

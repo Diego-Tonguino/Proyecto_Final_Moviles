@@ -1,0 +1,352 @@
+---
+// src/layouts/MainLayout.astro
+// Iconos para el layout
+const iconUser = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>';
+const iconLogout = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>';
+---
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.props.title || "NorthWind Dashboard"}</title>
+
+    <style is:global>
+        /* Variables Globales Premium */
+        :root {
+            --bg-page-top: #1a103c;
+            --bg-page-bottom: #2d1b63;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #7c3aed; 
+            --primary-hover: #6d28d9;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --input-bg: rgba(0, 0, 0, 0.2);
+            --input-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            height: 100vh; 
+            overflow: hidden; 
+            background: linear-gradient(rgba(15, 8, 30, 0.2), rgba(26, 16, 60, 0.3)), url('/fondo_web.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-main);
+        }
+
+        /* Menú Lateral (Sidebar) de Cristal */
+        .sidebar { 
+            width: 260px; 
+            background: rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-right: 1px solid var(--card-border);
+            display: flex; 
+            flex-direction: column; 
+            z-index: 10;
+        }
+        
+        .sidebar-header { 
+            padding: 1.5rem; 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            color: white; 
+            text-decoration: none; 
+            display: block;
+            border-bottom: 1px solid var(--card-border);
+            letter-spacing: 0.05em;
+        }
+        
+        .sidebar-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15) 20%, rgba(255, 255, 255, 0.15) 80%, transparent);
+            margin: 0.75rem 0;
+            width: 100%;
+        }
+
+        .sidebar-menu { list-style: none; padding: 1rem 0; }
+        .sidebar-menu li { margin-bottom: 4px; padding: 0 1rem; }
+        
+        .sidebar-menu li a { 
+            display: flex; 
+            align-items: center; 
+            padding: 0.875rem 1rem; 
+            color: var(--text-muted); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            font-weight: 500;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-menu li a:hover { 
+            color: white; 
+            background-color: rgba(255, 255, 255, 0.05); 
+        }
+        
+        .sidebar-menu li a.active { 
+            color: white; 
+            background-color: rgba(124, 58, 237, 0.2); 
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+        
+        .icon { margin-right: 12px; display: flex; align-items: center; justify-content: center; width: 20px;}
+
+        /* Contenido Principal */
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* Barra Superior (Topbar) */
+        .topbar { 
+            height: 70px; 
+            background: rgba(0, 0, 0, 0.1); 
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--card-border); 
+            display: flex; 
+            justify-content: flex-end; 
+            align-items: center; 
+            padding: 0 2rem; 
+            gap: 1.5rem; 
+        }
+
+        /* ===== ESTILOS DEL PERFIL Y BADGES ===== */
+        .user-profile-container { display: flex; align-items: center; gap: 1.5rem; }
+        
+        .user-info-box { display: flex; align-items: center; gap: 12px; }
+        
+        .user-avatar { 
+            background: var(--primary); 
+            color: white; 
+            width: 38px; 
+            height: 38px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3); 
+        }
+        .user-avatar svg { width: 20px; height: 20px; }
+        
+        .user-text-data { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: flex-start; 
+            gap: 4px; 
+        }
+        
+        .user-fullname { color: white; font-weight: 600; font-size: 0.95rem; line-height: 1; }
+        
+        .user-role-badge { 
+            font-size: 0.7rem; 
+            font-weight: 800; 
+            padding: 2px 8px; 
+            border-radius: 12px; 
+            letter-spacing: 0.5px; 
+            text-transform: uppercase; 
+        }
+        
+        .role-admin { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .role-seller { background: rgba(234, 179, 8, 0.2); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.3); }
+        
+        .btn-logout { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            background: rgba(239, 68, 68, 0.1); 
+            border: 1px solid rgba(239, 68, 68, 0.3); 
+            color: #fca5a5; 
+            padding: 8px 16px; 
+            border-radius: 0.5rem; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+        }
+        .btn-logout:hover { background: #ef4444; color: white; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4); }
+        .btn-logout svg { width: 16px; height: 16px; }
+
+        /* Área de contenido scrolleable */
+        .content-area { 
+            padding: 2rem; 
+            flex: 1; 
+            overflow-y: auto; 
+        }
+        
+        /* Scrollbar estilizado para la zona oscura */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+        .oculto { display: none !important; }
+    </style>
+</head>
+<body>
+    <aside class="sidebar no-print">
+        <a href="/" class="sidebar-header">NORTHWIND</a>
+        
+        <ul class="sidebar-menu">
+            <li><a href="/"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Inicio</a></li>
+            <li><a href="/perfil"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span> Perfil</a></li>
+            
+            <hr class="sidebar-divider" />
+            
+            <li><a href="/crear-orden"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg></span> Crear Orden</a></li>
+            
+            <li id="menu-clientes"><a href="/clientes"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span> Clientes</a></li>
+            <li id="menu-productos"><a href="/productos"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span> Productos</a></li>
+            <li id="menu-usuarios"><a href="/usuarios"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span> Usuarios</a></li>
+            <li id="menu-facturas"><a href="/facturas"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span> Facturas</a></li>
+            <li id="menu-logs"><a href="/logs"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></span> Logs Sistema</a></li>
+        </ul>
+    </aside>
+    
+    <main class="main-content">
+        <header class="topbar no-print">
+            <div class="user-profile-container">
+                <a href="/perfil" class="user-info-box" style="text-decoration: none; cursor: pointer; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                    <div class="user-avatar" id="nav-user-avatar" style="overflow: hidden;">
+                        <img id="nav-user-img" src="" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; display: none;" />
+                        <svg id="nav-user-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="user-text-data">
+                        <span id="nombre-usuario-nav" class="user-fullname">Cargando...</span>
+                        <span id="rol-usuario-nav" class="user-role-badge">...</span>
+                    </div>
+                </a>
+                <button id="btn-cerrar-sesion" class="btn-logout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Cerrar sesión
+                </button>
+            </div>
+        </header>
+        
+        <section class="content-area">
+            <slot /> 
+        </section>
+    </main>
+
+    <script is:inline>
+        function inicializarLayout() {
+            const token = localStorage.getItem('northwind_token');
+            const nombreUsuario = localStorage.getItem('northwind_user_name');
+            const rolUsuario = localStorage.getItem('northwind_user_role') || "Vendedor";
+            let userId = localStorage.getItem('northwind_user_id');
+
+            // Fallback: si tenemos token pero no userId (el usuario ya estaba logueado antes de la actualización)
+            if (!userId && token) {
+                try {
+                    const base64Url = token.split('.')[1];
+                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    }).join(''));
+                    const decoded = JSON.parse(jsonPayload);
+                    userId = decoded.sub || decoded.nameid || decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'] || decoded.uid || decoded.id || '';
+                    if (userId) {
+                        localStorage.setItem('northwind_user_id', userId);
+                    }
+                } catch (e) {
+                    console.error("Error decoding token for userId in layout", e);
+                }
+            }
+
+            const spanNombreUsuario = document.getElementById('nombre-usuario-nav');
+            const spanRolUsuario = document.getElementById('rol-usuario-nav');
+            const btnCerrarSesion = document.getElementById('btn-cerrar-sesion');
+            const navUserImg = document.getElementById('nav-user-img');
+            const navUserSvg = document.getElementById('nav-user-svg');
+
+            // 1. Guardia de Sesión
+            if (!token && window.location.pathname !== '/login' && window.location.pathname !== '/registro') {
+                window.location.href = '/login'; 
+                return;
+            }
+
+            // 2. Control de Permisos (RBAC - Menú)
+            if (!rolUsuario.toLowerCase().includes('admin')) {
+                const itemsProtegidos = ['menu-usuarios', 'menu-logs'];
+                
+                itemsProtegidos.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                });
+
+                const path = window.location.pathname;
+                if (path === '/usuarios' || path === '/logs') {
+                    window.location.href = '/'; 
+                }
+            }
+            
+            // 3. Pintar Datos del Usuario en el Topbar
+            if (token && spanNombreUsuario && spanRolUsuario) {
+                spanNombreUsuario.textContent = nombreUsuario || "Usuario Norteño";
+                
+                const esAdmin = rolUsuario.toLowerCase().includes('admin');
+                spanRolUsuario.textContent = esAdmin ? "ADMINISTRADOR" : "VENDEDOR";
+                spanRolUsuario.className = "user-role-badge " + (esAdmin ? "role-admin" : "role-seller");
+                
+                // Cargar foto de perfil si existe el userId
+                if (userId && navUserImg && navUserSvg) {
+                    const avatarUrl = `http://localhost:5033/api/users/${userId}/profile-picture`;
+                    fetch(avatarUrl, {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            navUserImg.src = avatarUrl + "?t=" + new Date().getTime(); // Anti-cache
+                            navUserImg.style.display = 'block';
+                            navUserSvg.style.display = 'none';
+                        }
+                    })
+                    .catch(err => console.error("Error al cargar avatar", err));
+                }
+            }
+
+            // 4. Lógica de Cerrar Sesión
+            if (btnCerrarSesion) {
+                const nuevoBtnCerrar = btnCerrarSesion.cloneNode(true);
+                btnCerrarSesion.parentNode.replaceChild(nuevoBtnCerrar, btnCerrarSesion);
+                
+                nuevoBtnCerrar.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('northwind_token');
+                    localStorage.removeItem('northwind_user_name');
+                    localStorage.removeItem('northwind_user_role');
+                    localStorage.removeItem('northwind_user_email');
+                    localStorage.removeItem('northwind_user_id');
+                    window.location.href = '/login'; 
+                });
+            }
+
+            // 5. Marcar como activo el link correspondiente
+            const currentPath = window.location.pathname;
+            const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', inicializarLayout);
+    </script>
+</body>
+</html>

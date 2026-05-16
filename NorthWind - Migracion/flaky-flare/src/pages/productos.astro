@@ -1,0 +1,918 @@
+---
+// src/pages/productos.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Directorio de Productos - Northwind">
+  <div class="page-content">
+    
+    <div class="header-section">
+      <h1 class="page-title">Directorio de Productos</h1>
+      
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <div class="filter-group">
+            <span class="filter-label">Filtrar por:</span>
+            <select id="searchFilterProductos" class="search-select-dark">
+              <option value="Todo">Todo</option>
+              <option value="Id">ID</option>
+              <option value="Nombre">Nombre del producto</option>
+              <option value="SinStock">Sin Stock</option>
+              <option value="ConStock">Con Stock</option>
+            </select>
+          </div>
+          <div class="search-input-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchPageProductos" placeholder="Buscar desde el inicio..." autocomplete="off" class="search-input-dark" maxlength="40" />
+          </div>
+        </div>
+        
+        <button class="btn-primary" onclick="abrirModalProducto()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          Insertar Producto
+        </button>
+      </div>
+    </div>
+
+    <div class="glass-card table-card">
+      <div class="table-responsive">
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-nombre">NOMBRE DEL PRODUCTO</th>
+              <th class="col-precio" style="text-align: right;">PRECIO UNITARIO</th>
+              <th class="col-stock" style="text-align: right;">STOCK</th>
+              <th class="col-acciones" style="text-align: center;">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody id="productosTableBody">
+            <tr class="state-row">
+              <td colspan="5" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                Cargando datos de productos...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-footer">
+        <span id="registrosInfo">Mostrando 0 productos</span>
+        <div class="pagination-controls" id="paginationBtns">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="formProductoModal" class="modal-overlay" style="display: none;">
+    <div class="glass-card modal-content-sm">
+      <div class="modal-header">
+        <h2 id="modalTitle">Nuevo Producto</h2>
+        <button class="btn-close" onclick="cerrarModalProducto()">&times;</button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- SECCIÓN DE FOTO DE PRODUCTO (CUADRADA) -->
+        <div id="productoPicSection" style="text-align: center; margin-bottom: 2rem;">
+            <div class="avatar-wrapper-square" style="width: 120px; height: 120px; border-radius: 0.75rem; background: rgba(124, 58, 237, 0.1); border: 3px solid rgba(124, 58, 237, 0.3); margin: 0 auto 1.5rem auto; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                <img id="productoProfileImg" src="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+                <div id="productoProfileFallback" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#a78bfa;">
+                    <!-- Icono de Caja / Producto -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 50px; height: 50px;">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; max-width: 380px; margin: 0 auto;">
+                <input type="file" id="productoFileUpload" accept="image/jpeg, image/png, image/webp" style="display: none;" />
+                
+                <button type="button" class="btn-perfil-purple-large" onclick="document.getElementById('productoFileUpload').click()" style="flex: 1; padding: 0.6rem 1rem; font-size: 0.9rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10l0 4"></path><path d="M10 12l4 0"></path></svg>
+                    Subir Imagen
+                </button>
+                
+                <button type="button" class="btn-perfil-red-outline-large" id="btnProductoDeletePic" style="display:none; flex: 1; padding: 0.6rem 1rem; font-size: 0.9rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>
+                    Eliminar Imagen
+                </button>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.75rem; font-weight: 500;">JPG, PNG. Máx 5MB.</p>
+        </div>
+
+        <form id="productoForm">
+          <input type="hidden" id="formMode" value="create">
+          
+          <div class="form-group" id="groupFormId" style="display: none;">
+            <label for="formId">ID del Producto</label>
+            <input type="text" id="formId" readonly class="form-input" style="opacity: 0.6; cursor: not-allowed;">
+          </div>
+          
+          <div class="form-group">
+            <label for="formName">Nombre del Producto</label>
+            <!-- Removido el pattern para permitir caracteres especiales -->
+            <input type="text" id="formName" required maxlength="30" title="Máximo 30 caracteres" placeholder="Ej: Queso Manchego (100%)..." class="form-input">
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="formPrice">Precio Unitario ($)</label>
+              <input type="number" id="formPrice" step="0.01" min="0" max="999999" required value="0.00" class="form-input" style="color: #86efac; font-weight: bold;" oninput="if(this.value.split('.')[0].length > 6) this.value = this.value.slice(0, -1);">
+            </div>
+            
+            <div class="form-group">
+              <label for="formStock">Unidades en Stock</label>
+              <input type="number" id="formStock" step="1" min="0" max="32767" required value="0" class="form-input" style="color: #93c5fd; font-weight: bold;" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(Number(this.value) > 32767) this.value = '32767';">
+            </div>
+          </div>
+          
+          <div id="formAlert" class="alert" style="display: none;"></div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <button type="button" class="btn-modal btn-cancel" onclick="cerrarModalProducto()" style="flex: 1; margin: 0; padding: 12px; border-radius: 0.5rem;">
+              Cancelar
+            </button>
+            <button type="submit" class="btn-registro-submit" id="btnGuardarForm" style="flex: 1; margin: 0;">
+              <span id="btnGuardarText">Guardar Producto</span>
+              <div id="btnSpinner" class="spinner-small" style="display:none; margin: 0 auto;"></div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteConfirmModal" class="modal-overlay" style="display: none; z-index: 2000;">
+    <div class="modal-card">
+      <div class="modal-icon-container">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon-svg">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Eliminar Producto?</h2>
+      <p class="modal-text">
+        Estás a punto de eliminar permanentemente el producto <strong id="deleteProductoId" style="color: white;"></strong>. Esta acción no se puede deshacer.
+      </p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarModalDelete()">Cancelar</button>
+        <button class="btn-modal btn-confirm" id="btnConfirmDelete">
+          <span id="btnDeleteText">Sí, eliminar</span>
+          <div id="btnDeleteSpinner" class="spinner-small" style="display:none;"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ELIMINAR FOTO -->
+  <div id="confirmDeletePhotoModal" class="modal-overlay" style="display: none; z-index: 2000;">
+    <div class="modal-card">
+      <div class="modal-icon-container" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="modal-icon-svg" style="color: #ef4444;">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Eliminar Imagen?</h2>
+      <p class="modal-text">La imagen se marcará para eliminación. Esta acción se aplicará al hacer clic en <strong>Guardar Producto</strong>.</p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarConfirmDeletePhoto()">Cancelar</button>
+        <button class="btn-modal btn-confirm" id="btnConfirmDeletePhotoConfirm" style="background: #ef4444;">
+          <span id="btnDeletePhotoText">Sí, eliminar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: DESCARTAR CAMBIOS -->
+  <div id="unsavedChangesModal" class="modal-overlay" style="display: none; z-index: 3000;">
+    <div class="modal-card">
+      <div class="modal-icon-container" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon-svg" style="color: #ef4444;">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h2 class="modal-title">¿Descartar cambios?</h2>
+      <p class="modal-text">Tienes datos sin guardar. Si cierras ahora, <strong>todos tus cambios se perderán</strong>.</p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-cancel" onclick="cerrarUnsavedModal()">No, seguir editando</button>
+        <button class="btn-modal btn-confirm" style="background: #ef4444;" onclick="confirmDiscardChanges()">Sí, descartar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastNotif" class="toast-notif" style="display: none;">
+    <span id="toastMsg">Operación exitosa</span>
+  </div>
+
+</MainLayout>
+
+<style is:global>
+  :root {
+    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --bg-input-dark: rgba(0, 0, 0, 0.3);
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --color-id: #a78bfa; 
+    --color-price: #86efac; 
+    --color-stock: #93c5fd; 
+    --color-primary: #7c3aed; 
+    --color-primary-hover: #6d28d9;
+    --color-danger: #ef4444; 
+    --color-danger-hover: #dc2626;
+    --color-warning: #eab308;
+    --color-success: #10b981;
+    --bg-registro: #1f163f;
+  }
+
+  .page-content { padding: 0; width: 100%; box-sizing: border-box; }
+
+  .glass-card { background: var(--bg-card-dark); backdrop-filter: blur(25px); border-radius: 1.25rem; border: 1px solid var(--border-dark); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+  .search-wrapper { display: flex; align-items: center; gap: 12px; }
+  .filter-group { display: flex; align-items: center; gap: 8px; }
+  .filter-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
+  .search-input-container { position: relative; display: flex; align-items: center; }
+  .search-icon { position: absolute; left: 14px; width: 16px; height: 16px; color: var(--text-muted); z-index: 2; }
+  
+  .search-select-dark { padding: 10px 16px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background-color: #1a103c; color: white; font-size: 0.95rem; outline: none; cursor: pointer; transition: border-color 0.3s ease; }
+  .search-select-dark:focus { border-color: var(--color-primary); background-color: #2d1b63; }
+  .search-select-dark option { background-color: #1a103c; color: white; }
+  
+  .search-input-dark { padding: 10px 16px 10px 40px !important; width: 300px; border-radius: 0.75rem !important; border: 1px solid var(--border-dark) !important; background-color: #1a103c !important; color: white !important; font-size: 0.95rem; outline: none; box-sizing: border-box; transition: border-color 0.3s ease; }
+  .search-input-dark::placeholder { color: #64748b !important; }
+  .search-input-dark:focus { border-color: var(--color-primary) !important; background-color: #2d1b63 !important; }
+
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active{ -webkit-box-shadow: 0 0 0 30px #1a103c inset !important; -webkit-text-fill-color: white !important; }
+
+  .btn-primary { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-primary); color: white; border: none; padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.7; cursor: not-allowed; }
+  .btn-primary svg { width: 18px; height: 18px; }
+
+  .btn-danger { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-danger); color: white; border: none; padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-danger:hover { background: var(--color-danger-hover); transform: translateY(-1px); }
+  .btn-danger:disabled { opacity: 0.7; cursor: not-allowed; }
+
+  .btn-secondary { background: rgba(255,255,255,0.05); color: white; border: 1px solid var(--border-dark); padding: 10px 20px; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+  .btn-registro-submit { width: 100%; background: var(--color-primary); color: white; border: none; padding: 14px; border-radius: 0.5rem; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; justify-content: center; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
+  .btn-registro-submit:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+  .btn-registro-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+  .form-input { width: 100%; padding: 12px 16px; border-radius: 0.75rem; border: 1px solid var(--border-dark); background: var(--bg-input-dark); color: var(--text-white); font-size: 0.95rem; outline: none; box-sizing: border-box; transition: border-color 0.3s ease; }
+  .form-input:focus { border-color: var(--color-primary); }
+
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+  .page-title { color: var(--text-white); font-size: 1.5rem; font-weight: 600; margin: 0; }
+  .header-actions { display: flex; gap: 16px; align-items: center; }
+
+  .table-card { display: flex; flex-direction: column; overflow: hidden; }
+  .table-responsive { overflow-x: auto; max-height: calc(100vh - 250px); }
+  .main-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .main-table thead th { background: rgba(255, 255, 255, 0.03); color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 1; }
+  .main-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.03); transition: background-color 0.15s ease; }
+  .main-table tbody tr:hover { background: rgba(124, 58, 237, 0.15); }
+  .main-table td { padding: 1.2rem 1.5rem; font-size: 0.95rem; color: #cbd5e1; vertical-align: middle; }
+
+  /* ESTILOS AVATAR CUADRADO EN TABLA */
+  .table-avatar-container { display: flex; align-items: center; gap: 12px; }
+  .table-avatar-square { width: 44px; height: 44px; border-radius: 0.5rem; object-fit: cover; border: 2px solid rgba(124, 58, 237, 0.3); }
+  .table-avatar-fallback-square { width: 44px; height: 44px; border-radius: 0.5rem; background: rgba(124, 58, 237, 0.2); color: #a78bfa; display: flex; align-items: center; justify-content: center; border: 2px solid rgba(124, 58, 237, 0.3); }
+
+  .action-buttons { display: flex; gap: 8px; justify-content: center; }
+  .btn-icon { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); cursor: pointer; padding: 8px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .btn-edit { color: #cbd5e1; }
+  .btn-edit:hover { background: rgba(234, 179, 8, 0.2); color: var(--color-warning); border-color: var(--color-warning); }
+  .btn-delete { color: #cbd5e1; }
+  .btn-delete:hover { background: rgba(239, 68, 68, 0.2); color: var(--color-danger); border-color: var(--color-danger); }
+  .btn-icon svg { width: 16px; height: 16px; }
+
+  .table-footer { padding: 1.2rem 1.5rem; background: rgba(0, 0, 0, 0.2); border-top: 1px solid var(--border-dark); display: flex; justify-content: space-between; align-items: center; }
+  #registrosInfo { color: var(--text-muted); font-size: 0.85rem; }
+  .pagination-controls { display: flex; gap: 6px; }
+  .page-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: white; padding: 0.3rem 0.8rem; border-radius: 0.4rem; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;}
+  .page-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); }
+  .page-btn.active { background: var(--color-primary); border-color: var(--color-primary); }
+
+  .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.2s ease-out; }
+  .modal-content-sm { width: 90%; max-width: 500px; display: flex; flex-direction: column; }
+  .modal-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-dark); }
+  .modal-header h2 { margin: 0; color: white; font-size: 1.25rem; }
+  .btn-close { background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer; opacity: 0.7; }
+  .btn-close:hover { opacity: 1; }
+  .modal-body { padding: 1.5rem; }
+  
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+
+  .alert { padding: 12px; border-radius: 8px; font-size: 0.9rem; margin-top: 1rem; text-align: center; }
+  .alert-error { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
+  
+  .spinner-small { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .toast-notif { position: fixed; bottom: 30px; right: 30px; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 3000; animation: slideInUp 0.3s ease; }
+  
+  /* ESTILOS DE FOTO DE PERFIL (BOTONES HORIZONTALES) */
+  .btn-perfil-purple-large { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-primary); color: white; border: none; border-radius: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); }
+  .btn-perfil-purple-large:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+  .btn-perfil-purple-large svg { width: 16px; height: 16px; }
+
+  .btn-perfil-red-outline-large { display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-perfil-red-outline-large:hover { background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: white; transform: translateY(-1px); }
+  .btn-perfil-red-outline-large svg { width: 16px; height: 16px; }
+
+  /* MODALES SÓLIDOS */
+  .modal-card { width: 90%; max-width: 420px; background: var(--bg-registro, #1f163f); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1.25rem; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+  .modal-icon-container { width: 64px; height: 64px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; }
+  .modal-icon-svg { width: 32px; height: 32px; color: #ef4444; }
+  .modal-title { color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 0; }
+  .modal-text { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
+  .modal-actions { display: flex; gap: 1rem; justify-content: center; }
+  .btn-modal { flex: 1; padding: 0.875rem 1rem; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  
+  .btn-cancel { background: #2a204d; color: white; border: 1px solid rgba(255, 255, 255, 0.1); }
+  .btn-cancel:hover { background: #36295e; border-color: rgba(255, 255, 255, 0.2); }
+  
+  .btn-confirm { background: #ef4444; color: white; border: none; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3); }
+  .btn-confirm:hover { background: #dc2626; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4); }
+  .btn-confirm:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+  
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleUp { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  @keyframes slideInUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+</style>
+
+<script>
+  const API_URL = 'http://localhost:5033/api/products';
+  
+  interface Producto {
+    id?: number | string; Id?: number | string; productId?: number | string; ProductId?: number | string;
+    name?: string; Name?: string; productName?: string; ProductName?: string;
+    price?: number; Price?: number; unitPrice?: number; UnitPrice?: number;
+    stock?: number; Stock?: number; unitsInStock?: number; UnitsInStock?: number;
+    hasImage?: boolean; HasImage?: boolean;
+  }
+
+  let todosLosProductos: Producto[] = [];
+  let productosFiltrados: Producto[] = [];
+  let productoIdAEliminar: string | number | null = null;
+  let paginaActual = 1;
+  const itemsPorPagina = 10;
+
+  // ESTADOS PARA LA IMAGEN
+  let fileToUpload: File | null = null;
+  let deletePicFlag: boolean = false;
+  
+  // ESTADO FORMULARIO SUCIO
+  let isFormDirty = false;
+
+  // SABER SI ES ADMIN
+  const isAdmin = (localStorage.getItem('northwind_user_role') || '').toLowerCase().includes('admin');
+  const tokenLocal = localStorage.getItem('northwind_token') || '';
+
+  const tableBody = document.getElementById('productosTableBody');
+  const searchInput = document.getElementById('searchPageProductos') as HTMLInputElement;
+  const searchFilter = document.getElementById('searchFilterProductos') as HTMLSelectElement;
+  const registrosInfo = document.getElementById('registrosInfo');
+  const paginationBtns = document.getElementById('paginationBtns');
+
+  // CHECKEAR MENSAJE TRAS RECARGA INMEDIATA
+  if (sessionStorage.getItem('prod_photo_changed') === 'true') {
+      setTimeout(() => showToast("Producto e imagen actualizados exitosamente"), 100);
+      sessionStorage.removeItem('prod_photo_changed');
+  }
+
+  // EVENTOS PARA DETECTAR CAMBIOS EN LOS INPUTS
+  const formElement = document.getElementById('productoForm') as HTMLFormElement;
+  if (formElement) {
+      const formInputs = formElement.querySelectorAll('input');
+      formInputs.forEach(input => {
+          input.addEventListener('input', () => {
+              isFormDirty = true;
+          });
+      });
+  }
+
+  // LOGICA FOTO PREVIEW
+  const btnFileUpload = document.getElementById('productoFileUpload');
+  if (btnFileUpload) {
+    btnFileUpload.onchange = (e: any) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        fileToUpload = file;
+        deletePicFlag = false; 
+        isFormDirty = true; // Activar cambios sin guardar
+        
+        const url = URL.createObjectURL(file);
+        const img = document.getElementById('productoProfileImg');
+        const fallback = document.getElementById('productoProfileFallback');
+        const btnDelete = document.getElementById('btnProductoDeletePic');
+        
+        if(img && fallback && btnDelete) {
+            img.setAttribute('src', url);
+            img.style.display = 'block';
+            fallback.style.display = 'none';
+            btnDelete.style.display = 'flex';
+        }
+        
+        showToast("Imagen cargada, dale en guardar para confirmar los cambios");
+        e.target.value = ''; 
+    };
+  }
+
+  // ABRIR MODAL ELIMINAR FOTO
+  const btnProductoDeletePic = document.getElementById('btnProductoDeletePic');
+  if (btnProductoDeletePic) {
+    btnProductoDeletePic.onclick = () => {
+        const modalConfirm = document.getElementById('confirmDeletePhotoModal') as HTMLElement;
+        if(modalConfirm) modalConfirm.style.display = 'flex';
+    };
+  }
+
+  // CONFIRMAR ELIMINAR FOTO
+  const btnConfirmDeletePhotoConfirm = document.getElementById('btnConfirmDeletePhotoConfirm');
+  if (btnConfirmDeletePhotoConfirm) {
+    btnConfirmDeletePhotoConfirm.onclick = () => {
+        deletePicFlag = true;
+        fileToUpload = null;
+        isFormDirty = true; // Activar cambios sin guardar
+        
+        const fileInput = document.getElementById('productoFileUpload') as HTMLInputElement;
+        if(fileInput) fileInput.value = '';
+        
+        const img = document.getElementById('productoProfileImg');
+        const fallback = document.getElementById('productoProfileFallback');
+        const btnDelete = document.getElementById('btnProductoDeletePic');
+        
+        if(img && fallback && btnDelete) {
+            img.style.display = 'none';
+            fallback.style.display = 'flex';
+            btnDelete.style.display = 'none';
+        }
+        
+        showToast("Imagen eliminada, dale en guardar para confirmar los cambios");
+        (window as any).cerrarConfirmDeletePhoto();
+    };
+  }
+
+  (window as any).cerrarConfirmDeletePhoto = () => {
+      const modalConfirm = document.getElementById('confirmDeletePhotoModal') as HTMLElement;
+      if(modalConfirm) modalConfirm.style.display = 'none';
+  };
+
+  async function cargarDatos() {
+    try {
+      const respuesta = await fetch(API_URL);
+      if (!respuesta.ok) throw new Error('Error al conectar');
+      const data = await respuesta.json();
+      todosLosProductos = data;
+      productosFiltrados = data;
+      renderizarTabla();
+    } catch (error) {
+      if (tableBody) tableBody.innerHTML = `<tr><td colspan="${isAdmin ? '5' : '4'}" style="text-align:center; padding:3rem; color:#ef4444;">Error al conectar con la BD</td></tr>`;
+    }
+  }
+
+  function renderizarTabla() {
+    if (!tableBody) return;
+    
+    const inicio = (paginaActual - 1) * itemsPorPagina;
+    const fin = inicio + itemsPorPagina;
+    const productosPagina = productosFiltrados.slice(inicio, fin);
+
+    if (registrosInfo) registrosInfo.textContent = `Mostrando ${productosPagina.length} de ${productosFiltrados.length} productos (Pág ${paginaActual})`;
+
+    if (productosPagina.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="${isAdmin ? '5' : '4'}" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron productos</td></tr>`;
+      renderizarControlesPaginacion(0);
+      return;
+    }
+
+    tableBody.innerHTML = productosPagina.map(p => {
+      const id = p.productId ?? p.ProductId ?? p.id ?? p.Id ?? '';
+      const name = p.productName ?? p.ProductName ?? p.name ?? p.Name ?? '';
+      const price = p.unitPrice ?? p.UnitPrice ?? p.price ?? p.Price ?? 0;
+      const stock = p.unitsInStock ?? p.UnitsInStock ?? p.stock ?? p.Stock ?? 0;
+
+      const prodJson = encodeURIComponent(JSON.stringify({ id, name, price, stock })).replace(/'/g, "%27");
+      const safeName = String(name).replace(/'/g, "&apos;");
+
+      const timestamp = new Date().getTime();
+      const imageUrl = `${API_URL}/${id}/image?t=${timestamp}`;
+      
+      const iconProduct = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+      `;
+
+      const accionesHTML = isAdmin ? `
+        <td>
+          <div class="action-buttons">
+            <button class="btn-icon btn-edit" title="Editar" onclick="prepararEdicion('${prodJson}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </button>
+            <button class="btn-icon btn-delete" title="Eliminar" onclick="abrirModalDelete('${id}', '${safeName}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button>
+          </div>
+        </td>` : '';
+
+      return `
+        <tr>
+          <td><span style="color: var(--color-id); font-weight: 700;">${id}</span></td>
+          <td>
+            <div class="table-avatar-container">
+                <img src="${imageUrl}" class="table-avatar-square" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="table-avatar-fallback-square" style="display:none;">${iconProduct}</div>
+                <span style="font-weight: 500; color: white;">${name}</span>
+            </div>
+          </td>
+          <td style="text-align: right; color: var(--color-price); font-weight: 700;">$${Number(price).toFixed(2)}</td>
+          <td style="text-align: right; color: var(--color-stock); font-weight: 700;">${stock} ud.</td>
+          ${accionesHTML}
+        </tr>
+      `;
+    }).join('');
+
+    renderizarControlesPaginacion(Math.ceil(productosFiltrados.length / itemsPorPagina));
+  }
+
+  function renderizarControlesPaginacion(totalPaginas: number) {
+      if (!paginationBtns) return;
+      let html = `<button class="page-btn" id="btnPrevPage" ${paginaActual === 1 || totalPaginas === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}>&laquo;</button>`;
+      for (let i = 1; i <= totalPaginas; i++) {
+        html += `<button class="page-btn ${i === paginaActual ? 'active' : ''}" data-page="${i}">${i}</button>`;
+      }
+      html += `<button class="page-btn" id="btnNextPage" ${paginaActual === totalPaginas || totalPaginas === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}>&raquo;</button>`;
+      paginationBtns.innerHTML = html;
+
+      document.getElementById('btnPrevPage')?.addEventListener('click', () => { if (paginaActual > 1) { paginaActual--; renderizarTabla(); }});
+      document.getElementById('btnNextPage')?.addEventListener('click', () => { if (paginaActual < totalPaginas) { paginaActual++; renderizarTabla(); }});
+      paginationBtns.querySelectorAll('button[data-page]').forEach(btn => {
+        btn.addEventListener('click', (e) => { paginaActual = parseInt((e.target as HTMLElement).getAttribute('data-page') || '1'); renderizarTabla(); });
+      });
+  }
+
+  function aplicarFiltros() {
+    const term = searchInput?.value.toLowerCase().trim() || "";
+    const filterType = searchFilter?.value || "Todo";
+
+    productosFiltrados = todosLosProductos.filter(p => {
+      const id = String(p.productId ?? p.ProductId ?? p.id ?? p.Id ?? "").toLowerCase();
+      const name = String(p.productName ?? p.ProductName ?? p.name ?? p.Name ?? "").toLowerCase();
+      const stock = p.unitsInStock ?? p.UnitsInStock ?? p.stock ?? p.Stock ?? 0;
+
+      let matchText = false;
+      // === REGLA ESTRICTA DE BÚSQUEDA DESDE LA PRIMERA LETRA ===
+      if (filterType === "Id") {
+        matchText = id.startsWith(term);
+      } else if (filterType === "Nombre") {
+        matchText = name.startsWith(term);
+      } else {
+        matchText = id.startsWith(term) || name.startsWith(term);
+      }
+
+      if (filterType === "SinStock") {
+        return matchText && stock === 0;
+      } else if (filterType === "ConStock") {
+        return matchText && stock > 0;
+      }
+
+      return matchText;
+    });
+    paginaActual = 1;
+    renderizarTabla();
+  }
+
+  searchInput?.addEventListener('input', aplicarFiltros);
+  searchFilter?.addEventListener('change', aplicarFiltros);
+
+  // FUNCIONES DE MODALES
+  (window as any).abrirModalProducto = () => {
+    const modal = document.getElementById('formProductoModal') as HTMLElement;
+    if (modal) {
+      isFormDirty = false; // Resetear al abrir
+      document.getElementById('formMode')!.value = 'create';
+      document.getElementById('formName')!.value = '';
+      document.getElementById('formPrice')!.value = '0.00';
+      document.getElementById('formStock')!.value = '0';
+      document.getElementById('modalTitle')!.textContent = 'Nuevo Producto';
+      document.getElementById('btnGuardarText')!.textContent = 'Guardar Producto';
+      const alert = document.getElementById('formAlert') as HTMLElement;
+      alert.style.display = 'none';
+
+      // Limpiar Foto del formulario
+      fileToUpload = null;
+      deletePicFlag = false;
+      const fileInput = document.getElementById('productoFileUpload') as HTMLInputElement;
+      if(fileInput) fileInput.value = '';
+      
+      document.getElementById('productoProfileImg')!.style.display = 'none';
+      document.getElementById('productoProfileFallback')!.style.display = 'flex';
+      document.getElementById('btnProductoDeletePic')!.style.display = 'none';
+
+      modal.style.display = 'flex';
+    }
+  };
+
+  (window as any).cerrarModalProducto = () => {
+    if (isFormDirty) {
+        // Mostrar advertencia si el formulario está sucio
+        const modal = document.getElementById('unsavedChangesModal') as HTMLElement;
+        if (modal) modal.style.display = 'flex';
+    } else {
+        // Cerrar directamente
+        (window as any).forceCloseProductoModal();
+    }
+  };
+
+  (window as any).forceCloseProductoModal = () => {
+      const modal = document.getElementById('formProductoModal') as HTMLElement;
+      if (modal) modal.style.display = 'none';
+      isFormDirty = false; // Resetear estado
+  };
+
+  (window as any).cerrarUnsavedModal = () => {
+      const modal = document.getElementById('unsavedChangesModal') as HTMLElement;
+      if (modal) modal.style.display = 'none';
+  };
+
+  (window as any).confirmDiscardChanges = () => {
+      const unsavedModal = document.getElementById('unsavedChangesModal') as HTMLElement;
+      if (unsavedModal) unsavedModal.style.display = 'none';
+      (window as any).forceCloseProductoModal();
+  };
+
+  (window as any).prepararEdicion = (dataEncoded: string) => {
+    const data = JSON.parse(decodeURIComponent(dataEncoded));
+    const modal = document.getElementById('formProductoModal') as HTMLElement;
+    if (modal) {
+      isFormDirty = false; // Resetear al abrir
+      document.getElementById('formMode')!.value = 'edit';
+      document.getElementById('formId')!.value = data.id;
+      document.getElementById('groupFormId')!.style.display = 'block';
+      document.getElementById('formName')!.value = data.name;
+      document.getElementById('formPrice')!.value = data.price;
+      document.getElementById('formStock')!.value = data.stock;
+      document.getElementById('modalTitle')!.textContent = 'Editar Producto';
+      document.getElementById('btnGuardarText')!.textContent = 'Actualizar Producto';
+      const alert = document.getElementById('formAlert') as HTMLElement;
+      alert.style.display = 'none';
+
+      // Cargar la foto existente en el modal
+      fileToUpload = null;
+      deletePicFlag = false;
+      const fileInput = document.getElementById('productoFileUpload') as HTMLInputElement;
+      if(fileInput) fileInput.value = '';
+      
+      const img = document.getElementById('productoProfileImg') as HTMLImageElement;
+      const fallback = document.getElementById('productoProfileFallback');
+      const btnDelete = document.getElementById('btnProductoDeletePic');
+      
+      if(img && fallback && btnDelete) {
+          const timestamp = new Date().getTime();
+          img.src = `${API_URL}/${data.id}/image?t=${timestamp}`;
+          
+          img.onload = () => { 
+              img.style.display = 'block'; 
+              fallback.style.display = 'none'; 
+              btnDelete.style.display = 'flex'; 
+          };
+          
+          img.onerror = () => { 
+              img.style.display = 'none'; 
+              fallback.style.display = 'flex'; 
+              btnDelete.style.display = 'none'; 
+          };
+      }
+
+      modal.style.display = 'flex';
+    }
+  };
+
+  (window as any).abrirModalDelete = (id: string, name: string) => {
+    productoIdAEliminar = id;
+    const deleteModal = document.getElementById('deleteConfirmModal') as HTMLElement;
+    const deleteProductoId = document.getElementById('deleteProductoId');
+    if (deleteProductoId) deleteProductoId.textContent = name || id;
+    if (deleteModal) deleteModal.style.display = 'flex';
+  };
+
+  (window as any).cerrarModalDelete = () => {
+    const deleteModal = document.getElementById('deleteConfirmModal') as HTMLElement;
+    if (deleteModal) deleteModal.style.display = 'none';
+    productoIdAEliminar = null;
+  };
+
+  // MANEJO DEL FORMULARIO
+  formElement?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const mode = (document.getElementById('formMode') as HTMLInputElement).value;
+    const id = (document.getElementById('formId') as HTMLInputElement).value;
+    const name = (document.getElementById('formName') as HTMLInputElement).value.trim();
+    
+    const priceRaw = (document.getElementById('formPrice') as HTMLInputElement).value;
+    const price = parseFloat(priceRaw) || 0;
+    
+    const stockRaw = (document.getElementById('formStock') as HTMLInputElement).value;
+    const stock = parseInt(stockRaw) || 0;
+
+    if (!name) {
+      showAlert(formElement, 'El nombre del producto es requerido', true);
+      return;
+    }
+
+    // Removida la validación de caracteres especiales
+    if (name.length > 30) {
+      showAlert(formElement, 'El nombre no puede superar los 30 caracteres.', true);
+      return;
+    }
+
+    if (price > 999999.99) {
+      showAlert(formElement, 'El precio unitario no puede superar los 999,999.99.', true);
+      return;
+    }
+    if (priceRaw.includes('.') && priceRaw.split('.')[1].length > 2) {
+      showAlert(formElement, 'El precio unitario solo permite un máximo de 2 decimales.', true);
+      return;
+    }
+
+    if (stock > 32767) {
+      showAlert(formElement, 'El stock máximo permitido por la base de datos es 32,767.', true);
+      return;
+    }
+    if (stockRaw.includes('.')) {
+      showAlert(formElement, 'El stock debe ser un número entero (sin decimales).', true);
+      return;
+    }
+
+    const btnGuardar = formElement.querySelector('button[type="submit"]') as HTMLElement;
+    const btnText = document.getElementById('btnGuardarText');
+    const btnSpinner = document.getElementById('btnSpinner');
+
+    if (btnGuardar) (btnGuardar as HTMLButtonElement).disabled = true;
+    if (btnSpinner) btnSpinner.style.display = 'inline-block';
+    if (btnText) btnText.style.display = 'none';
+
+    try {
+      const url = mode === 'create' ? API_URL : `${API_URL}/${id}`;
+      const method = mode === 'create' ? 'POST' : 'PUT';
+      
+      const body = mode === 'create' 
+        ? { name, unitPrice: price, unitsInStock: stock }
+        : { id, name, unitPrice: price, unitsInStock: stock };
+
+      const respuesta = await fetch(url, {
+        method: method,
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${tokenLocal}` 
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (!respuesta.ok) {
+        let errorMsg = `Error ${respuesta.status}`;
+        try {
+          const errData = await respuesta.json();
+          errorMsg = errData.message || errData.error || errData.title || errorMsg;
+        } catch (e) { }
+        throw new Error(errorMsg);
+      }
+      
+      // Capturar ID del producto (nuevo o actualizado)
+      let finalProductId = id;
+      if (mode === 'create') {
+          try {
+              const createdProduct = await respuesta.json();
+              finalProductId = createdProduct.id || createdProduct.Id || createdProduct.productId || createdProduct.ProductId;
+          } catch(e) { } 
+      }
+      
+      // SUBIR O ELIMINAR FOTO
+      if (finalProductId) {
+          const picUrl = `${API_URL}/${finalProductId}/image`;
+          if (deletePicFlag) {
+              await fetch(picUrl, { method: 'DELETE', headers: { 'Authorization': `Bearer ${tokenLocal}` } });
+          } else if (fileToUpload) {
+              const formData = new FormData();
+              formData.append('image', fileToUpload);
+              await fetch(picUrl, { method: 'POST', headers: { 'Authorization': `Bearer ${tokenLocal}` }, body: formData });
+          }
+      }
+      
+      (window as any).forceCloseProductoModal();
+      document.getElementById('groupFormId')!.style.display = 'none';
+      
+      // RECARGAR SI CAMBIÓ LA IMAGEN PARA REFLEJARLA INMEDIATAMENTE
+      if (deletePicFlag || fileToUpload) {
+          sessionStorage.setItem('prod_photo_changed', 'true');
+          window.location.reload();
+      } else {
+          showToast(`Producto ${mode === 'create' ? 'creado' : 'actualizado'} exitosamente`);
+          cargarDatos();
+      }
+    } catch (error: any) {
+      showAlert(formElement, `Error: ${error.message}`, true);
+    } finally {
+      if (btnGuardar) (btnGuardar as HTMLButtonElement).disabled = false;
+      if (btnSpinner) btnSpinner.style.display = 'none';
+      if (btnText) btnText.style.display = 'inline';
+    }
+  });
+
+  // CONFIRMAR ELIMINACIÓN
+  const btnConfirmDelete = document.getElementById('btnConfirmDelete');
+  btnConfirmDelete?.addEventListener('click', async () => {
+    if (!productoIdAEliminar) return;
+    
+    const btnText = document.getElementById('btnDeleteText');
+    const btnSpinner = document.getElementById('btnDeleteSpinner');
+    const btn = btnConfirmDelete as HTMLElement;
+
+    if (btn) (btn as HTMLButtonElement).disabled = true;
+    if (btnSpinner) btnSpinner.style.display = 'inline-block';
+    if (btnText) btnText.style.display = 'none';
+
+    try {
+      const respuesta = await fetch(`${API_URL}/${productoIdAEliminar}`, {
+        method: 'DELETE',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${tokenLocal}` 
+        }
+      });
+
+      if (!respuesta.ok) {
+        let errorMsg = `Error ${respuesta.status}`;
+        try {
+          const errData = await respuesta.json();
+          errorMsg = errData.message || errData.error || errData.title || errorMsg;
+        } catch (e) { }
+        throw new Error(errorMsg); 
+      }
+      
+      showToast('Producto eliminado exitosamente');
+      (window as any).cerrarModalDelete();
+      cargarDatos();
+    } catch (error: any) {
+      showToast(error.message, true); 
+      (window as any).cerrarModalDelete();
+    } finally {
+      if (btn) (btn as HTMLButtonElement).disabled = false;
+      if (btnSpinner) btnSpinner.style.display = 'none';
+      if (btnText) btnText.style.display = 'inline';
+    }
+  });
+
+  function showAlert(container: HTMLElement, message: string, isError: boolean = false) {
+    const alert = container.querySelector('.alert') as HTMLElement;
+    if (alert) {
+      alert.textContent = message;
+      alert.className = isError ? 'alert alert-error' : 'alert';
+      alert.style.display = 'block';
+    }
+  }
+
+  function showToast(message: string, isError: boolean = false) {
+    const toast = document.getElementById('toastNotif') as HTMLElement;
+    const toastMsg = document.getElementById('toastMsg');
+    if (toast && toastMsg) {
+      toastMsg.textContent = message;
+      toast.style.background = isError ? 'var(--color-danger)' : 'var(--color-success)';
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 5000); 
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+      // SI NO ES ADMIN, OCULTAMOS BOTONES Y CABECERAS
+      if (!isAdmin) {
+          const btnInsertar = document.querySelector('.header-actions .btn-primary');
+          if (btnInsertar) (btnInsertar as HTMLElement).style.display = 'none';
+          
+          const colAcciones = document.querySelector('.col-acciones');
+          if (colAcciones) (colAcciones as HTMLElement).style.display = 'none';
+      }
+      cargarDatos();
+  });
+</script>
