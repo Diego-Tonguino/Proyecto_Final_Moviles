@@ -41,6 +41,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var etSearch: EditText
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var adapter: ProductAdapter
+    private lateinit var swipeRefresh: androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +63,11 @@ class HomeActivity : AppCompatActivity() {
         btnLogout = findViewById(R.id.btnLogout)
         etSearch = findViewById(R.id.etSearch)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        swipeRefresh = findViewById(R.id.swipeRefresh)
+
+        swipeRefresh.setOnRefreshListener {
+            cargarProductos()
+        }
 
         // Mostrar nombre del usuario guardado
         val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
@@ -72,16 +78,10 @@ class HomeActivity : AppCompatActivity() {
         rvProducts.layoutManager = GridLayoutManager(this, 2)
         adapter = ProductAdapter(emptyList(), 
             onProductClick = { product ->
-                Toast.makeText(this, "${product.name}", Toast.LENGTH_SHORT).show()
-            },
-            onFavoriteClick = { product, icon ->
-                product.isFavorite = !product.isFavorite
-                if (product.isFavorite) {
-                    icon.setImageResource(android.R.drawable.btn_star_big_on)
-                    icon.setColorFilter(getColor(android.R.color.holo_orange_light))
+                if (uta.edu.ec.proyecto_final_moviles.models.CartManager.addProduct(product)) {
+                    Toast.makeText(this, "${product.name} añadido al carrito", Toast.LENGTH_SHORT).show()
                 } else {
-                    icon.setImageResource(android.R.drawable.btn_star_big_off)
-                    icon.setColorFilter(getColor(android.R.color.white))
+                    Toast.makeText(this, "Stock máximo alcanzado para ${product.name}", Toast.LENGTH_SHORT).show()
                 }
             }
         )
@@ -100,16 +100,14 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> true
-                R.id.nav_favorites -> {
-                    Toast.makeText(this, "Favoritos próximamente", Toast.LENGTH_SHORT).show()
-                    true
-                }
                 R.id.nav_cart -> {
-                    Toast.makeText(this, "Carrito próximamente", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@HomeActivity, CartActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_history -> {
-                    Toast.makeText(this, "Historial próximamente", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@HomeActivity, HistoryActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_profile -> {
@@ -134,8 +132,9 @@ class HomeActivity : AppCompatActivity() {
         ApiClient.apiService.getProducts().enqueue(object : Callback<List<Product>> {
             override fun onResponse(call: Call<List<Product>>, response: Response<List<Product>>) {
                 pbHome.visibility = View.GONE
+                swipeRefresh.isRefreshing = false
                 if (response.isSuccessful && response.body() != null) {
-                    val products = response.body()!!
+                    val products = response.body()!!.filter { it.unitsInStock > 0 }
                     adapter.updateList(products)
                 } else {
                     Toast.makeText(this@HomeActivity, "Error al cargar productos", Toast.LENGTH_SHORT).show()
@@ -144,6 +143,7 @@ class HomeActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<List<Product>>, t: Throwable) {
                 pbHome.visibility = View.GONE
+                swipeRefresh.isRefreshing = false
                 Toast.makeText(this@HomeActivity, "Error de conexión: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })

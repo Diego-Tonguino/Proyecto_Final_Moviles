@@ -438,6 +438,28 @@
     ]
   },
   {
+    "ContainingType": "NorthWind.Sales.Backend.Controllers.Admin.OrdersController",
+    "Method": "GetOrdersByCustomer",
+    "RelativePath": "api/orders/customer/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "NorthWind.Sales.Backend.Controllers.Admin.ProductsController",
     "Method": "GetAllProducts",
     "RelativePath": "api/products",

@@ -161,3 +161,31 @@ C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.pdb
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.BusinessObjects.dll
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.deps.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Transactions.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Transactions.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWin.430E2971.Up2Date
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\refint\NorthWind.Sales.Backend.BusinessObjects.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.BusinessObjects\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.BusinessObjects.dll

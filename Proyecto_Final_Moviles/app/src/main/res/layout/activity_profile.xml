@@ -7,15 +7,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_welcome">
 
-    <!-- Overlay oscuro para resaltar el contenido -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#D90F172A" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
         android:fillViewport="true">
 
         <LinearLayout
@@ -25,16 +23,6 @@
             android:background="@drawable/bg_glass_card"
             android:padding="24dp"
             android:layout_margin="16dp">
-
-            <!-- Botón Volver -->
-            <ImageView
-                android:id="@+id/ivBack"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@android:drawable/ic_menu_revert"
-                app:tint="#FFFFFF"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="Volver" />
 
             <!-- Foto de Perfil -->
             <FrameLayout
@@ -95,7 +83,7 @@
             <!-- Cédula -->
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cédula" android:textColor="#94a3b8" android:layout_marginBottom="4dp" />
             <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfCedula" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCedula" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" />
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCedula" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:inputType="number" android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Nombre -->
@@ -152,4 +140,34 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- Menú de Navegación Flotante -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#CC1E293B"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:strokeColor="#33FFFFFF"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:itemIconTint="#94a3b8"
+            app:itemTextColor="#94a3b8"
+            app:labelVisibilityMode="labeled"
+            app:itemPaddingTop="12dp"
+            app:itemPaddingBottom="12dp"
+            app:menu="@menu/bottom_nav_menu" />
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

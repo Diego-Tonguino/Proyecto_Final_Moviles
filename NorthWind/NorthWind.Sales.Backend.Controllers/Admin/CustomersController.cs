@@ -7,6 +7,10 @@ using NorthWind.Sales.Backend.Repositories.Interfaces;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System;
 using System.IO;
 using System.Text;
@@ -27,13 +31,13 @@ public static class CustomersController
         app.MapGet("/api/customers/check-phone/{phone}", CheckPhone);
 
         // ==========================================
-        // NUEVA RUTA PARA EL LOGIN M”VIL DEL CLIENTE
+        // NUEVA RUTA PARA EL LOGIN M√ìVIL DEL CLIENTE
         // ==========================================
         app.MapPost("/api/customers/login", LoginMobileCustomer);
 
         app.MapPost("/api/customers", CreateCustomerJson);
-        app.MapPost("/api/customers/form", CreateCustomerForm);
-        app.MapPost("/api/customers/{id}/photo", UploadProfilePicture);
+        app.MapPost("/api/customers/form", CreateCustomerForm).DisableAntiforgery();
+        app.MapPost("/api/customers/{id}/photo", UploadProfilePicture).DisableAntiforgery();
 
         app.MapPost("/api/customers/{id}/profile-picture", async (HttpContext ctx, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries) =>
         {
@@ -41,7 +45,7 @@ public static class CustomersController
             if (string.IsNullOrEmpty(id)) return Results.BadRequest(new { error = "Missing id route value." });
             var file = ctx.Request.Form.Files.FirstOrDefault();
             return await UploadProfilePicture(id, file, admin, queries);
-        });
+        }).DisableAntiforgery();
 
         app.MapDelete("/api/customers/{id}/profile-picture", async (string id, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries) =>
         {
@@ -60,32 +64,59 @@ public static class CustomersController
     }
 
     // ========================================================
-    // M…TODO Y DTO PARA EL LOGIN M”VIL EXCLUSIVO DE CLIENTES
+    // M√âTODO Y DTO PARA EL LOGIN M√ìVIL EXCLUSIVO DE CLIENTES
     // ========================================================
     public record CustomerLoginDto(string Email, string Password);
 
-    static async Task<IResult> LoginMobileCustomer([FromBody] CustomerLoginDto dto, INorthWindSalesQueriesDataContext queries)
+    static async Task<IResult> LoginMobileCustomer([FromBody] CustomerLoginDto dto, INorthWindSalesQueriesDataContext queries, IConfiguration configuration)
     {
         try
         {
             if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
-                return Results.BadRequest(new { error = "Correo y contraseÒa son obligatorios." });
+                return Results.BadRequest(new { error = "Correo y contrase√±a son obligatorios." });
 
             // 1. Buscamos al cliente en la tabla Customers (NO en Usuarios)
             var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
-            if (customer == null) return Results.BadRequest(new { error = "Correo o contraseÒa incorrectos." });
+            if (customer == null) return Results.BadRequest(new { error = "Correo o contrase√±a incorrectos." });
 
-            // 2. Verificamos la contraseÒa hasheada
+            // 2. Verificamos la contrase√±a hasheada
             var hasher = new PasswordHasher<Repositories.Entities.Customer>();
             var result = hasher.VerifyHashedPassword(customer, customer.PasswordHash, dto.Password);
 
             if (result == PasswordVerificationResult.Failed)
-                return Results.BadRequest(new { error = "Correo o contraseÒa incorrectos." });
+                return Results.BadRequest(new { error = "Correo o contrase√±a incorrectos." });
 
-            // 3. Retornamos Èxito con los datos del cliente
+            // 3. Generamos un JWT real para que funcione con /CreateOrder (RequireAuthorization)
+            var secKey = configuration["JwtOptions:SecurityKey"];
+            var issuer = configuration["JwtOptions:ValidIssuer"];
+            var audience = configuration["JwtOptions:ValidAudience"];
+            var expireMinutesStr = configuration["JwtOptions:ExpireInMinutes"] ?? "1440";
+            if (!int.TryParse(expireMinutesStr, out var expireMinutes)) expireMinutes = 1440;
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secKey!));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, customer.Id),
+                new Claim(ClaimTypes.Name, customer.Email),
+                new Claim("FullName", $"{customer.FirstName} {customer.LastName}"),
+                new Claim(ClaimTypes.Role, "Cliente")
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(expireMinutes),
+                signingCredentials: creds);
+
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+            // 4. Retornamos √©xito con el JWT real y datos del cliente
             return Results.Ok(new
             {
-                token = "CUSTOMER_TOKEN_" + customer.Id, // Token temporal/simulado para tu mÛvil
+                token = tokenString,
                 customerId = customer.Id,
                 firstName = customer.FirstName,
                 lastName = customer.LastName,
@@ -125,9 +156,9 @@ public static class CustomersController
     // Quick check endpoints implementations
     static async Task<IResult> CheckCedula(string cedula, INorthWindSalesQueriesDataContext queries)
     {
-        if (string.IsNullOrWhiteSpace(cedula)) return Results.BadRequest(new { exists = false, message = "CÈdula requerida" });
+        if (string.IsNullOrWhiteSpace(cedula)) return Results.BadRequest(new { exists = false, message = "C√©dula requerida" });
         var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == cedula));
-        if (exists != null) return Results.Conflict(new { exists = true, message = "La cÈdula ya se encuentra registrada" });
+        if (exists != null) return Results.Conflict(new { exists = true, message = "La c√©dula ya se encuentra registrada" });
         return Results.Ok(new { exists = false, message = "Disponible" });
     }
 
@@ -136,22 +167,22 @@ public static class CustomersController
         if (string.IsNullOrWhiteSpace(email)) return Results.BadRequest(new { exists = false, message = "Email requerido" });
         // check in customers
         var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == email));
-        if (exists != null) return Results.Conflict(new { exists = true, message = "El correo ya est· en uso" });
+        if (exists != null) return Results.Conflict(new { exists = true, message = "El correo ya est√° en uso" });
         // check in Identity users
         var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
         if (userManager != null)
         {
             var user = await userManager.FindByEmailAsync(email);
-            if (user != null) return Results.Conflict(new { exists = true, message = "El correo ya est· en uso" });
+            if (user != null) return Results.Conflict(new { exists = true, message = "El correo ya est√° en uso" });
         }
         return Results.Ok(new { exists = false, message = "Disponible" });
     }
 
     static async Task<IResult> CheckPhone(string phone, INorthWindSalesQueriesDataContext queries)
     {
-        if (string.IsNullOrWhiteSpace(phone)) return Results.BadRequest(new { exists = false, message = "TelÈfono requerido" });
+        if (string.IsNullOrWhiteSpace(phone)) return Results.BadRequest(new { exists = false, message = "Tel√©fono requerido" });
         var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == phone));
-        if (exists != null) return Results.Conflict(new { exists = true, message = "El telÈfono ya est· registrado" });
+        if (exists != null) return Results.Conflict(new { exists = true, message = "El tel√©fono ya est√° registrado" });
         return Results.Ok(new { exists = false, message = "Disponible" });
     }
 
@@ -207,19 +238,19 @@ public static class CustomersController
 
             // Validate cedula uniqueness
             var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula));
-            if (cedulaExists != null) return Results.BadRequest(new { error = "La cÈdula ya est· siendo usada por otro cliente." });
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La c√©dula ya est√° siendo usada por otro cliente." });
 
             // Validate email unique across customers and users
             var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
-            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· siendo usado por otro cliente." });
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° siendo usado por otro cliente." });
 
             var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
             if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
             var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
-            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· siendo usado por un usuario del sistema." });
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° siendo usado por un usuario del sistema." });
 
             var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone));
-            if (phoneExists != null) return Results.BadRequest(new { error = "El n˙mero de telÈfono ya est· siendo usado por otro cliente." });
+            if (phoneExists != null) return Results.BadRequest(new { error = "El n√∫mero de tel√©fono ya est√° siendo usado por otro cliente." });
 
             // Generate unique ID
             var newId = await GenerateUniqueCustomerId(queries);
@@ -259,18 +290,18 @@ public static class CustomersController
             if (dto.Cedula.Length != 10) return Results.BadRequest(new { error = "Cedula must be 10 characters long." });
 
             var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
-            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· siendo usado por otro cliente." });
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° siendo usado por otro cliente." });
 
             var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
             if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
             var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
-            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· siendo usado por un usuario del sistema." });
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° siendo usado por un usuario del sistema." });
 
             var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone));
-            if (phoneExists != null) return Results.BadRequest(new { error = "El n˙mero de telÈfono ya est· siendo usado por otro cliente." });
+            if (phoneExists != null) return Results.BadRequest(new { error = "El n√∫mero de tel√©fono ya est√° siendo usado por otro cliente." });
 
             var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula));
-            if (cedulaExists != null) return Results.BadRequest(new { error = "La cÈdula ya est· siendo usada por otro cliente." });
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La c√©dula ya est√° siendo usada por otro cliente." });
 
             var newId = await GenerateUniqueCustomerId(queries);
 
@@ -348,21 +379,21 @@ public static class CustomersController
 
             if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
 
-            // ValidaciÛn cruzada al actualizar
+            // Validaci√≥n cruzada al actualizar
             var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email && c.Id != id));
-            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· registrado por otra persona en el sistema." });
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° registrado por otra persona en el sistema." });
 
             var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
             if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
             var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
-            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrÛnico ya est· registrado por otra persona en el sistema." });
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electr√≥nico ya est√° registrado por otra persona en el sistema." });
 
             var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone && c.Id != id));
-            if (phoneExists != null) return Results.BadRequest(new { error = "El n˙mero de telÈfono ya est· siendo usado por otra persona del sistema." });
+            if (phoneExists != null) return Results.BadRequest(new { error = "El n√∫mero de tel√©fono ya est√° siendo usado por otra persona del sistema." });
 
             // Cedula uniqueness on update (exclude current)
             var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula && c.Id != id));
-            if (cedulaExists != null) return Results.BadRequest(new { error = "La cÈdula ya est· siendo usada por otra persona del sistema." });
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La c√©dula ya est√° siendo usada por otra persona del sistema." });
 
             if (!string.IsNullOrEmpty(dto.Password) || !string.IsNullOrEmpty(dto.PasswordConfirm))
             {
@@ -398,7 +429,7 @@ public static class CustomersController
         {
             if (await admin.HasOrdersAsync(id))
             {
-                return Results.BadRequest(new { error = $"No se puede eliminar el cliente '{id}' porque tiene Ûrdenes asociadas. Elimine primero todas las Ûrdenes relacionadas." });
+                return Results.BadRequest(new { error = $"No se puede eliminar el cliente '{id}' porque tiene √≥rdenes asociadas. Elimine primero todas las √≥rdenes relacionadas." });
             }
 
             await admin.DeleteCustomerAsync(id);

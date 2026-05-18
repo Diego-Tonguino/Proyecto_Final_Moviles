@@ -65,3 +65,15 @@ C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.pdb
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Entities\obj\Debug\net8.0\ref\NorthWind.Entities.dll
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\bin\Debug\net8.0\NorthWind.Entities.deps.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\refint\NorthWind.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Entities\obj\Debug\net8.0\ref\NorthWind.Entities.dll

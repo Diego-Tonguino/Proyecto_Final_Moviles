@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +15,22 @@ public static class OrdersController
         // enforce numeric id and improve binding reliability
         app.MapGet("/api/orders/{id:int}", GetOrderById);
         app.MapGet("/api/orders/{id:int}/details", GetOrderDetails);
+        app.MapGet("/api/orders/customer/{customerId}", GetOrdersByCustomer);
         return app;
+    }
+
+    static async Task<IResult> GetOrdersByCustomer(string customerId, INorthWindSalesQueriesDataContext queries)
+    {
+        try
+        {
+            var list = await queries.GetAllOrdersAsync();
+            var customerOrders = list.Where(o => o.CustomerId == customerId).ToList();
+            return Results.Ok(customerOrders);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.ToString(), statusCode: 500);
+        }
     }
 
     static async Task<IResult> GetAllOrders(INorthWindSalesQueriesDataContext queries)

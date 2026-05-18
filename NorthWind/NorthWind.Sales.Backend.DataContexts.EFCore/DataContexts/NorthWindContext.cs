@@ -16,7 +16,7 @@ internal class NorthWindContext : DbContext
         //  Establece la cadena de conexión a una base de datos llamada NorthWindB.
         //optionsBuilder.UseSqlServer("Server=(localdb)\\SQLEXPRESS;Database=NorthWindDB");
         optionsBuilder.UseSqlServer(
-        "Server=AlexAnder;Database=NorthWindDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        "Server=Teo\\MSSQLSERVER01;Database=NorthWindDB;Trusted_Connection=True;TrustServerCertificate=True;");
 
   }
 

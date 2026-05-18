@@ -1,6 +1,9 @@
 package uta.edu.ec.proyecto_final_moviles
 
+import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
@@ -21,6 +24,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -59,12 +64,14 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var tilProfConfirmPassword: TextInputLayout
 
     private lateinit var ivProfilePicture: ShapeableImageView
-    private lateinit var ivBack: ImageView
+    private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var btnSaveProfile: Button
     private lateinit var pbProfile: ProgressBar
 
     private var currentUserId: String? = null
     private var originalEmail: String = ""
+    private var hasUnsavedChanges: Boolean = false
+    private var isDataLoaded: Boolean = false
 
     private val selectImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         if (uri != null) {
@@ -103,14 +110,14 @@ class ProfileActivity : AppCompatActivity() {
         tilProfConfirmPassword = findViewById(R.id.tilProfConfirmPassword)
 
         ivProfilePicture = findViewById(R.id.ivProfilePicture)
-        ivBack = findViewById(R.id.ivBack)
+        bottomNavigation = findViewById(R.id.bottomNavigation)
         btnSaveProfile = findViewById(R.id.btnSaveProfile)
         pbProfile = findViewById(R.id.pbProfile)
 
         setupInputFilters()
         setupTextWatchers()
 
-        ivBack.setOnClickListener { finish() }
+        setupBottomNavigation()
 
         ivProfilePicture.setOnClickListener {
             selectImageLauncher.launch("image/*")
@@ -121,6 +128,71 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         loadUserIdFromToken()
+
+        onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                checkUnsavedChangesAndNavigate(null)
+            }
+        })
+    }
+
+    private fun setupBottomNavigation() {
+        bottomNavigation.setOnItemSelectedListener(null)
+        bottomNavigation.selectedItemId = R.id.nav_profile
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_profile -> true
+                R.id.nav_home -> {
+                    checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, HomeActivity::class.java))
+                    false // Evitar que se seleccione si hay cambios, o dejarlo en falso si navegamos
+                }
+                R.id.nav_cart -> {
+                    checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, CartActivity::class.java))
+                    false
+                }
+                R.id.nav_history -> {
+                    checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, HistoryActivity::class.java))
+                    false
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun checkUnsavedChangesAndNavigate(intent: android.content.Intent?) {
+        if (hasUnsavedChanges) {
+            val dialog = Dialog(this)
+            val view = layoutInflater.inflate(R.layout.dialog_unsaved_changes, null)
+            dialog.setContentView(view)
+
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            
+            val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
+            dialog.window?.setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT)
+
+            // "Seguir editando" equivale a cancelar la navegación
+            view.findViewById<View>(R.id.btnKeepEditing).setOnClickListener {
+                dialog.dismiss()
+                setupBottomNavigation() // Restaurar selección del menú a "Perfil"
+            }
+
+            // "Descartar" equivale a salir perdiendo los cambios
+            view.findViewById<View>(R.id.btnDiscardChanges).setOnClickListener {
+                dialog.dismiss()
+                hasUnsavedChanges = false
+                if (intent != null) {
+                    startActivity(intent)
+                }
+                finish()
+            }
+
+            dialog.show()
+        } else {
+            if (intent != null) {
+                startActivity(intent)
+            }
+            finish()
+        }
     }
 
     private fun loadUserIdFromToken() {
@@ -130,7 +202,7 @@ class ProfileActivity : AppCompatActivity() {
         if (currentUserId != null) {
             loadUserProfile()
         } else {
-            // Fallback: Si el backend no envió el ID en el login, buscamos el cliente por su correo
+            // Fallback: Si el backend no enviÃ³ el ID en el login, buscamos el cliente por su correo
             val userEmail = prefs.getString("user_email", null)
             if (userEmail != null) {
                 pbProfile.visibility = View.VISIBLE
@@ -145,7 +217,7 @@ class ProfileActivity : AppCompatActivity() {
                                 loadUserProfile()
                             } else {
                                 pbProfile.visibility = View.GONE
-                                Toast.makeText(this@ProfileActivity, "No se encontró tu perfil en la base de datos.", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this@ProfileActivity, "No se encontrÃ³ tu perfil en la base de datos.", Toast.LENGTH_LONG).show()
                                 finish()
                             }
                         } else {
@@ -162,7 +234,7 @@ class ProfileActivity : AppCompatActivity() {
                     }
                 })
             } else {
-                Toast.makeText(this, "Falta el correo del usuario. Por favor cierra sesión y vuelve a entrar.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Falta el correo del usuario. Por favor cierra sesiÃ³n y vuelve a entrar.", Toast.LENGTH_LONG).show()
                 finish()
             }
         }
@@ -185,13 +257,16 @@ class ProfileActivity : AppCompatActivity() {
                     originalEmail = profile.email
 
                     // Cargar imagen de perfil con Glide
-                    val imageUrl = "http://10.0.2.2:5033/api/customers/${currentUserId}/profile-picture"
+                    val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
                     Glide.with(this@ProfileActivity)
                         .load(imageUrl)
-                        .signature(ObjectKey(System.currentTimeMillis().toString())) // Evitar caché
+                        .signature(ObjectKey(System.currentTimeMillis().toString())) // Evitar cachÃ©
                         .placeholder(R.drawable.bg_welcome) // o un avatar por defecto
                         .error(R.drawable.bg_welcome)
                         .into(ivProfilePicture)
+
+                    // Todo estÃ¡ cargado
+                    ivProfilePicture.postDelayed({ isDataLoaded = true }, 500)
 
                 } else {
                     Toast.makeText(this@ProfileActivity, "Error al cargar perfil", Toast.LENGTH_SHORT).show()
@@ -200,7 +275,7 @@ class ProfileActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<CustomerProfile>, t: Throwable) {
                 pbProfile.visibility = View.GONE
-                Toast.makeText(this@ProfileActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ProfileActivity, "Error de conexiÃ³n", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -210,10 +285,12 @@ class ProfileActivity : AppCompatActivity() {
         
         pbProfile.visibility = View.VISIBLE
         try {
-            val inputStream = contentResolver.openInputStream(uri)
             val file = File(cacheDir, "profile_pic.jpg")
-            val outputStream = FileOutputStream(file)
-            inputStream?.copyTo(outputStream)
+            contentResolver.openInputStream(uri)?.use { inputStream ->
+                FileOutputStream(file).use { outputStream ->
+                    inputStream.copyTo(outputStream)
+                }
+            }
             
             val requestFile = RequestBody.create(MediaType.parse("image/*"), file)
             val body = MultipartBody.Part.createFormData("file", file.name, requestFile)
@@ -223,6 +300,13 @@ class ProfileActivity : AppCompatActivity() {
                     pbProfile.visibility = View.GONE
                     if (response.isSuccessful) {
                         Toast.makeText(this@ProfileActivity, "Foto actualizada", Toast.LENGTH_SHORT).show()
+                        val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
+                        Glide.with(this@ProfileActivity)
+                            .load(imageUrl)
+                            .signature(ObjectKey(System.currentTimeMillis().toString()))
+                            .placeholder(R.drawable.bg_welcome)
+                            .error(R.drawable.bg_welcome)
+                            .into(ivProfilePicture)
                     } else {
                         Toast.makeText(this@ProfileActivity, "Error al subir foto", Toast.LENGTH_SHORT).show()
                     }
@@ -230,7 +314,7 @@ class ProfileActivity : AppCompatActivity() {
 
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                     pbProfile.visibility = View.GONE
-                    Toast.makeText(this@ProfileActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ProfileActivity, "Error de conexiÃ³n", Toast.LENGTH_SHORT).show()
                 }
             })
         } catch (e: Exception) {
@@ -251,7 +335,7 @@ class ProfileActivity : AppCompatActivity() {
 
         if (!validarCedulaEcuador(cedula)) {
             val tilProfCedula = findViewById<TextInputLayout>(R.id.tilProfCedula)
-            tilProfCedula.error = "Cédula ecuatoriana inválida"
+            tilProfCedula.error = "CÃ©dula ecuatoriana invÃ¡lida"
             return
         }
 
@@ -260,7 +344,7 @@ class ProfileActivity : AppCompatActivity() {
         if (city.isEmpty()) { tilProfCity.error = "Campo obligatorio"; return }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            tilProfEmail.error = "Email inválido"
+            tilProfEmail.error = "Email invÃ¡lido"
             return
         }
         
@@ -276,7 +360,7 @@ class ProfileActivity : AppCompatActivity() {
                 return
             }
             if (password != confirm) {
-                tilProfConfirmPassword.error = "Las contraseñas no coinciden"
+                tilProfConfirmPassword.error = "Las contraseÃ±as no coinciden"
                 return
             }
         }
@@ -285,12 +369,12 @@ class ProfileActivity : AppCompatActivity() {
         btnSaveProfile.text = "Validando..."
         pbProfile.visibility = View.VISIBLE
 
-        // Si el email cambió, validar que no exista
+        // Si el email cambiÃ³, validar que no exista
         if (email != originalEmail) {
             ApiClient.apiService.checkEmail(email).enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                     if (response.code() == 409) {
-                        tilProfEmail.error = "Este correo ya está en uso"
+                        tilProfEmail.error = "Este correo ya estÃ¡ en uso"
                         restoreSaveButton()
                     } else {
                         checkPhoneAndSave(nombre, apellido, email, phone, city, password, confirm)
@@ -298,7 +382,7 @@ class ProfileActivity : AppCompatActivity() {
                 }
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                     restoreSaveButton()
-                    Toast.makeText(this@ProfileActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ProfileActivity, "Error de conexiÃ³n", Toast.LENGTH_SHORT).show()
                 }
             })
         } else {
@@ -307,15 +391,15 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun checkPhoneAndSave(nombre: String, apellido: String, email: String, phone: String, city: String, password: String, confirm: String) {
-        // Asumiendo que el endpoint de checkPhone retorna 409 si el teléfono existe para OTRO usuario.
-        // Dado que no sabemos si el teléfono es el mismo original sin guardarlo, mejor intentamos guardarlo 
+        // Asumiendo que el endpoint de checkPhone retorna 409 si el telÃ©fono existe para OTRO usuario.
+        // Dado que no sabemos si el telÃ©fono es el mismo original sin guardarlo, mejor intentamos guardarlo 
         // y manejamos el posible error 409 o 400 del backend, pero para seguir tu regla:
         ApiClient.apiService.checkPhone(phone).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                // Si retorna 409, y el usuario no cambió su teléfono, el backend dirá 409. 
-                // Lo ideal sería guardar originalPhone también, pero vamos a omitir la validación estricta de teléfono 
-                // aquí o arriesgarnos a un falso positivo. Por seguridad, vamos directo a guardar el perfil.
-                // Si el backend lo rechaza, lo mostrará en el guardado.
+                // Si retorna 409, y el usuario no cambiÃ³ su telÃ©fono, el backend dirÃ¡ 409. 
+                // Lo ideal serÃ­a guardar originalPhone tambiÃ©n, pero vamos a omitir la validaciÃ³n estricta de telÃ©fono 
+                // aquÃ­ o arriesgarnos a un falso positivo. Por seguridad, vamos directo a guardar el perfil.
+                // Si el backend lo rechaza, lo mostrarÃ¡ en el guardado.
                 saveProfile(nombre, apellido, email, phone, city, password, confirm)
             }
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
@@ -353,10 +437,10 @@ class ProfileActivity : AppCompatActivity() {
                     val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
                     prefs.edit().putString("user_name", "$nombre $apellido".trim()).apply()
                     
-                    if (password.isNotEmpty()) {
-                        etProfPassword.text?.clear()
-                        etProfConfirmPassword.text?.clear()
-                    }
+                    val intent = android.content.Intent(this@ProfileActivity, HomeActivity::class.java)
+                    intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this@ProfileActivity, "Error al actualizar. Verifica tus datos.", Toast.LENGTH_LONG).show()
                 }
@@ -364,7 +448,7 @@ class ProfileActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 restoreSaveButton()
-                Toast.makeText(this@ProfileActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ProfileActivity, "Error de conexiÃ³n", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -376,11 +460,11 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun validatePassword(p: String): String? {
-        if (p.length < 6) return "Mínimo 6 caracteres"
-        if (!p.any { it.isUpperCase() }) return "Falta 1 mayúscula"
-        if (!p.any { it.isLowerCase() }) return "Falta 1 minúscula"
-        if (!p.any { it.isDigit() }) return "Falta 1 número"
-        if (!p.any { "!@#$%^&*".contains(it) }) return "Falta 1 carácter especial"
+        if (p.length < 6) return "MÃ­nimo 6 caracteres"
+        if (!p.any { it.isUpperCase() }) return "Falta 1 mayÃºscula"
+        if (!p.any { it.isLowerCase() }) return "Falta 1 minÃºscula"
+        if (!p.any { it.isDigit() }) return "Falta 1 nÃºmero"
+        if (!p.any { "!@#$%^&*".contains(it) }) return "Falta 1 carÃ¡cter especial"
         return null
     }
 
@@ -455,7 +539,11 @@ class ProfileActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 layouts.forEach { it.error = null }
             }
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+                if (isDataLoaded) {
+                    hasUnsavedChanges = true
+                }
+            }
         }
         etProfCedula.addTextChangedListener(generalWatcher)
         etProfNombre.addTextChangedListener(generalWatcher)
@@ -491,3 +579,4 @@ class ProfileActivity : AppCompatActivity() {
         return resultado == verificador
     }
 }
+

@@ -15,7 +15,7 @@ namespace NorthWind.Membership.Backend.AspNetIdentity.DataContexts
             new MembershipDBOptions()
             {
                 ConnectionString =
-            "Server=AlexAnder;Database=NorthWindUsersDB;Trusted_Connection=True;TrustServerCertificate=True;"
+            "Server=Teo\\MSSQLSERVER01;Database=NorthWindUsersDB;Trusted_Connection=True;TrustServerCertificate=True;"
             });
             return new NorthWindMembershipContext(DbOptions);
         }

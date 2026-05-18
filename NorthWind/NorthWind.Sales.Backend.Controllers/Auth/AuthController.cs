@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using NorthWind.Sales.Backend.Controllers;
@@ -87,7 +87,7 @@ public static class AuthController
                 signingCredentials: creds);
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
-            return Results.Ok(new { token = tokenString, roles = roles });
+            return Results.Ok(new { token = tokenString, roles = roles, id = user.Id, firstName = user.FirstName, lastName = user.LastName });
         }
         catch (Exception ex)
         {

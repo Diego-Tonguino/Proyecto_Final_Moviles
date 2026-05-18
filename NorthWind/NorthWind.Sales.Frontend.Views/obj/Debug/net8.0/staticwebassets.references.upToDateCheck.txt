@@ -156,3 +156,8 @@ C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\ob
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.RazorComponents\obj\Debug\net8.0\staticwebassets.build.json

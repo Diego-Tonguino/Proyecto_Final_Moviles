@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Http.Json;
 using System.Text.Json;
@@ -100,18 +100,24 @@ internal static class Startup
         })
         .AddJwtBearer(options =>
         {
-            // Establecer la configuración del Token.
-            builder.Configuration.GetSection(JwtOptions.SectionKey)
-            .Bind(options.TokenValidationParameters);
+            // Extraer explícitamente los valores de configuración
+            string SecurityKey = builder.Configuration.GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.SecurityKey)];
+            string ValidIssuer = builder.Configuration.GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.ValidIssuer)];
+            string ValidAudience = builder.Configuration.GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.ValidAudience)];
 
-            // Establecer la llave para validación de la firma
-            string SecurityKey = builder.Configuration
-            .GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.SecurityKey)];
+            byte[] SecurityKeyBytes = Encoding.UTF8.GetBytes(SecurityKey ?? "");
 
-            byte[] SecurityKeyBytes = Encoding.UTF8.GetBytes(SecurityKey);
-
-            options.TokenValidationParameters.IssuerSigningKey =
-            new SymmetricSecurityKey(SecurityKeyBytes);
+            // Configurar los TokenValidationParameters explícitamente
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = ValidIssuer,
+                ValidAudience = ValidAudience,
+                IssuerSigningKey = new SymmetricSecurityKey(SecurityKeyBytes)
+            };
         });
 
         builder.Services.AddAuthorization();

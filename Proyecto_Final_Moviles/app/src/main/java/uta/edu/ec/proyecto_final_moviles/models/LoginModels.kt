@@ -12,7 +12,7 @@ data class LoginRequest(
 data class LoginResponse(
     @SerializedName("token")
     val token: String,
-    @SerializedName("id", alternate = ["Id"])
+    @SerializedName("id", alternate = ["Id", "customerId"])
     val id: String?,
     @SerializedName("firstName", alternate = ["FirstName"])
     val firstName: String?,
@@ -27,6 +27,9 @@ data class RegisterCustomerRequest(
     val email: String,
     val phone: String,
     val city: String,
+    val country: String,
+    val postalCode: String,
+    val address: String,
     val password: String,
     val passwordConfirm: String
 )
@@ -39,6 +42,9 @@ data class CustomerProfile(
     val email: String,
     val phone: String?,
     val city: String?,
+    val country: String?,
+    val postalCode: String?,
+    val address: String?,
     val currentBalance: Double
 )
 

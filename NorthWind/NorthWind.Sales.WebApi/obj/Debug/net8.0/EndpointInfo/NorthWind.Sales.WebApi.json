@@ -504,6 +504,28 @@
         }
       }
     },
+    "/api/orders/customer/{customerId}": {
+      "get": {
+        "tags": [
+          "OrdersController"
+        ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/products": {
       "get": {
         "tags": [

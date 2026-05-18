@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj",
         "projectName": "NorthWind.Membership.Backend.AspNetIdentity",
-        "projectPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\NorthWind.Membership.Backend.AspNetIdentity.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Backend.AspNetIdentity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,16 +25,16 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Lenovo\\Downloads\\Proyecto NorthWind\\Proyecto NorthWind\\NorthWind.Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj": {
-                "projectPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj"
+              "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj": {
+                "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj"
               }
             }
           }
@@ -90,24 +90,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj",
         "projectName": "NorthWind.Membership.Entities",
-        "projectPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind.Membership\\NorthWind.Membership.Entities\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\NorthWind.Membership.Entities.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind.Membership\\NorthWind.Membership.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,8 +115,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\NorthWind.Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Lenovo\\Downloads\\Proyecto NorthWind\\Proyecto NorthWind\\NorthWind.Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -166,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

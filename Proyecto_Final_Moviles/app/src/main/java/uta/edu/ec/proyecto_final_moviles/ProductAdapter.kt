@@ -15,8 +15,7 @@ import uta.edu.ec.proyecto_final_moviles.models.Product
 
 class ProductAdapter(
     private var products: List<Product>,
-    private val onProductClick: (Product) -> Unit,
-    private val onFavoriteClick: (Product, ImageView) -> Unit
+    private val onProductClick: (Product) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     private var productsFull: List<Product> = ArrayList(products)
@@ -25,7 +24,6 @@ class ProductAdapter(
         val ivProductImage: ImageView = view.findViewById(R.id.ivProductImage)
         val tvProductName: TextView = view.findViewById(R.id.tvProductName)
         val tvProductPrice: TextView = view.findViewById(R.id.tvProductPrice)
-        val ivFavorite: ImageView = view.findViewById(R.id.ivFavorite)
         val cardProduct: View = view.findViewById(R.id.cardProduct)
     }
 
@@ -89,17 +87,7 @@ class ProductAdapter(
         }
         // ==========================================
 
-        // Favorito state
-        if (product.isFavorite) {
-            holder.ivFavorite.setImageResource(android.R.drawable.btn_star_big_on)
-            holder.ivFavorite.setColorFilter(holder.itemView.context.getColor(android.R.color.holo_orange_light))
-        } else {
-            holder.ivFavorite.setImageResource(android.R.drawable.btn_star_big_off)
-            holder.ivFavorite.setColorFilter(holder.itemView.context.getColor(android.R.color.white))
-        }
-
         holder.cardProduct.setOnClickListener { onProductClick(product) }
-        holder.ivFavorite.setOnClickListener { onFavoriteClick(product, holder.ivFavorite) }
     }
 
     override fun getItemCount() = products.size

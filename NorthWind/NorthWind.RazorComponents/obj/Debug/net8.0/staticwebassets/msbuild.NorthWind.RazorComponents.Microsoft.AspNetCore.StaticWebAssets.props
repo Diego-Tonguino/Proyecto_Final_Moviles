@@ -17,7 +17,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2479</FileLength>
-      <LastWriteTime>Sat, 07 Feb 2026 08:36:05 GMT</LastWriteTime>
+      <LastWriteTime>Sat, 16 May 2026 22:40:59 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\NorthWind.RazorComponents.9x886uo20w.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>

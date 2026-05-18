@@ -89,3 +89,19 @@ C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.deps.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWin.B98BC945.Up2Date
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\refint\NorthWind.UserServices.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\NorthWind.UserServices.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.UserServices\obj\Debug\net8.0\ref\NorthWind.UserServices.dll

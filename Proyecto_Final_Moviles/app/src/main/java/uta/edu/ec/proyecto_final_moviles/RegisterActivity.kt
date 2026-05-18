@@ -1,6 +1,7 @@
 package uta.edu.ec.proyecto_final_moviles
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.InputFilter
@@ -32,6 +33,9 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var etRegEmail: TextInputEditText
     private lateinit var etRegPhone: TextInputEditText
     private lateinit var etRegCity: TextInputEditText
+    private lateinit var etRegCountry: TextInputEditText
+    private lateinit var etRegPostalCode: TextInputEditText
+    private lateinit var etRegAddress: TextInputEditText
     private lateinit var etRegPassword: TextInputEditText
     private lateinit var etRegConfirmPassword: TextInputEditText
 
@@ -41,6 +45,9 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var tilRegEmail: TextInputLayout
     private lateinit var tilRegPhone: TextInputLayout
     private lateinit var tilRegCity: TextInputLayout
+    private lateinit var tilRegCountry: TextInputLayout
+    private lateinit var tilRegPostalCode: TextInputLayout
+    private lateinit var tilRegAddress: TextInputLayout
     private lateinit var tilRegPassword: TextInputLayout
     private lateinit var tilRegConfirmPassword: TextInputLayout
 
@@ -70,6 +77,9 @@ class RegisterActivity : AppCompatActivity() {
         etRegEmail = findViewById(R.id.etRegEmail)
         etRegPhone = findViewById(R.id.etRegPhone)
         etRegCity = findViewById(R.id.etRegCity)
+        etRegCountry = findViewById(R.id.etRegCountry)
+        etRegPostalCode = findViewById(R.id.etRegPostalCode)
+        etRegAddress = findViewById(R.id.etRegAddress)
         etRegPassword = findViewById(R.id.etRegPassword)
         etRegConfirmPassword = findViewById(R.id.etRegConfirmPassword)
 
@@ -79,6 +89,9 @@ class RegisterActivity : AppCompatActivity() {
         tilRegEmail = findViewById(R.id.tilRegEmail)
         tilRegPhone = findViewById(R.id.tilRegPhone)
         tilRegCity = findViewById(R.id.tilRegCity)
+        tilRegCountry = findViewById(R.id.tilRegCountry)
+        tilRegPostalCode = findViewById(R.id.tilRegPostalCode)
+        tilRegAddress = findViewById(R.id.tilRegAddress)
         tilRegPassword = findViewById(R.id.tilRegPassword)
         tilRegConfirmPassword = findViewById(R.id.tilRegConfirmPassword)
 
@@ -163,6 +176,9 @@ class RegisterActivity : AppCompatActivity() {
         etRegNombre.filters = arrayOf(strictFilter, lettersOnlyNoSpace, InputFilter.LengthFilter(15))
         etRegApellido.filters = arrayOf(strictFilter, lettersOnlyNoSpace, InputFilter.LengthFilter(15))
         etRegCity.filters = arrayOf(strictFilter, cityFilter, InputFilter.LengthFilter(20))
+        etRegCountry.filters = arrayOf(strictFilter, cityFilter, InputFilter.LengthFilter(20))
+        etRegPostalCode.filters = arrayOf(strictFilter, noSpace, digitsOnly, InputFilter.LengthFilter(5))
+        etRegAddress.filters = arrayOf(strictFilter, InputFilter.LengthFilter(30))
         etRegEmail.filters = arrayOf(strictFilter, noSpace, InputFilter.LengthFilter(35))
         etRegPassword.filters = arrayOf(strictFilter, noSpace, InputFilter.LengthFilter(16))
         etRegConfirmPassword.filters = arrayOf(strictFilter, noSpace, InputFilter.LengthFilter(16))
@@ -210,9 +226,13 @@ class RegisterActivity : AppCompatActivity() {
         etRegNombre.addTextChangedListener(capitalizationWatcher)
         etRegApellido.addTextChangedListener(capitalizationWatcher)
         etRegCity.addTextChangedListener(capitalizationWatcher)
+        etRegCountry.addTextChangedListener(capitalizationWatcher)
 
-        val inputs = listOf(etRegCedula, etRegNombre, etRegApellido, etRegEmail, etRegPhone, etRegCity, etRegPassword, etRegConfirmPassword)
-        val layouts = listOf(tilRegCedula, tilRegNombre, tilRegApellido, tilRegEmail, tilRegPhone, tilRegCity, tilRegPassword, tilRegConfirmPassword)
+        // Valor por defecto para País
+        etRegCountry.setText("Ecuador")
+
+        val inputs = listOf(etRegCedula, etRegNombre, etRegApellido, etRegEmail, etRegPhone, etRegCity, etRegCountry, etRegPostalCode, etRegAddress, etRegPassword, etRegConfirmPassword)
+        val layouts = listOf(tilRegCedula, tilRegNombre, tilRegApellido, tilRegEmail, tilRegPhone, tilRegCity, tilRegCountry, tilRegPostalCode, tilRegAddress, tilRegPassword, tilRegConfirmPassword)
         
         val generalWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -322,6 +342,9 @@ class RegisterActivity : AppCompatActivity() {
                 val email = etRegEmail.text.toString().trim()
                 val phone = etRegPhone.text.toString().trim()
                 val city = etRegCity.text.toString().trim()
+                val country = etRegCountry.text.toString().trim()
+                val postalCode = etRegPostalCode.text.toString().trim()
+                val address = etRegAddress.text.toString().trim()
 
                 if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     tilRegEmail.error = "Email inválido"
@@ -332,6 +355,9 @@ class RegisterActivity : AppCompatActivity() {
                     return
                 }
                 if (city.isEmpty()) { tilRegCity.error = "Campo obligatorio"; return }
+                if (country.isEmpty()) { tilRegCountry.error = "Campo obligatorio"; return }
+                if (postalCode.isEmpty()) { tilRegPostalCode.error = "Campo obligatorio"; return }
+                if (address.isEmpty()) { tilRegAddress.error = "Campo obligatorio"; return }
 
                 btnNext.isEnabled = false
                 btnNext.text = "Verificando..."
@@ -437,6 +463,9 @@ class RegisterActivity : AppCompatActivity() {
             email = etRegEmail.text.toString().trim(),
             phone = etRegPhone.text.toString().trim(),
             city = etRegCity.text.toString().trim(),
+            country = etRegCountry.text.toString().trim(),
+            postalCode = etRegPostalCode.text.toString().trim(),
+            address = etRegAddress.text.toString().trim(),
             password = pass,
             passwordConfirm = conf
         )
@@ -446,6 +475,15 @@ class RegisterActivity : AppCompatActivity() {
                 btnRegister.isEnabled = true
                 btnRegister.text = "Crear Cuenta"
                 if (response.isSuccessful) {
+                    // Guardar datos de envío localmente para usarlos en la orden
+                    val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
+                    prefs.edit().apply {
+                        putString("user_city", request.city)
+                        putString("user_country", request.country)
+                        putString("user_postal_code", request.postalCode)
+                        putString("user_address", request.address)
+                        putBoolean("just_registered", true)
+                    }.apply()
                     Toast.makeText(this@RegisterActivity, "¡Cuenta creada exitosamente!", Toast.LENGTH_LONG).show()
                     finish()
                 } else {

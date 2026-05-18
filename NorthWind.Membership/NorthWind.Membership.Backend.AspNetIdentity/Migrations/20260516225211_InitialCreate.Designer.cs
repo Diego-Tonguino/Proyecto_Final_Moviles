@@ -12,7 +12,7 @@ using NorthWind.Membership.Backend.AspNetIdentity.DataContexts;
 namespace NorthWind.Membership.Backend.AspNetIdentity.Migrations
 {
     [DbContext(typeof(NorthWindMembershipContext))]
-    [Migration("20260515040424_InitialCreate")]
+    [Migration("20260516225211_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

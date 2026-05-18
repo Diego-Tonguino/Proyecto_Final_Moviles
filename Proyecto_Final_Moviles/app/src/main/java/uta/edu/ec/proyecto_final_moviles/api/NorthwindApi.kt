@@ -44,4 +44,10 @@ interface NorthwindApi {
     @retrofit2.http.Multipart
     @POST("api/customers/{id}/photo")
     fun uploadProfilePicture(@Path("id") id: String, @retrofit2.http.Part file: okhttp3.MultipartBody.Part): Call<ResponseBody>
+
+    @POST("CreateOrder")
+    fun createOrder(@Body request: uta.edu.ec.proyecto_final_moviles.models.CreateOrderRequest): Call<okhttp3.ResponseBody>
+
+    @GET("api/orders/customer/{customerId}")
+    fun getOrdersByCustomer(@Path("customerId") customerId: String): Call<List<uta.edu.ec.proyecto_final_moviles.models.OrderHistoryResponse>>
 }

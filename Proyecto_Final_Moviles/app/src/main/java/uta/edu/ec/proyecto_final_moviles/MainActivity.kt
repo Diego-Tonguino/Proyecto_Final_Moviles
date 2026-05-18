@@ -34,11 +34,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         
         val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
-        val token = prefs.getString("northwind_token", null)
-        if (token != null) {
-            irAHome()
-            return
-        }
+        // Auto-login ha sido removido a petición del usuario.
+        // Siempre se pedirá inicio de sesión al abrir la aplicación.
 
         setContentView(R.layout.activity_main)
 
@@ -132,17 +129,65 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     val loginResponse = response.body()!!
                     val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
-                    prefs.edit().apply {
-                        putString("northwind_token", loginResponse.token)
-                        putString("user_email", email) // Guardamos el email usado para iniciar sesión
-                        if (loginResponse.id != null) {
-                            putString("user_id", loginResponse.id)
-                        }
-                        putString("user_name", "${loginResponse.firstName ?: ""} ${loginResponse.lastName ?: ""}".trim())
-                    }.apply()
+                    val editor = prefs.edit()
+                    editor.putString("northwind_token", loginResponse.token)
+                    editor.putString("user_email", email) // Guardamos el email usado para iniciar sesión
+                    if (loginResponse.id != null) {
+                        editor.putString("user_id", loginResponse.id)
+                    }
+                    editor.putString("user_name", "${loginResponse.firstName ?: ""} ${loginResponse.lastName ?: ""}".trim())
+                    
+                    if (!prefs.getBoolean("just_registered", false)) {
+                        editor.remove("user_address")
+                        editor.remove("user_postal_code")
+                    }
+                    editor.remove("just_registered")
+                    editor.apply()
 
-                    Toast.makeText(this@MainActivity, "¡Bienvenido!", Toast.LENGTH_SHORT).show()
-                    irAHome()
+                    ApiClient.authToken = loginResponse.token
+
+                    // Obtener perfil completo del cliente para guardar datos de envío
+                    val customerId = loginResponse.id
+                    if (customerId != null) {
+                        ApiClient.apiService.getCustomer(customerId).enqueue(object : Callback<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile> {
+                            override fun onResponse(call: Call<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>, response: Response<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>) {
+                                if (response.isSuccessful && response.body() != null) {
+                                    val profile = response.body()!!
+                                    val editor = prefs.edit()
+                                    editor.putString("user_id", profile.id)
+                                    editor.putString("user_city", profile.city ?: "")
+                                    
+                                    // Solo sobrescribimos si la API devuelve un valor real,
+                                    // de lo contrario conservamos lo que el usuario llenó en el registro.
+                                    if (!profile.country.isNullOrEmpty()) {
+                                        editor.putString("user_country", profile.country)
+                                    } else if (!prefs.contains("user_country")) {
+                                        editor.putString("user_country", "Ecuador")
+                                    }
+                                    
+                                    if (!profile.postalCode.isNullOrEmpty()) {
+                                        editor.putString("user_postal_code", profile.postalCode)
+                                    }
+                                    
+                                    if (!profile.address.isNullOrEmpty()) {
+                                        editor.putString("user_address", profile.address)
+                                    }
+                                    
+                                    editor.apply()
+                                }
+                                Toast.makeText(this@MainActivity, "¡Bienvenido!", Toast.LENGTH_SHORT).show()
+                                irAHome()
+                            }
+                            override fun onFailure(call: Call<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>, t: Throwable) {
+                                // Si falla obtener el perfil, continuamos igual
+                                Toast.makeText(this@MainActivity, "¡Bienvenido!", Toast.LENGTH_SHORT).show()
+                                irAHome()
+                            }
+                        })
+                    } else {
+                        Toast.makeText(this@MainActivity, "¡Bienvenido!", Toast.LENGTH_SHORT).show()
+                        irAHome()
+                    }
                 } else {
                     etEmail.setBackgroundResource(R.drawable.bg_input_error)
                     etPassword.setBackgroundResource(R.drawable.bg_input_error)

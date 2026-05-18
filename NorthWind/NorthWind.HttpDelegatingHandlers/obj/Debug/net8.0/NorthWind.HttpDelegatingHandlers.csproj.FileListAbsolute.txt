@@ -89,3 +89,19 @@ C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.deps.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWin.8C53A2A9.Up2Date
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\refint\NorthWind.HttpDelegatingHandlers.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\NorthWind.HttpDelegatingHandlers.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.HttpDelegatingHandlers\obj\Debug\net8.0\ref\NorthWind.HttpDelegatingHandlers.dll

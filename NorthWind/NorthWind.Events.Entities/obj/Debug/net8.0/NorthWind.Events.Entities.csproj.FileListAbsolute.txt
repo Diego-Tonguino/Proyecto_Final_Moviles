@@ -71,3 +71,16 @@ C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
 C:\Users\Lenovo\Downloads\Proyecto NorthWind - copia - copia\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
 C:\Users\diego\Desktop\Proyecto NorthWind\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.deps.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.sourcelink.json
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\refint\NorthWind.Events.Entities.dll
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Events.Entities\obj\Debug\net8.0\ref\NorthWind.Events.Entities.dll
