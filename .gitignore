@@ -1,0 +1,5 @@
+.vs/
+*.sqlite
+*.db
+.dtbcache.v2
+.futdcache.v2
