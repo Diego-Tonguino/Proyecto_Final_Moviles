@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -35,6 +35,7 @@ public static class ProductsController
         {
             p.Id,
             p.Name,
+            p.Description,
             p.UnitPrice,
             p.UnitsInStock,
             HasImage = p.ImageData != null && p.ImageData.Length > 0,
@@ -50,6 +51,7 @@ public static class ProductsController
         {
             product.Id,
             product.Name,
+            product.Description,
             product.UnitPrice,
             product.UnitsInStock,
             HasImage = product.ImageData != null && product.ImageData.Length > 0,
@@ -65,6 +67,7 @@ public static class ProductsController
         {
             product.Id,
             product.Name,
+            product.Description,
             product.UnitPrice,
             product.UnitsInStock,
             HasImage = false,

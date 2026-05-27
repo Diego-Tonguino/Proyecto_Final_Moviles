@@ -75,7 +75,13 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         rvOrderHistory.layoutManager = LinearLayoutManager(this)
-        adapter = OrderHistoryAdapter(emptyList(), emptyMap())
+        adapter = OrderHistoryAdapter(emptyList(), emptyMap()) { order ->
+            val intent = Intent(this, OrderDetailActivity::class.java).apply {
+                putExtra("order_json", com.google.gson.Gson().toJson(order))
+                putExtra("products_json", com.google.gson.Gson().toJson(productNames))
+            }
+            startActivity(intent)
+        }
         rvOrderHistory.adapter = adapter
     }
 

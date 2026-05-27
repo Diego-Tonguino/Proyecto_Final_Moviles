@@ -23,12 +23,12 @@ class CartAdapter(
     class CartViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val ivCartProduct: ImageView = view.findViewById(R.id.ivCartProduct)
         val tvCartProductName: TextView = view.findViewById(R.id.tvCartProductName)
+        val tvCartProductUnitPrice: TextView = view.findViewById(R.id.tvCartProductUnitPrice)
         val tvCartProductPrice: TextView = view.findViewById(R.id.tvCartProductPrice)
         val tvQuantity: TextView = view.findViewById(R.id.tvQuantity)
-        val tvSubtotalItem: TextView = view.findViewById(R.id.tvSubtotalItem)
-        val btnMinus: ImageButton = view.findViewById(R.id.btnMinus)
-        val btnPlus: ImageButton = view.findViewById(R.id.btnPlus)
-        val ivRemoveProduct: ImageButton = view.findViewById(R.id.ivRemoveProduct)
+        val btnMinus: ImageView = view.findViewById(R.id.btnMinus)
+        val btnPlus: ImageView = view.findViewById(R.id.btnPlus)
+        val ivRemoveProduct: ImageView = view.findViewById(R.id.ivRemoveProduct)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
@@ -39,9 +39,9 @@ class CartAdapter(
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val item = cartItems[position]
         holder.tvCartProductName.text = item.product.name
-        holder.tvCartProductPrice.text = "$${String.format("%.2f", item.product.unitPrice)}"
+        holder.tvCartProductUnitPrice.text = "$${String.format("%.2f", item.product.unitPrice)}"
+        holder.tvCartProductPrice.text = "$${String.format("%.2f", item.subtotal)}"
         holder.tvQuantity.text = item.quantity.toString()
-        holder.tvSubtotalItem.text = "$${String.format("%.2f", item.subtotal)}"
 
         // Carga de imagen usando la misma lógica que ProductAdapter
         val imageData = item.product.imageData

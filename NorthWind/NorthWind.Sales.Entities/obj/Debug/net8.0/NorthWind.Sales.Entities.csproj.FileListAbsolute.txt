@@ -77,3 +77,15 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Entities.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Entities.dll

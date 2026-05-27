@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\crear-orden.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\pages\\crear-orden.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\login.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\pages\\login.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\registro.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\pages\\registro.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\MainLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\layouts\\MainLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\Layout.astro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\layouts\\Layout.astro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:flaky-flare\\src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "crear-orden.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\crear-orden.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\pages\\crear-orden.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\crear-orden.astro",
+              "RelativeToolTip": "flaky-flare\\src\\pages\\crear-orden.astro",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAuwNoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T04:38:53.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\login.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\pages\\login.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\login.astro",
+              "RelativeToolTip": "flaky-flare\\src\\pages\\login.astro",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAuwF8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T04:15:15.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "registro.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\registro.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\pages\\registro.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\registro.astro",
+              "RelativeToolTip": "flaky-flare\\src\\pages\\registro.astro",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T04:00:43.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\MainLayout.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\layouts\\MainLayout.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\MainLayout.astro",
+              "RelativeToolTip": "flaky-flare\\src\\layouts\\MainLayout.astro",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwGoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T03:55:22.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\index.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\pages\\index.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\pages\\index.astro",
+              "RelativeToolTip": "flaky-flare\\src\\pages\\index.astro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T03:50:48.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Layout.astro",
+              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\Layout.astro",
+              "RelativeDocumentMoniker": "flaky-flare\\src\\layouts\\Layout.astro",
+              "ToolTip": "C:\\Users\\diego\\Desktop\\Proyecto NorthWind\\NorthWind - Migracion\\flaky-flare\\src\\layouts\\Layout.astro",
+              "RelativeToolTip": "flaky-flare\\src\\layouts\\Layout.astro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-13T03:50:37.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 813,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

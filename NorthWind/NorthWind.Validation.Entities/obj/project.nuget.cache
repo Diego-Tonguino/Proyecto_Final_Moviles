@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0FssbA5RumU=",
+  "dgSpecHash": "LoaJ+2Dp0ag=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
+  "projectFilePath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512"
+    "C:\\Users\\jhon\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512"
   ],
   "logs": []
 }

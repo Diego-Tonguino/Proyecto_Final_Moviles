@@ -1,7 +1,8 @@
-using Microsoft.AspNetCore.Builder;
+ï»¿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using System;
+using NorthWind.Sales.Backend.Controllers;
 
 namespace NorthWind.Sales.WebApi;
 
@@ -9,8 +10,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        //  "WebApplication.CreateBuilder(args)": Inicializa el builder de la aplicación web
-        //  ".CreateWebApplication()": Configura servicios e inyección de dependencias
+        //  "WebApplication.CreateBuilder(args)": Inicializa el builder de la aplicaciï¿½n web
+        //  ".CreateWebApplication()": Configura servicios e inyecciï¿½n de dependencias
         //  ".ConfigureWebApplication()": Configura el pipeline de middlewares
         var app = WebApplication.CreateBuilder(args)
           .CreateWebApplication()
@@ -26,11 +27,11 @@ public class Program
             try
             {
                 // NOTA: Si en tu proyecto creaste una clase personalizada para el usuario (ej. ApplicationUser),
-                // cambia 'IdentityUser' por tu clase personalizada en las siguientes líneas.
-                var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+                // cambia 'IdentityUser' por tu clase personalizada en las siguientes lï¿½neas.
+                var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
 
                 string adminEmail = "admin@northwind.com";
-                string adminPassword = "Password123!"; // Asegúrate de que cumpla con los requisitos (Mayúscula, minúscula, número y símbolo)
+                string adminPassword = "Password123!"; // Asegï¿½rate de que cumpla con los requisitos (Mayï¿½scula, minï¿½scula, nï¿½mero y sï¿½mbolo)
                 string roleName = "Administrador";
 
                 // 1. Verificamos si el usuario ya existe
@@ -39,14 +40,14 @@ public class Program
                 if (user == null)
                 {
                     // 2. Preparamos el nuevo usuario
-                    var newAdmin = new IdentityUser
+                    var newAdmin = new ApplicationUser
                     {
                         UserName = adminEmail,
                         Email = adminEmail,
                         EmailConfirmed = true
                     };
 
-                    // 3. Creamos el usuario en la BD con su contraseña encriptada
+                    // 3. Creamos el usuario en la BD con su contraseï¿½a encriptada
                     var createResult = userManager.CreateAsync(newAdmin, adminPassword).GetAwaiter().GetResult();
 
                     if (createResult.Succeeded)
@@ -57,18 +58,18 @@ public class Program
                     }
                     else
                     {
-                        Console.WriteLine("No se pudo crear el administrador. Revisa las reglas de la contraseña.");
+                        Console.WriteLine("No se pudo crear el administrador. Revisa las reglas de la contraseï¿½a.");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ocurrió un error al intentar crear el administrador: {ex.Message}");
+                Console.WriteLine($"Ocurriï¿½ un error al intentar crear el administrador: {ex.Message}");
             }
         }
         // ----------------------------------------------------------------
 
-        // Inicia el servidor web y pone la aplicación a la escucha de solicitudes HTTP
+        // Inicia el servidor web y pone la aplicaciï¿½n a la escucha de solicitudes HTTP
         app.Run();
     }
 }

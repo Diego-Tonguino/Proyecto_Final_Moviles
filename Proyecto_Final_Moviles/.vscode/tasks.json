@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "▶️ PLAY: Instalar y Abrir en BlueStacks",
+            "type": "shell",
+            "command": ".\\gradlew installDebug ; C:\\Users\\jhon\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -s 127.0.0.1:5555 shell monkey -p uta.edu.ec.proyecto_final_moviles -c android.intent.category.LAUNCHER 1",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

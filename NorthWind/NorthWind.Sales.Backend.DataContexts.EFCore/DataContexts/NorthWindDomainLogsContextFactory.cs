@@ -21,7 +21,7 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts
             new DBOptions
             {
                 DomainLogsConnectionString =
-               "Server=Teo\\MSSQLSERVER01;Database=NorthWindLogsDB;Trusted_Connection=True;TrustServerCertificate=True;"
+               "Server=jhon\\MOVILES;Database=NorthWindLogsDB;Trusted_Connection=True;TrustServerCertificate=True;"
             });
             return new NorthWindDomainLogsContext(DbOptions);
         }

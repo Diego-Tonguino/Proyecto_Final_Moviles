@@ -78,11 +78,15 @@ class HomeActivity : AppCompatActivity() {
         rvProducts.layoutManager = GridLayoutManager(this, 2)
         adapter = ProductAdapter(emptyList(), 
             onProductClick = { product ->
-                if (uta.edu.ec.proyecto_final_moviles.models.CartManager.addProduct(product)) {
-                    Toast.makeText(this, "${product.name} añadido al carrito", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this, "Stock máximo alcanzado para ${product.name}", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@HomeActivity, ProductDetailActivity::class.java).apply {
+                    putExtra("product_id", product.id)
+                    putExtra("product_name", product.name)
+                    putExtra("product_description", product.description)
+                    putExtra("product_price", product.unitPrice)
+                    putExtra("product_stock", product.unitsInStock.toInt())
+                    putExtra("product_image", product.imageData)
                 }
+                startActivity(intent)
             }
         )
         rvProducts.adapter = adapter

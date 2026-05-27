@@ -1,0 +1,405 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Interfaces;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.IO;
+using System.Text;
+
+namespace NorthWind.Sales.Backend.Controllers.Admin;
+
+public static class CustomersController
+{
+    public static WebApplication UseCustomersController(this WebApplication app)
+    {
+        app.MapGet("/api/customers", GetAllCustomers);
+        app.MapGet("/api/customers/{id}", GetCustomerById);
+        app.MapGet("/api/customers/{id}/profile-picture", GetProfilePicture);
+
+        // Quick existence checks for progressive registration
+        app.MapGet("/api/customers/check-cedula/{cedula}", CheckCedula);
+        app.MapGet("/api/customers/check-email/{email}", CheckEmail);
+        app.MapGet("/api/customers/check-phone/{phone}", CheckPhone);
+
+        // ==========================================
+        // NUEVA RUTA PARA EL LOGIN MÓVIL DEL CLIENTE
+        // ==========================================
+        app.MapPost("/api/customers/login", LoginMobileCustomer);
+
+        app.MapPost("/api/customers", CreateCustomerJson);
+        app.MapPost("/api/customers/form", CreateCustomerForm);
+        app.MapPost("/api/customers/{id}/photo", UploadProfilePicture);
+
+        app.MapPost("/api/customers/{id}/profile-picture", async (HttpContext ctx, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries) =>
+        {
+            var id = ctx.Request.RouteValues["id"]?.ToString();
+            if (string.IsNullOrEmpty(id)) return Results.BadRequest(new { error = "Missing id route value." });
+            var file = ctx.Request.Form.Files.FirstOrDefault();
+            return await UploadProfilePicture(id, file, admin, queries);
+        });
+
+        app.MapDelete("/api/customers/{id}/profile-picture", async (string id, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries) =>
+        {
+            var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (customer == null) return Results.NotFound();
+            customer.ProfilePictureData = null;
+            customer.ProfilePictureContentType = null;
+            admin.UpdateCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.NoContent();
+        });
+
+        app.MapPut("/api/customers/{id}", UpdateCustomer);
+        app.MapDelete("/api/customers/{id}", DeleteCustomer);
+        return app;
+    }
+
+    // ========================================================
+    // MÉTODO Y DTO PARA EL LOGIN MÓVIL EXCLUSIVO DE CLIENTES
+    // ========================================================
+    public record CustomerLoginDto(string Email, string Password);
+
+    static async Task<IResult> LoginMobileCustomer([FromBody] CustomerLoginDto dto, INorthWindSalesQueriesDataContext queries)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                return Results.BadRequest(new { error = "Correo y contraseña son obligatorios." });
+
+            // 1. Buscamos al cliente en la tabla Customers (NO en Usuarios)
+            var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
+            if (customer == null) return Results.BadRequest(new { error = "Correo o contraseña incorrectos." });
+
+            // 2. Verificamos la contraseña hasheada
+            var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+            var result = hasher.VerifyHashedPassword(customer, customer.PasswordHash, dto.Password);
+
+            if (result == PasswordVerificationResult.Failed)
+                return Results.BadRequest(new { error = "Correo o contraseña incorrectos." });
+
+            // 3. Retornamos éxito con los datos del cliente
+            return Results.Ok(new
+            {
+                token = "CUSTOMER_TOKEN_" + customer.Id, // Token temporal/simulado para tu móvil
+                customerId = customer.Id,
+                firstName = customer.FirstName,
+                lastName = customer.LastName,
+                email = customer.Email
+            });
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+    // ========================================================
+
+    static async Task<IResult> GetAllCustomers(INorthWindSalesQueriesDataContext queries)
+    {
+        var list = await queries.ToListAsync(queries.Customers);
+        return Results.Ok(list);
+    }
+
+    static async Task<IResult> GetCustomerById(string id, INorthWindSalesQueriesDataContext queries)
+    {
+        var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+        if (customer == null) return Results.NotFound();
+        return Results.Ok(customer);
+    }
+
+    static async Task<IResult> GetProfilePicture(string id, INorthWindSalesQueriesDataContext queries)
+    {
+        var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+
+        if (customer == null || customer.ProfilePictureData == null || customer.ProfilePictureData.Length == 0)
+            return Results.NotFound();
+
+        return Results.File(customer.ProfilePictureData, customer.ProfilePictureContentType ?? "image/jpeg");
+    }
+
+    // Quick check endpoints implementations
+    static async Task<IResult> CheckCedula(string cedula, INorthWindSalesQueriesDataContext queries)
+    {
+        if (string.IsNullOrWhiteSpace(cedula)) return Results.BadRequest(new { exists = false, message = "Cédula requerida" });
+        var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == cedula));
+        if (exists != null) return Results.StatusCode(StatusCodes.Status409Conflict, new { exists = true, message = "La cédula ya se encuentra registrada" });
+        return Results.Ok(new { exists = false, message = "Disponible" });
+    }
+
+    static async Task<IResult> CheckEmail(string email, INorthWindSalesQueriesDataContext queries)
+    {
+        if (string.IsNullOrWhiteSpace(email)) return Results.BadRequest(new { exists = false, message = "Email requerido" });
+        var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == email));
+        if (exists != null) return Results.StatusCode(StatusCodes.Status409Conflict, new { exists = true, message = "El correo ya está en uso" });
+        return Results.Ok(new { exists = false, message = "Disponible" });
+    }
+
+    static async Task<IResult> CheckPhone(string phone, INorthWindSalesQueriesDataContext queries)
+    {
+        if (string.IsNullOrWhiteSpace(phone)) return Results.BadRequest(new { exists = false, message = "Teléfono requerido" });
+        var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == phone));
+        if (exists != null) return Results.StatusCode(StatusCodes.Status409Conflict, new { exists = true, message = "El teléfono ya está registrado" });
+        return Results.Ok(new { exists = false, message = "Disponible" });
+    }
+
+    // Create DTOs updated: remove Id, add Cedula
+    public record CreateCustomerDto(
+        string FirstName, string LastName, string Email,
+        string Password, string PasswordConfirm, string Cedula,
+        string? City, string? Phone, decimal CurrentBalance
+    );
+
+    public record CreateCustomerFormDto(
+        string FirstName, string LastName, string Email,
+        string Password, string PasswordConfirm, string Cedula,
+        string? City, string? Phone, decimal CurrentBalance, IFormFile? ProfilePicture
+    );
+
+    static string GenerateCustomerId()
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        var sb = new StringBuilder(5);
+        var rnd = new Random();
+        for (int i = 0; i < 5; i++) sb.Append(chars[rnd.Next(chars.Length)]);
+        return sb.ToString();
+    }
+
+    static async Task<string> GenerateUniqueCustomerId(INorthWindSalesQueriesDataContext queries)
+    {
+        string id;
+        int attempts = 0;
+        do
+        {
+            id = GenerateCustomerId();
+            var exists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (exists == null) return id;
+            attempts++;
+        } while (attempts < 10);
+        throw new InvalidOperationException("Unable to generate unique customer ID after multiple attempts.");
+    }
+
+    static async Task<IResult> CreateCustomerJson([FromBody] CreateCustomerDto dto, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries, HttpContext httpContext)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(dto.FirstName)) return Results.BadRequest(new { error = "FirstName is required." });
+            if (string.IsNullOrWhiteSpace(dto.LastName)) return Results.BadRequest(new { error = "LastName is required." });
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+            if (string.IsNullOrWhiteSpace(dto.Password)) return Results.BadRequest(new { error = "Password is required." });
+            if (dto.Password != dto.PasswordConfirm) return Results.BadRequest(new { error = "Passwords do not match." });
+            if (dto.Password.Length < 6) return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+            if (string.IsNullOrWhiteSpace(dto.Phone)) return Results.BadRequest(new { error = "Phone is required." });
+            if (string.IsNullOrWhiteSpace(dto.Cedula)) return Results.BadRequest(new { error = "Cedula is required." });
+            if (dto.Cedula.Length != 10) return Results.BadRequest(new { error = "Cedula must be 10 characters long." });
+
+            // Validate cedula uniqueness
+            var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula));
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La cédula ya está siendo usada por otro cliente." });
+
+            // Validate email unique across customers and users
+            var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrónico ya está siendo usado por otro cliente." });
+
+            var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
+            if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
+            var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrónico ya está siendo usado por un usuario del sistema." });
+
+            var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone));
+            if (phoneExists != null) return Results.BadRequest(new { error = "El número de teléfono ya está siendo usado por otro cliente." });
+
+            // Generate unique ID
+            var newId = await GenerateUniqueCustomerId(queries);
+
+            var customer = new Repositories.Entities.Customer
+            {
+                Id = newId,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.Email,
+                City = dto.City,
+                Phone = dto.Phone,
+                CurrentBalance = dto.CurrentBalance,
+                Cedula = dto.Cedula
+            };
+
+            var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+            customer.PasswordHash = hasher.HashPassword(customer, dto.Password);
+            customer.SecurityStamp = Guid.NewGuid().ToString();
+
+            await admin.AddCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.Created($"/api/customers/{customer.Id}", customer);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> CreateCustomerForm([FromForm] CreateCustomerFormDto dto, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries, HttpContext httpContext)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+            if (string.IsNullOrWhiteSpace(dto.Cedula)) return Results.BadRequest(new { error = "Cedula is required." });
+            if (dto.Cedula.Length != 10) return Results.BadRequest(new { error = "Cedula must be 10 characters long." });
+
+            var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email));
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrónico ya está siendo usado por otro cliente." });
+
+            var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
+            if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
+            var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrónico ya está siendo usado por un usuario del sistema." });
+
+            var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone));
+            if (phoneExists != null) return Results.BadRequest(new { error = "El número de teléfono ya está siendo usado por otro cliente." });
+
+            var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula));
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La cédula ya está siendo usada por otro cliente." });
+
+            var newId = await GenerateUniqueCustomerId(queries);
+
+            var customer = new Repositories.Entities.Customer
+            {
+                Id = newId,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.Email,
+                City = dto.City,
+                Phone = dto.Phone,
+                CurrentBalance = dto.CurrentBalance,
+                Cedula = dto.Cedula
+            };
+
+            if (dto.ProfilePicture != null && dto.ProfilePicture.Length > 0)
+            {
+                using var ms = new MemoryStream();
+                await dto.ProfilePicture.CopyToAsync(ms);
+                customer.ProfilePictureData = ms.ToArray();
+                customer.ProfilePictureContentType = dto.ProfilePicture.ContentType;
+            }
+
+            var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+            customer.PasswordHash = hasher.HashPassword(customer, dto.Password);
+            customer.SecurityStamp = Guid.NewGuid().ToString();
+
+            await admin.AddCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.Created($"/api/customers/{customer.Id}", customer);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> UploadProfilePicture(string id, IFormFile file, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries)
+    {
+        try
+        {
+            if (file == null || file.Length == 0) return Results.BadRequest(new { error = "No file provided." });
+            var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (customer == null) return Results.NotFound();
+
+            using var ms = new MemoryStream();
+            await file.CopyToAsync(ms);
+            customer.ProfilePictureData = ms.ToArray();
+            customer.ProfilePictureContentType = file.ContentType;
+
+            admin.UpdateCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.Ok();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    public record UpdateCustomerDto(
+        string Id, string FirstName, string LastName, string Email,
+        string? City, string? Phone, decimal CurrentBalance,
+        string? Password, string? PasswordConfirm, string Cedula
+    );
+
+    static async Task<IResult> UpdateCustomer(string id, [FromBody] UpdateCustomerDto dto, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries, HttpContext httpContext)
+    {
+        try
+        {
+            if (id != dto.Id) return Results.BadRequest(new { error = "Id mismatch." });
+
+            var existing = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (existing == null) return Results.NotFound();
+
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+
+            // Validación cruzada al actualizar
+            var emailExistsInCustomers = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Email == dto.Email && c.Id != id));
+            if (emailExistsInCustomers != null) return Results.BadRequest(new { error = "El correo electrónico ya está registrado por otra persona en el sistema." });
+
+            var userManager = httpContext.RequestServices.GetService(typeof(UserManager<ApplicationUser>)) as UserManager<ApplicationUser>;
+            if (userManager == null) return Results.Problem(detail: "UserManager not available", statusCode: 500);
+            var emailExistsInUsers = await userManager.FindByEmailAsync(dto.Email);
+            if (emailExistsInUsers != null) return Results.BadRequest(new { error = "El correo electrónico ya está registrado por otra persona en el sistema." });
+
+            var phoneExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Phone == dto.Phone && c.Id != id));
+            if (phoneExists != null) return Results.BadRequest(new { error = "El número de teléfono ya está siendo usado por otra persona del sistema." });
+
+            // Cedula uniqueness on update (exclude current)
+            var cedulaExists = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Cedula == dto.Cedula && c.Id != id));
+            if (cedulaExists != null) return Results.BadRequest(new { error = "La cédula ya está siendo usada por otra persona del sistema." });
+
+            if (!string.IsNullOrEmpty(dto.Password) || !string.IsNullOrEmpty(dto.PasswordConfirm))
+            {
+                if (dto.Password != dto.PasswordConfirm) return Results.BadRequest(new { error = "Passwords do not match." });
+                if (dto.Password != null && dto.Password.Length < 6) return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+
+                var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+                existing.PasswordHash = hasher.HashPassword(existing, dto.Password);
+                existing.SecurityStamp = Guid.NewGuid().ToString();
+            }
+
+            existing.FirstName = dto.FirstName;
+            existing.LastName = dto.LastName;
+            existing.Email = dto.Email;
+            existing.City = dto.City;
+            existing.Phone = dto.Phone;
+            existing.CurrentBalance = dto.CurrentBalance;
+            existing.Cedula = dto.Cedula;
+
+            admin.UpdateCustomerAsync(existing);
+            await admin.SaveChangesAsync();
+            return Results.NoContent();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> DeleteCustomer(string id, INorthWindSalesAdminDataContext admin)
+    {
+        try
+        {
+            if (await admin.HasOrdersAsync(id))
+            {
+                return Results.BadRequest(new { error = $"No se puede eliminar el cliente '{id}' porque tiene órdenes asociadas. Elimine primero todas las órdenes relacionadas." });
+            }
+
+            await admin.DeleteCustomerAsync(id);
+            await admin.SaveChangesAsync();
+            return Results.NoContent();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+}

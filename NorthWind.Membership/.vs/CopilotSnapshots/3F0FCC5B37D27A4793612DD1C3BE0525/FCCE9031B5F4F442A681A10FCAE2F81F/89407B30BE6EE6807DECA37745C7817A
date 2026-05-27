@@ -1,0 +1,72 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.AspNetCore.Identity;
+
+#nullable disable
+
+namespace NorthWind.Membership.Backend.AspNetIdentity.Migrations
+{
+    /// <inheritdoc />
+    public partial class SeedAdminUser : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            // Ensure role 'Administrador' exists with known id
+            var adminRoleId = "B76F89AE-ECAB-4058-8A47-66F47805F027";
+
+            // Create admin user
+            var adminId = "D3F8A7C2-5B1E-4A2F-9C4D-1E2F3A4B5C6D";
+            var userName = "admin@northwind.local";
+            var normalizedUserName = userName.ToUpperInvariant();
+            var email = userName;
+            var normalizedEmail = email.ToUpperInvariant();
+
+            var adminUser = new IdentityUser
+            {
+                Id = adminId,
+                UserName = userName,
+                NormalizedUserName = normalizedUserName,
+                Email = email,
+                NormalizedEmail = normalizedEmail,
+                EmailConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString("D"),
+                ConcurrencyStamp = Guid.NewGuid().ToString("D")
+            };
+
+            var hasher = new PasswordHasher<IdentityUser>();
+            var passwordHash = hasher.HashPassword(adminUser, "Alex123@");
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "FirstName", "LastName", "ProfilePictureData", "ProfilePictureContentType", "UserName", "NormalizedUserName", "Email", "NormalizedEmail", "EmailConfirmed", "PasswordHash", "SecurityStamp", "ConcurrencyStamp", "PhoneNumber", "PhoneNumberConfirmed", "TwoFactorEnabled", "LockoutEnd", "LockoutEnabled", "AccessFailedCount" },
+                values: new object[] { adminId, "Administrador", "Sistema", null, null, adminUser.UserName, adminUser.NormalizedUserName, adminUser.Email, adminUser.NormalizedEmail, true, passwordHash, adminUser.SecurityStamp, adminUser.ConcurrencyStamp, null, false, false, null, false, 0 }
+            );
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "UserId", "RoleId" },
+                values: new object[] { adminId, adminRoleId }
+            );
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            var adminId = "D3F8A7C2-5B1E-4A2F-9C4D-1E2F3A4B5C6D";
+            var adminRoleId = "B76F89AE-ECAB-4058-8A47-66F47805F027";
+
+            migrationBuilder.DeleteData(
+                table: "AspNetUserRoles",
+                keyColumns: new[] { "UserId", "RoleId" },
+                keyValues: new object[] { adminId, adminRoleId }
+            );
+
+            migrationBuilder.DeleteData(
+                table: "AspNetUsers",
+                keyColumn: "Id",
+                keyValue: adminId
+            );
+        }
+    }
+}

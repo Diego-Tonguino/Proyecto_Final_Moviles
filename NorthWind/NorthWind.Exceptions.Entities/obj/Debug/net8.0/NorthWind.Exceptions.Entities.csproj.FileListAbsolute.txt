@@ -119,3 +119,21 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.Resources.ExceptionMessages.resources
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.GenerateResource.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWin.65329DA7.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\refint\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Exceptions.Entities\obj\Debug\net8.0\ref\NorthWind.Exceptions.Entities.dll

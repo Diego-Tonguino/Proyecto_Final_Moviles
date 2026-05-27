@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\NorthWind.Membership.Backend.AspNetIdentity",
+    "\\NorthWind.Membership.Backend.AspNetIdentity\\DataContexts"
+  ],
+  "SelectedNode": "\\NorthWind.Membership.Backend.AspNetIdentity\\DataContexts\\NorthWindMembershipContextFactory.cs",
+  "PreviewInSolutionExplorer": false
+}

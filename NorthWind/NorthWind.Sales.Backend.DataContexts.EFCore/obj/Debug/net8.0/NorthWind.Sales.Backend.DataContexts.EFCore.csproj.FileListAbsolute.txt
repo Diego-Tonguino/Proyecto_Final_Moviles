@@ -231,3 +231,37 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.DataContexts.EFCore.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.runtimeconfig.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.Repositories.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.Repositories.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Transactions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWin.CA30F21C.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\refint\NorthWind.Sales.Backend.DataContexts.EFCore.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\NorthWind.Sales.Backend.DataContexts.EFCore.genruntimeconfig.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.DataContexts.EFCore\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.DataContexts.EFCore.dll

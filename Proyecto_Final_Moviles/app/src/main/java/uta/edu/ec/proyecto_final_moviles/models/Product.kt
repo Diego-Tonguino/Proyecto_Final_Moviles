@@ -9,6 +9,9 @@ data class Product(
     @SerializedName("name", alternate = ["Name"])
     val name: String,
     
+    @SerializedName("description", alternate = ["Description"])
+    val description: String? = null,
+    
     @SerializedName("unitPrice", alternate = ["UnitPrice"])
     val unitPrice: Double,
     

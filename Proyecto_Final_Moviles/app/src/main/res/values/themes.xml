@@ -30,4 +30,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <!-- Esquinas redondeadas solo en la parte inferior para la pantalla de éxito -->
+    <style name="SuccessTopCard" parent="">
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">60dp</item>
+        <item name="cornerSizeBottomRight">60dp</item>
+    </style>
+
 </resources>

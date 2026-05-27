@@ -1,0 +1,40 @@
+﻿using NorthWind.Sales.Frontend.BusinessObjects.Interfaces;
+using System.Net.Http.Json;
+
+namespace NorthWind.Sales.Frontend.WebApiGateways;
+
+internal class UsersGateway(HttpClient client) : IUsersGateway
+{
+    public async Task<IList<UserDto>> GetUsersAsync()
+    {
+        var response = await client.GetAsync(Endpoints.GetUsers);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<IList<UserDto>>() ?? [];
+    }
+
+    public async Task<UserDto> GetUserByIdAsync(string id)
+    {
+        var response = await client.GetAsync($"{Endpoints.GetUsers}/{id}");
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<UserDto>() ?? throw new InvalidOperationException("User not found");
+    }
+
+    public async Task<UserDto> CreateUserAsync(CreateUserDto userDto)
+    {
+        var response = await client.PostAsJsonAsync(Endpoints.GetUsers, userDto);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<UserDto>() ?? throw new InvalidOperationException("Failed to create user");
+    }
+
+    public async Task UpdateUserAsync(string id, UpdateUserDto userDto)
+    {
+        var response = await client.PutAsJsonAsync($"{Endpoints.GetUsers}/{id}", userDto);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public async Task DeleteUserAsync(string id)
+    {
+        var response = await client.DeleteAsync($"{Endpoints.GetUsers}/{id}");
+        response.EnsureSuccessStatusCode();
+    }
+}

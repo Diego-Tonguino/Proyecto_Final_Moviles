@@ -84,3 +84,16 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\refint\NorthWind.Validation.Entities.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\ref\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\refint\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Validation.Entities\obj\Debug\net8.0\ref\NorthWind.Validation.Entities.dll

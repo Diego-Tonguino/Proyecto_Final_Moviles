@@ -133,3 +133,23 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.Resources.CreateOrderMessages.resources
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.GenerateResource.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWin.B5DC4725.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\refint\NorthWind.Sales.Validators.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\NorthWind.Sales.Validators.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Validators.Entities\obj\Debug\net8.0\ref\NorthWind.Sales.Validators.Entities.dll

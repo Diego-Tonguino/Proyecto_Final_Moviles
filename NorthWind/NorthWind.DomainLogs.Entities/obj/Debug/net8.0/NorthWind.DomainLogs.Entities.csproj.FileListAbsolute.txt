@@ -1,0 +1,16 @@
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWin.B24B6788.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\refint\NorthWind.DomainLogs.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.DomainLogs.Entities\obj\Debug\net8.0\ref\NorthWind.DomainLogs.Entities.dll

@@ -1,0 +1,92 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using NorthWind.Sales.Backend.Repositories.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NorthWind.Sales.Backend.DataContexts.EFCore.Configurations
+{
+    internal class CustomerConfiguration :
+ IEntityTypeConfiguration<Customer>
+    {
+        public void Configure(EntityTypeBuilder<Customer> builder)
+        {
+            builder
+            .Property(c => c.Id)
+            .HasMaxLength(5)
+            .IsFixedLength();
+            builder.Property(c => c.FirstName)
+            .IsRequired()
+            .HasMaxLength(40);
+            builder.Property(c => c.LastName)
+            .IsRequired()
+            .HasMaxLength(40);
+            builder.Property(c => c.Email)
+            .IsRequired()
+            .HasMaxLength(256);
+            builder.Property(c => c.PasswordHash)
+            .HasMaxLength(255);
+            builder.Property(c => c.SecurityStamp)
+            .HasMaxLength(128);
+            builder.Property(c => c.CurrentBalance)
+            .HasPrecision(8, 2);
+            builder.Property(c => c.City)
+            .HasMaxLength(15)
+            .IsRequired(false);
+            builder.Property(c => c.Phone)
+            .HasMaxLength(24)
+            .IsRequired(false);
+            builder.Property(c => c.ProfilePictureData)
+            .IsRequired(false);
+            builder.Property(c => c.ProfilePictureContentType)
+            .HasMaxLength(100)
+            .IsRequired(false);
+            builder.HasData(
+            new Customer
+            {
+                Id = "ALFKI",
+                FirstName = "Alfreds",
+                LastName = "Futterkiste",
+                Email = "alfreds@mail.com",
+                CurrentBalance = 0,
+                PasswordHash = "AQAAAAIAAYagAAAAEKz3F1o5Z2tVhZ4kF0K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1",
+                SecurityStamp = "ALFKISTAMP",
+                City = "Berlin",
+                Phone = "+49-30-007-1234",
+                ProfilePictureData = null,
+                ProfilePictureContentType = null
+            },
+            new Customer
+            {
+                Id = "ANATR",
+                FirstName = "Ana",
+                LastName = "Trujillo",
+                Email = "ana@mail.com",
+                CurrentBalance = 0,
+                PasswordHash = "AQAAAAIAAYagAAAAEKz3F1o5Z2tVhZ4kF0K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1",
+                SecurityStamp = "ANATRSTAMP",
+                City = "México D.F.",
+                Phone = "+52-55-1234-5678",
+                ProfilePictureData = null,
+                ProfilePictureContentType = null
+            },
+            new Customer
+            {
+                Id = "ANTON",
+                FirstName = "Antonio",
+                LastName = "Moreno",
+                Email = "antonio@mail.com",
+                CurrentBalance = 100,
+                PasswordHash = "AQAAAAIAAYagAAAAEKz3F1o5Z2tVhZ4kF0K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1V2K1",
+                SecurityStamp = "ANTONSTAMP",
+                City = "México D.F.",
+                Phone = "+52-55-8765-4321",
+                ProfilePictureData = null,
+                ProfilePictureContentType = null
+            });
+        }
+    }
+}

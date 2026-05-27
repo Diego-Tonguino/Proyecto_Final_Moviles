@@ -35,6 +35,9 @@ class CartActivity : AppCompatActivity() {
     private lateinit var pbCart: ProgressBar
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var adapter: CartAdapter
+    private lateinit var tvWelcomeName: TextView
+    private lateinit var ivCartProfilePic: com.google.android.material.imageview.ShapeableImageView
+    private lateinit var btnCartLogout: com.google.android.material.button.MaterialButton
     private lateinit var etCartAddress: EditText
     private lateinit var etCartPostalCode: EditText
 
@@ -58,12 +61,45 @@ class CartActivity : AppCompatActivity() {
         btnCheckout = findViewById(R.id.btnCheckout)
         pbCart = findViewById(R.id.pbCart)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        
+        tvWelcomeName = findViewById(R.id.tvWelcomeName)
+        ivCartProfilePic = findViewById(R.id.ivCartProfilePic)
+        btnCartLogout = findViewById(R.id.btnCartLogout)
         etCartAddress = findViewById(R.id.etCartAddress)
         etCartPostalCode = findViewById(R.id.etCartPostalCode)
 
         val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
+        
         etCartAddress.setText(prefs.getString("user_address", ""))
         etCartPostalCode.setText(prefs.getString("user_postal_code", ""))
+        
+        val userName = prefs.getString("user_name", "Usuario")
+        tvWelcomeName.text = userName
+        
+        val userId = prefs.getString("user_id", null)
+        if (userId != null) {
+            val imageUrl = "http://localhost:5033/api/customers/${userId}/profile-picture"
+            com.bumptech.glide.Glide.with(this)
+                .load(imageUrl)
+                .placeholder(R.drawable.bg_welcome)
+                .error(R.drawable.bg_welcome)
+                .into(ivCartProfilePic)
+        }
+
+        btnCartLogout.setOnClickListener {
+            com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
+                .setTitle("Cerrar Sesión")
+                .setMessage("¿Estás seguro que deseas salir de tu cuenta?")
+                .setPositiveButton("Salir") { _, _ ->
+                    prefs.edit().clear().apply()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Cancelar", null)
+                .show()
+        }
 
         bottomNavigation.selectedItemId = R.id.nav_cart
         bottomNavigation.setOnItemSelectedListener { item ->
@@ -123,9 +159,13 @@ class CartActivity : AppCompatActivity() {
         if (CartManager.items.isEmpty()) {
             tvEmptyCart.visibility = View.VISIBLE
             rvCartItems.visibility = View.GONE
+            findViewById<View>(R.id.shippingDataCard).visibility = View.GONE
+            findViewById<View>(R.id.bottomSummary).visibility = View.GONE
         } else {
             tvEmptyCart.visibility = View.GONE
             rvCartItems.visibility = View.VISIBLE
+            findViewById<View>(R.id.shippingDataCard).visibility = View.VISIBLE
+            findViewById<View>(R.id.bottomSummary).visibility = View.VISIBLE
         }
 
         tvSubtotal.text = "$${String.format("%.2f", CartManager.getSubtotal())}"
@@ -192,51 +232,75 @@ class CartActivity : AppCompatActivity() {
 
     private fun validarClienteYEnviarOrden() {
         val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
-        val customerId = prefs.getString("user_id", "") ?: ""
+        val userEmail = prefs.getString("user_email", "") ?: ""
 
-        // Si no hay ID o el ID es un GUID (largo > 5), buscamos el ID real de 5 letras
-        if (customerId.isEmpty() || customerId.length > 5) {
-            val userEmail = prefs.getString("user_email", "") ?: ""
-            if (userEmail.isEmpty()) {
-                pbCart.visibility = View.GONE
-                btnCheckout.isEnabled = true
-                Toast.makeText(this, "Error: No se encontró el correo del usuario.", Toast.LENGTH_SHORT).show()
-                return
-            }
+        if (userEmail.isEmpty()) {
+            pbCart.visibility = View.GONE
+            btnCheckout.isEnabled = true
+            Toast.makeText(this, "Error: No se encontró el correo del usuario.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-            ApiClient.apiService.getAllCustomers().enqueue(object : Callback<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>> {
-                override fun onResponse(call: Call<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>, response: Response<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>) {
-                    if (response.isSuccessful && response.body() != null) {
-                        val customer = response.body()!!.find { it.email == userEmail }
-                        if (customer != null) {
-                            prefs.edit().putString("user_id", customer.id).apply()
-                            enviarOrden(customer.id)
-                        } else {
-                            pbCart.visibility = View.GONE
-                            btnCheckout.isEnabled = true
-                            Toast.makeText(this@CartActivity, "Error: No se encontró el perfil del cliente.", Toast.LENGTH_LONG).show()
-                        }
+        // Buscamos siempre al cliente para obtener el CurrentBalance fresco
+        ApiClient.apiService.getAllCustomers().enqueue(object : Callback<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>> {
+            override fun onResponse(call: Call<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>, response: Response<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>) {
+                if (response.isSuccessful && response.body() != null) {
+                    val customer = response.body()!!.find { it.email == userEmail }
+                    if (customer != null) {
+                        prefs.edit().putString("user_id", customer.id).apply()
+                        mostrarOpcionesDePago(customer)
                     } else {
                         pbCart.visibility = View.GONE
                         btnCheckout.isEnabled = true
-                        Toast.makeText(this@CartActivity, "Error al buscar cliente.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CartActivity, "Error: No se encontró el perfil del cliente.", Toast.LENGTH_LONG).show()
                     }
-                }
-
-                override fun onFailure(call: Call<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>, t: Throwable) {
+                } else {
                     pbCart.visibility = View.GONE
                     btnCheckout.isEnabled = true
-                    Toast.makeText(this@CartActivity, "Error de red: ${t.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@CartActivity, "Error al buscar cliente.", Toast.LENGTH_SHORT).show()
                 }
-            })
-        } else {
-            enviarOrden(customerId)
+            }
+
+            override fun onFailure(call: Call<List<uta.edu.ec.proyecto_final_moviles.models.CustomerProfile>>, t: Throwable) {
+                pbCart.visibility = View.GONE
+                btnCheckout.isEnabled = true
+                Toast.makeText(this@CartActivity, "Error de red: ${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
+    private fun mostrarOpcionesDePago(customer: uta.edu.ec.proyecto_final_moviles.models.CustomerProfile) {
+        pbCart.visibility = android.view.View.GONE
+        btnCheckout.isEnabled = true
+
+        val totalApagar = CartManager.getTotal()
+        val shipAddress = etCartAddress.text.toString().trim()
+        val shipPostalCode = etCartPostalCode.text.toString().trim()
+
+        if (shipAddress.isEmpty() || shipPostalCode.isEmpty()) {
+            Toast.makeText(this, "Por favor ingrese Dirección y Código Postal", Toast.LENGTH_SHORT).show()
+            return
         }
+
+        // Guardar dirección en prefs para que PaymentDetailsActivity la use
+        val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
+        prefs.edit().apply {
+            putString("user_address", shipAddress)
+            putString("user_postal_code", shipPostalCode)
+        }.apply()
+
+        // Lanzar el flujo de pago estilo Flutter
+        val intent = Intent(this, PaymentMethodActivity::class.java).apply {
+            putExtra(PaymentMethodActivity.EXTRA_CUSTOMER_ID, customer.id)
+            putExtra(PaymentMethodActivity.EXTRA_WALLET_BALANCE, customer.currentBalance)
+            putExtra(PaymentMethodActivity.EXTRA_TOTAL, totalApagar)
+        }
+        startActivity(intent)
     }
 
     private fun enviarOrden(customerId: String) {
         val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
-        val shipCity = prefs.getString("user_city", "") ?: ""
+        val shipCity = prefs.getString("user_city", "Quito") ?: "Quito"
         val shipCountry = prefs.getString("user_country", "Ecuador") ?: "Ecuador"
         
         val shipAddress = etCartAddress.text.toString().trim()
@@ -245,11 +309,10 @@ class CartActivity : AppCompatActivity() {
         if (shipAddress.isEmpty() || shipPostalCode.isEmpty()) {
             pbCart.visibility = View.GONE
             btnCheckout.isEnabled = true
-            Toast.makeText(this, "Por favor ingrese Dirección y Código Postal", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Por favor ingrese Ciudad/Dirección y Código Postal", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Guardar para futuros usos
         prefs.edit().apply {
             putString("user_address", shipAddress)
             putString("user_postal_code", shipPostalCode)
@@ -283,6 +346,14 @@ class CartActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     Toast.makeText(this@CartActivity, "¡Orden creada exitosamente!", Toast.LENGTH_LONG).show()
                     CartManager.clearCart()
+                    
+                    etCartAddress.text.clear()
+                    etCartPostalCode.text.clear()
+                    getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE).edit().apply {
+                        remove("user_address")
+                        remove("user_postal_code")
+                    }.apply()
+                    
                     startActivity(Intent(this@CartActivity, HomeActivity::class.java))
                     finish()
                 } else if (response.code() == 401) {

@@ -17,6 +17,9 @@ IEntityTypeConfiguration<Product>
             builder.Property(p => p.Name)
             .IsRequired()
             .HasMaxLength(40);
+            builder.Property(p => p.Description)
+            .HasMaxLength(500)
+            .IsRequired(false);
             builder.Property(p => p.UnitPrice)
             .HasPrecision(8, 2);
             builder.Property(p => p.ImageContentType)

@@ -67,6 +67,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var btnSaveProfile: Button
     private lateinit var pbProfile: ProgressBar
+    private lateinit var btnLogoutProfile: com.google.android.material.button.MaterialButton
 
     private var currentUserId: String? = null
     private var originalEmail: String = ""
@@ -113,6 +114,7 @@ class ProfileActivity : AppCompatActivity() {
         bottomNavigation = findViewById(R.id.bottomNavigation)
         btnSaveProfile = findViewById(R.id.btnSaveProfile)
         pbProfile = findViewById(R.id.pbProfile)
+        btnLogoutProfile = findViewById(R.id.btnLogoutProfile)
 
         setupInputFilters()
         setupTextWatchers()
@@ -125,6 +127,22 @@ class ProfileActivity : AppCompatActivity() {
 
         btnSaveProfile.setOnClickListener {
             validateAndSave()
+        }
+
+        btnLogoutProfile.setOnClickListener {
+            // Confirm logout
+            com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
+                .setTitle("Cerrar Sesión")
+                .setMessage("¿Estás seguro que deseas salir de tu cuenta?")
+                .setPositiveButton("Salir") { _, _ ->
+                    getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE).edit().clear().apply()
+                    val intent = android.content.Intent(this, MainActivity::class.java)
+                    intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Cancelar", null)
+                .show()
         }
 
         loadUserIdFromToken()

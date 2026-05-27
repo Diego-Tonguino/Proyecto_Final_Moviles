@@ -1,0 +1,41 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using NorthWind.Sales.Backend.Controllers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace NorthWind.Sales.Backend.Controllers.Auth;
+
+public static class AuthController
+{
+    public record LoginDto(string UserName, string Password);
+
+    public static WebApplication UseAuthController(this WebApplication app)
+    {
+        app.MapPost("/api/auth/login", Login);
+        return app;
+    }
+
+    private static async Task<IResult> Login(LoginDto dto, HttpContext httpContext, IConfiguration configuration)
+    {
+        try
+        {
+            // existing logic
+        }
+        catch (Exception ex)
+        {
+            // Return detailed error in development to aid debugging
+            return Results.Problem(detail: ex.ToString(), statusCode: 500);
+        }
+        // NOTE: actual logic placed inside try-block above
+    }
+}

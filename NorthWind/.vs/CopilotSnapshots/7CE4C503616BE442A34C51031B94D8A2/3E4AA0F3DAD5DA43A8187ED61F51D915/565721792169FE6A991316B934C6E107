@@ -1,0 +1,273 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using NorthWind.Sales.Backend.Repositories.Entities;
+using NorthWind.Sales.Backend.Repositories.Interfaces;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using System;
+using System.IO;
+
+namespace NorthWind.Sales.Backend.Controllers.Admin;
+
+public static class CustomersController
+{
+    public static WebApplication UseCustomersController(this WebApplication app)
+    {
+        app.MapGet("/api/customers", GetAllCustomers);
+        app.MapGet("/api/customers/{id}", GetCustomerById);
+        // JSON create (no file)
+        app.MapPost("/api/customers", CreateCustomerJson);
+        // Form create (with optional file)
+        app.MapPost("/api/customers/form", CreateCustomerForm);
+        // Upload or replace profile picture
+        app.MapPost("/api/customers/{id}/photo", UploadProfilePicture);
+        app.MapPut("/api/customers/{id}", UpdateCustomer);
+        app.MapDelete("/api/customers/{id}", DeleteCustomer);
+        return app;
+    }
+
+    static async Task<IResult> GetAllCustomers(NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesQueriesDataContext queries)
+    {
+        var list = await queries.ToListAsync(queries.Customers);
+        return Results.Ok(list);
+    }
+
+    static async Task<IResult> GetCustomerById(string id, NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesQueriesDataContext queries)
+    {
+        var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+        if (customer == null) return Results.NotFound();
+        return Results.Ok(customer);
+    }
+
+    // DTO used for creating customer via JSON (no file)
+    public record CreateCustomerDto(
+        string Id,
+        string FirstName,
+        string LastName,
+        string Email,
+        string Password,
+        string PasswordConfirm,
+        string? City,
+        string? Phone,
+        decimal CurrentBalance
+    );
+
+    // DTO used for creating customer via form-data (optional file)
+    public record CreateCustomerFormDto(
+        string Id,
+        string FirstName,
+        string LastName,
+        string Email,
+        string Password,
+        string PasswordConfirm,
+        string? City,
+        string? Phone,
+        decimal CurrentBalance,
+        IFormFile? ProfilePicture
+    );
+
+    static async Task<IResult> CreateCustomerJson([FromBody] CreateCustomerDto dto, INorthWindSalesAdminDataContext admin)
+    {
+        try
+        {
+            // Basic validation
+            if (string.IsNullOrWhiteSpace(dto.Id)) return Results.BadRequest(new { error = "Id is required." });
+            if (string.IsNullOrWhiteSpace(dto.FirstName)) return Results.BadRequest(new { error = "FirstName is required." });
+            if (string.IsNullOrWhiteSpace(dto.LastName)) return Results.BadRequest(new { error = "LastName is required." });
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+            if (string.IsNullOrWhiteSpace(dto.Password)) return Results.BadRequest(new { error = "Password is required." });
+            if (dto.Password != dto.PasswordConfirm) return Results.BadRequest(new { error = "Passwords do not match." });
+            if (dto.Password.Length < 6) return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+
+            // Map DTO to entity
+            var customer = new Repositories.Entities.Customer
+            {
+                Id = dto.Id,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.Email,
+                City = dto.City,
+                Phone = dto.Phone,
+                CurrentBalance = dto.CurrentBalance
+            };
+
+            // Hash password and set security stamp
+            var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+            customer.PasswordHash = hasher.HashPassword(customer, dto.Password);
+            customer.SecurityStamp = Guid.NewGuid().ToString();
+
+            await admin.AddCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.Created($"/api/customers/{customer.Id}", customer);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> CreateCustomerForm([FromForm] CreateCustomerFormDto dto, INorthWindSalesAdminDataContext admin)
+    {
+        try
+        {
+            // Basic validation
+            if (string.IsNullOrWhiteSpace(dto.Id)) return Results.BadRequest(new { error = "Id is required." });
+            if (string.IsNullOrWhiteSpace(dto.FirstName)) return Results.BadRequest(new { error = "FirstName is required." });
+            if (string.IsNullOrWhiteSpace(dto.LastName)) return Results.BadRequest(new { error = "LastName is required." });
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+            if (string.IsNullOrWhiteSpace(dto.Password)) return Results.BadRequest(new { error = "Password is required." });
+            if (dto.Password != dto.PasswordConfirm) return Results.BadRequest(new { error = "Passwords do not match." });
+            if (dto.Password.Length < 6) return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+
+            // Map DTO to entity
+            var customer = new Repositories.Entities.Customer
+            {
+                Id = dto.Id,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.Email,
+                City = dto.City,
+                Phone = dto.Phone,
+                CurrentBalance = dto.CurrentBalance
+            };
+
+            // Handle uploaded profile picture if present
+            if (dto.ProfilePicture != null && dto.ProfilePicture.Length > 0)
+            {
+                using var ms = new MemoryStream();
+                await dto.ProfilePicture.CopyToAsync(ms);
+                customer.ProfilePictureData = ms.ToArray();
+                customer.ProfilePictureContentType = dto.ProfilePicture.ContentType;
+            }
+
+            // Hash password and set security stamp
+            var hasher = new PasswordHasher<Repositories.Entities.Customer>();
+            customer.PasswordHash = hasher.HashPassword(customer, dto.Password);
+            customer.SecurityStamp = Guid.NewGuid().ToString();
+
+            await admin.AddCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+            return Results.Created($"/api/customers/{customer.Id}", customer);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> UploadProfilePicture(string id, IFormFile file, INorthWindSalesAdminDataContext admin, INorthWindSalesQueriesDataContext queries)
+    {
+        try
+        {
+            if (file == null || file.Length == 0) return Results.BadRequest(new { error = "No file provided." });
+
+            var customer = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (customer == null) return Results.NotFound();
+
+            using var ms = new MemoryStream();
+            await file.CopyToAsync(ms);
+            customer.ProfilePictureData = ms.ToArray();
+            customer.ProfilePictureContentType = file.ContentType;
+
+            admin.UpdateCustomerAsync(customer);
+            await admin.SaveChangesAsync();
+
+            return Results.Ok();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> UpdateCustomer(string id, [FromBody] NorthWind.Sales.Backend.Repositories.Entities.Customer customer, NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesAdminDataContext admin)
+    {
+        // Keep old behaviour for compatibility removed. Use a safer update flow below.
+        return Results.BadRequest();
+    }
+
+    // Safer DTO for update: only update allowed fields and preserve non-sent fields (like PasswordHash, SecurityStamp, ProfilePicture)
+    public record UpdateCustomerDto(
+        string Id,
+        string FirstName,
+        string LastName,
+        string Email,
+        string? City,
+        string? Phone,
+        decimal CurrentBalance,
+        string? Password,
+        string? PasswordConfirm
+    );
+
+    static async Task<IResult> UpdateCustomer(string id, [FromBody] UpdateCustomerDto dto,
+        NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesAdminDataContext admin,
+        NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesQueriesDataContext queries)
+    {
+        try
+        {
+            if (id != dto.Id) return Results.BadRequest(new { error = "Id mismatch." });
+
+            var existing = await queries.FirstOrDefaultAync(queries.Customers.Where(c => c.Id == id));
+            if (existing == null) return Results.NotFound();
+
+            // Basic validation
+            if (string.IsNullOrWhiteSpace(dto.FirstName)) return Results.BadRequest(new { error = "FirstName is required." });
+            if (string.IsNullOrWhiteSpace(dto.LastName)) return Results.BadRequest(new { error = "LastName is required." });
+            if (string.IsNullOrWhiteSpace(dto.Email)) return Results.BadRequest(new { error = "Email is required." });
+
+            // If password fields provided, validate and hash
+            if (!string.IsNullOrEmpty(dto.Password) || !string.IsNullOrEmpty(dto.PasswordConfirm))
+            {
+                if (dto.Password != dto.PasswordConfirm) return Results.BadRequest(new { error = "Passwords do not match." });
+                if (dto.Password != null && dto.Password.Length < 6) return Results.BadRequest(new { error = "Password must be at least 6 characters." });
+
+                var hasher = new Microsoft.AspNetCore.Identity.PasswordHasher<Repositories.Entities.Customer>();
+                existing.PasswordHash = hasher.HashPassword(existing, dto.Password);
+                existing.SecurityStamp = Guid.NewGuid().ToString();
+            }
+
+            // Update allowed fields
+            existing.FirstName = dto.FirstName;
+            existing.LastName = dto.LastName;
+            existing.Email = dto.Email;
+            existing.City = dto.City;
+            existing.Phone = dto.Phone;
+            existing.CurrentBalance = dto.CurrentBalance;
+
+            // Persist
+            admin.UpdateCustomerAsync(existing);
+            await admin.SaveChangesAsync();
+            return Results.NoContent();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    static async Task<IResult> DeleteCustomer(string id, NorthWind.Sales.Backend.Repositories.Interfaces.INorthWindSalesAdminDataContext admin)
+    {
+        try
+        {
+            // Validar que el cliente no tenga órdenes asociadas
+            if (await admin.HasOrdersAsync(id))
+            {
+                return Results.BadRequest(new 
+                { 
+                    error = $"No se puede eliminar el cliente '{id}' porque tiene órdenes asociadas. " +
+                            "Elimine primero todas las órdenes relacionadas."
+                });
+            }
+
+            await admin.DeleteCustomerAsync(id);
+            await admin.SaveChangesAsync();
+            return Results.NoContent();
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+}

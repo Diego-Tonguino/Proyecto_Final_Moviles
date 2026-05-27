@@ -122,6 +122,12 @@ import MainLayout from '../layouts/MainLayout.astro';
             <!-- Removido el pattern para permitir caracteres especiales -->
             <input type="text" id="formName" required maxlength="30" title="Máximo 30 caracteres" placeholder="Ej: Queso Manchego (100%)..." class="form-input">
           </div>
+
+          <div class="form-group">
+            <label for="formDescription">Descripción del Producto</label>
+            <textarea id="formDescription" maxlength="500" rows="3" placeholder="Describe el producto: origen, sabor, usos recomendados..." class="form-input" style="resize: vertical; min-height: 80px; font-family: inherit;"></textarea>
+            <small style="color: #64748b; font-size: 0.78rem;">Máximo 500 caracteres. Se mostrará en la app móvil.</small>
+          </div>
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="form-group">
@@ -509,8 +515,9 @@ import MainLayout from '../layouts/MainLayout.astro';
       const name = p.productName ?? p.ProductName ?? p.name ?? p.Name ?? '';
       const price = p.unitPrice ?? p.UnitPrice ?? p.price ?? p.Price ?? 0;
       const stock = p.unitsInStock ?? p.UnitsInStock ?? p.stock ?? p.Stock ?? 0;
+      const description = (p as any).description ?? (p as any).Description ?? '';
 
-      const prodJson = encodeURIComponent(JSON.stringify({ id, name, price, stock })).replace(/'/g, "%27");
+      const prodJson = encodeURIComponent(JSON.stringify({ id, name, description, price, stock })).replace(/'/g, "%27");
       const safeName = String(name).replace(/'/g, "&apos;");
 
       const timestamp = new Date().getTime();
@@ -613,6 +620,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       isFormDirty = false; // Resetear al abrir
       document.getElementById('formMode')!.value = 'create';
       document.getElementById('formName')!.value = '';
+      (document.getElementById('formDescription') as HTMLTextAreaElement).value = '';
       document.getElementById('formPrice')!.value = '0.00';
       document.getElementById('formStock')!.value = '0';
       document.getElementById('modalTitle')!.textContent = 'Nuevo Producto';
@@ -671,6 +679,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       document.getElementById('formId')!.value = data.id;
       document.getElementById('groupFormId')!.style.display = 'block';
       document.getElementById('formName')!.value = data.name;
+      (document.getElementById('formDescription') as HTMLTextAreaElement).value = data.description || '';
       document.getElementById('formPrice')!.value = data.price;
       document.getElementById('formStock')!.value = data.stock;
       document.getElementById('modalTitle')!.textContent = 'Editar Producto';
@@ -729,6 +738,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     const mode = (document.getElementById('formMode') as HTMLInputElement).value;
     const id = (document.getElementById('formId') as HTMLInputElement).value;
     const name = (document.getElementById('formName') as HTMLInputElement).value.trim();
+    const description = (document.getElementById('formDescription') as HTMLTextAreaElement).value.trim();
     
     const priceRaw = (document.getElementById('formPrice') as HTMLInputElement).value;
     const price = parseFloat(priceRaw) || 0;
@@ -778,8 +788,8 @@ import MainLayout from '../layouts/MainLayout.astro';
       const method = mode === 'create' ? 'POST' : 'PUT';
       
       const body = mode === 'create' 
-        ? { name, unitPrice: price, unitsInStock: stock }
-        : { id, name, unitPrice: price, unitsInStock: stock };
+        ? { name, description: description || null, unitPrice: price, unitsInStock: stock }
+        : { id, name, description: description || null, unitPrice: price, unitsInStock: stock };
 
       const respuesta = await fetch(url, {
         method: method,

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj": {}
+    "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj": {
+    "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
+        "projectUniqueName": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
         "projectName": "NorthWind.Validation.Entities",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\obj\\",
+        "projectPath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj",
+        "packagesPath": "C:\\Users\\jhon\\.nuget\\packages\\",
+        "outputPath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jhon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,9 +25,7 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Lenovo\\Downloads\\Proyecto NorthWind\\Proyecto NorthWind\\NorthWind.Packages": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Moviles\\Proyecto NorthWind\\NorthWind.Packages": {}
         },
         "frameworks": {
           "net8.0": {
@@ -72,24 +70,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj": {
+    "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj",
+        "projectUniqueName": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj",
         "projectName": "NorthWind.ValidationService.FluentValidation",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\obj\\",
+        "projectPath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\NorthWind.ValidationService.FluentValidation.csproj",
+        "packagesPath": "C:\\Users\\jhon\\.nuget\\packages\\",
+        "outputPath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.ValidationService.FluentValidation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jhon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,16 +95,14 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Lenovo\\Downloads\\Proyecto NorthWind\\Proyecto NorthWind\\NorthWind.Packages": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Moviles\\Proyecto NorthWind\\NorthWind.Packages": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\Desktop\\SEXTO\\APLICACIONES MOVILES\\Android\\PROYECTO\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj"
+              "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj": {
+                "projectPath": "C:\\Moviles\\ProyectoMovil\\Proyecto_Final_Moviles\\NorthWind\\NorthWind.Validation.Entities\\NorthWind.Validation.Entities.csproj"
               }
             }
           }
@@ -148,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

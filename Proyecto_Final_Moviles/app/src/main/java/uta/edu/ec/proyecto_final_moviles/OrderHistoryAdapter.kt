@@ -11,7 +11,8 @@ import java.util.Locale
 
 class OrderHistoryAdapter(
     private var orders: List<OrderHistoryResponse>,
-    private var productNames: Map<Int, String> = emptyMap()
+    private var productNames: Map<Int, String> = emptyMap(),
+    private val onItemClick: ((OrderHistoryResponse) -> Unit)? = null
 ) : RecyclerView.Adapter<OrderHistoryAdapter.OrderViewHolder>() {
 
     class OrderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -58,15 +59,16 @@ class OrderHistoryAdapter(
         holder.tvOrderItems.text = "$totalItems producto(s)"
         holder.tvOrderTotal.text = "$${String.format("%.2f", totalAmount)}"
 
-        if (details.isNotEmpty()) {
-            val detailsText = details.joinToString("\n") { detail ->
-                val name = productNames[detail.productId] ?: "Producto #${detail.productId}"
-                "• $name (${detail.quantity} x $${String.format("%.2f", detail.unitPrice)})"
-            }
-            holder.tvOrderDetailsList.text = detailsText
-            holder.tvOrderDetailsList.visibility = View.VISIBLE
-        } else {
-            holder.tvOrderDetailsList.visibility = View.GONE
+        // Ya no mostramos la lista de viñetas porque tenemos una pantalla dedicada
+        holder.tvOrderDetailsList.visibility = View.GONE
+
+        // Agregamos un texto que diga "Toca para ver detalles"
+        holder.tvOrderDetailsList.text = "Toca para ver la factura"
+        holder.tvOrderDetailsList.visibility = View.VISIBLE
+        holder.tvOrderDetailsList.setTextColor(android.graphics.Color.parseColor("#4ADE80"))
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(order)
         }
     }
 

@@ -203,3 +203,33 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\refint\NorthWind.Sales.Backend.SmtpGateways.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.SmtpGateways.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Events.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Exceptions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Backend.BusinessObjects.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.DomainLogs.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Events.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Exceptions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Sales.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Transactions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWin.036196E7.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\refint\NorthWind.Sales.Backend.SmtpGateways.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\NorthWind.Sales.Backend.SmtpGateways.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Sales.Backend.SmtpGateways\obj\Debug\net8.0\ref\NorthWind.Sales.Backend.SmtpGateways.dll

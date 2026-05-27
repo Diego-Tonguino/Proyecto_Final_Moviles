@@ -105,3 +105,19 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\bin\Debug\net8.0\NorthWind.Validation.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWin.B536FC6D.Up2Date
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\refint\NorthWind.ValidationService.FluentValidation.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\NorthWind.ValidationService.FluentValidation.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.ValidationService.FluentValidation\obj\Debug\net8.0\ref\NorthWind.ValidationService.FluentValidation.dll

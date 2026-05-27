@@ -84,3 +84,16 @@ C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Fin
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\refint\NorthWind.Transactions.Entities.dll
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.pdb
 C:\Users\Lenovo\Desktop\SEXTO\APLICACIONES MOVILES\Android\PROYECTO\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\ref\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\bin\Debug\net8.0\NorthWind.Transactions.Entities.deps.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\bin\Debug\net8.0\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\bin\Debug\net8.0\NorthWind.Transactions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.csproj.AssemblyReference.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.AssemblyInfoInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.AssemblyInfo.cs
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.csproj.CoreCompileInputs.cache
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.sourcelink.json
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\refint\NorthWind.Transactions.Entities.dll
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\NorthWind.Transactions.Entities.pdb
+C:\Moviles\ProyectoMovil\Proyecto_Final_Moviles\NorthWind\NorthWind.Transactions.Entities\obj\Debug\net8.0\ref\NorthWind.Transactions.Entities.dll
