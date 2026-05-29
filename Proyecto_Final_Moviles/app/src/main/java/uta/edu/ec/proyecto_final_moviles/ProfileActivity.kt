@@ -281,7 +281,7 @@ class ProfileActivity : AppCompatActivity() {
                     originalEmail = profile.email
 
                     // Cargar imagen de perfil con Glide
-                    val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
+                    val imageUrl = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/customers/${currentUserId}/profile-picture"
                     Glide.with(this@ProfileActivity)
                         .load(imageUrl)
                         .signature(ObjectKey(System.currentTimeMillis().toString())) // Evitar cachÃ©
@@ -324,7 +324,7 @@ class ProfileActivity : AppCompatActivity() {
                     pbProfile.visibility = View.GONE
                     if (response.isSuccessful) {
                         Toast.makeText(this@ProfileActivity, "Foto actualizada", Toast.LENGTH_SHORT).show()
-                        val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
+                        val imageUrl = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/customers/${currentUserId}/profile-picture"
                         Glide.with(this@ProfileActivity)
                             .load(imageUrl)
                             .signature(ObjectKey(System.currentTimeMillis().toString()))

@@ -124,7 +124,7 @@ class ProductDetailActivity : AppCompatActivity() {
                     val imageBytes = hexStringToByteArray(imageData.substring(2))
                     cargarImagenConGlide(imageView, imageBytes)
                 } else if (imageData.startsWith("http", ignoreCase = true) || imageData.startsWith("/")) {
-                    val imageUrl = if (imageData.startsWith("/")) "http://localhost:5033$imageData" else imageData
+                    val imageUrl = if (imageData.startsWith("/")) "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net$imageData" else imageData
                     cargarImagenConGlide(imageView, imageUrl)
                 } else if (isBase64(imageData)) {
                     val imageBytes = Base64.decode(imageData, Base64.DEFAULT)
@@ -136,7 +136,7 @@ class ProductDetailActivity : AppCompatActivity() {
                 imageView.setImageResource(R.drawable.bg_welcome)
             }
         } else {
-            val imageUrl = "http://localhost:5033/api/products/$productId/image"
+            val imageUrl = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products/$productId/image"
             Glide.with(this)
                 .load(imageUrl)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)

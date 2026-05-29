@@ -78,7 +78,7 @@ class CartActivity : AppCompatActivity() {
         
         val userId = prefs.getString("user_id", null)
         if (userId != null) {
-            val imageUrl = "http://localhost:5033/api/customers/${userId}/profile-picture"
+            val imageUrl = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/customers/${userId}/profile-picture"
             com.bumptech.glide.Glide.with(this)
                 .load(imageUrl)
                 .placeholder(R.drawable.bg_welcome)

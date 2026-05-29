@@ -57,7 +57,7 @@ class ProductAdapter(
                 }
                 // CASO 3: URL Directa
                 else if (imageData.startsWith("http", ignoreCase = true) || imageData.startsWith("/")) {
-                    val imageUrl = if (imageData.startsWith("/")) "http://localhost:5033$imageData" else imageData
+                    val imageUrl = if (imageData.startsWith("/")) "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net$imageData" else imageData
                     cargarImagenConGlide(holder, imageUrl)
                 }
                 // CASO 4: Base64 Puro
@@ -74,7 +74,7 @@ class ProductAdapter(
         }
         else {
             // CASO 5: NO HAY IMAGEN EN JSON (API Optimizada). Llama al endpoint de imagen
-            val imageUrl = "http://localhost:5033/api/products/${product.id}/image"
+            val imageUrl = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products/${product.id}/image"
 
             Glide.with(holder.itemView.context)
                 .load(imageUrl)
