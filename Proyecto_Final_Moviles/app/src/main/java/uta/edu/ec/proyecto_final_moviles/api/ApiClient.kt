@@ -5,11 +5,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
     // Restauramos a localhost que es la configuración que te funcionaba con adb reverse
-    private const val BASE_URL = "https://northwind-api-uta-anflgshdbxfjancr.switzerlandnorth-01.azurewebsites.net/"
+    private const val BASE_URL = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/"
 
     var authToken: String? = null
 
     private val client = okhttp3.OkHttpClient.Builder()
+        .connectTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
+        .readTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
+        .writeTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
         .addInterceptor { chain ->
             val requestBuilder = chain.request().newBuilder()
             authToken?.let {
