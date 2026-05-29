@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@drawable/bg_welcome">
 
     <!-- Header Flotante Premium (unificado con HomeActivity) -->
@@ -154,7 +155,7 @@
             <!-- Cédula -->
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CÉDULA" android:textColor="#A855F7" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
             <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilProfCedula" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" app:startIconDrawable="@android:drawable/ic_menu_info_details" app:startIconTint="#A1A1AA" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCedula" android:layout_width="match_parent" android:layout_height="56dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:inputType="number" android:maxLength="10" />
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etProfCedula" android:layout_width="match_parent" android:layout_height="56dp" android:background="@drawable/bg_input" android:paddingHorizontal="16dp" android:textColor="#80FFFFFF" android:enabled="false" android:inputType="number" android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Nombre -->
@@ -229,16 +230,15 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Primary Action Button -->
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btnSaveProfile"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:backgroundTint="#A855F7"
+                android:layout_height="55dp"
+                android:backgroundTint="#7c3aed"
                 android:text="Guardar Cambios"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
                 android:textStyle="bold"
-                app:cornerRadius="30dp" />
+                app:cornerRadius="8dp" />
 
             <!-- Botón Log de Errores -->
             <com.google.android.material.button.MaterialButton

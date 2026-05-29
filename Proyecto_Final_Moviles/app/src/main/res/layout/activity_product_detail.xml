@@ -87,20 +87,27 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvProductDescription"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_marginTop="8dp"
-                android:text="Sin descripción disponible."
-                android:textColor="#B3FFFFFF"
-                android:textSize="14sp"
-                android:lineSpacingExtra="4dp" />
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/tvProductDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sin descripción disponible."
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+            </ScrollView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -120,11 +127,6 @@
                     android:textStyle="bold"
                     tools:text="Unidades disponibles: 10" />
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
 
             <!-- Selector de cantidad -->
             <LinearLayout

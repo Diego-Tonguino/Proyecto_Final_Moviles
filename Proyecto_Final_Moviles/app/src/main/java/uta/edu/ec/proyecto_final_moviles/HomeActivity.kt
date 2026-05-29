@@ -17,6 +17,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -71,6 +72,13 @@ class HomeActivity : AppCompatActivity() {
         filterChipsScroll = findViewById(R.id.filterChipsScroll)
         filterChipsContainer = findViewById(R.id.filterChipsContainer)
         btnFilter = findViewById(R.id.btnFilter)
+        
+        val cardBottomNav = findViewById<MaterialCardView>(R.id.cardBottomNav)
+        ViewCompat.setOnApplyWindowInsetsListener(window.decorView.rootView) { _, insets ->
+            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            cardBottomNav.visibility = if (imeVisible) View.GONE else View.VISIBLE
+            insets
+        }
 
         swipeRefresh.setOnRefreshListener { cargarProductos() }
 

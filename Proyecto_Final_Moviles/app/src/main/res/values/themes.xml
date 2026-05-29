@@ -45,7 +45,7 @@
     </style>
 
     <style name="NeonBottomSheetStyle" parent="Widget.Material3.BottomSheet.Modal">
-        <item name="backgroundTint">#1E0A2E</item>
+        <item name="backgroundTint">@android:color/transparent</item>
         <item name="shapeAppearance">@style/NeonBottomSheetShape</item>
     </style>
 

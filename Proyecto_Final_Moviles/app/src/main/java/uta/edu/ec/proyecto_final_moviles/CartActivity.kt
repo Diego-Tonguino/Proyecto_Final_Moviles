@@ -10,6 +10,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -61,6 +62,13 @@ class CartActivity : AppCompatActivity() {
         btnCheckout = findViewById(R.id.btnCheckout)
         pbCart = findViewById(R.id.pbCart)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        val cardBottomNav = findViewById<com.google.android.material.card.MaterialCardView>(R.id.cardBottomNav)
+        
+        ViewCompat.setOnApplyWindowInsetsListener(window.decorView.rootView) { _, insets ->
+            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            cardBottomNav.visibility = if (imeVisible) View.GONE else View.VISIBLE
+            insets
+        }
         
         tvWelcomeName = findViewById(R.id.tvWelcomeName)
         ivCartProfilePic = findViewById(R.id.ivCartProfilePic)
@@ -87,18 +95,22 @@ class CartActivity : AppCompatActivity() {
         }
 
         btnCartLogout.setOnClickListener {
-            com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
-                .setTitle("Cerrar Sesión")
-                .setMessage("¿Estás seguro que deseas salir de tu cuenta?")
-                .setPositiveButton("Salir") { _, _ ->
-                    prefs.edit().clear().apply()
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                    finish()
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
+            val dialog = android.app.Dialog(this)
+            val view = layoutInflater.inflate(R.layout.dialog_logout, null)
+            dialog.setContentView(view)
+            dialog.window?.setBackgroundDrawable(android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT))
+            val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
+            dialog.window?.setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT)
+            view.findViewById<View>(R.id.btnCancelLogout).setOnClickListener { dialog.dismiss() }
+            view.findViewById<View>(R.id.btnConfirmLogout).setOnClickListener {
+                dialog.dismiss()
+                prefs.edit().clear().apply()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+            dialog.show()
         }
 
         bottomNavigation.selectedItemId = R.id.nav_cart

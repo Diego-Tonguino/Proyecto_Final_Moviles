@@ -65,6 +65,34 @@ class HistoryActivity : AppCompatActivity() {
         tvEmptyHistory = findViewById(R.id.tvEmptyHistory)
         pbHistory = findViewById(R.id.pbHistory)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        val cardBottomNav = findViewById<MaterialCardView>(R.id.cardBottomNav)
+        val btnHistoryLogout = findViewById<MaterialButton>(R.id.btnHistoryLogout)
+        
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(window.decorView.rootView) { _, insets ->
+            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            cardBottomNav.visibility = if (imeVisible) View.GONE else View.VISIBLE
+            insets
+        }
+
+        btnHistoryLogout.setOnClickListener {
+            val dialog = android.app.Dialog(this)
+            val view = layoutInflater.inflate(R.layout.dialog_logout, null)
+            dialog.setContentView(view)
+            dialog.window?.setBackgroundDrawable(android.graphics.drawable.ColorDrawable(Color.TRANSPARENT))
+            val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
+            dialog.window?.setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT)
+            view.findViewById<View>(R.id.btnCancelLogout).setOnClickListener { dialog.dismiss() }
+            view.findViewById<View>(R.id.btnConfirmLogout).setOnClickListener {
+                dialog.dismiss()
+                getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE).edit().clear().apply()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+            dialog.show()
+        }
+
         etHistorySearch = findViewById(R.id.etHistorySearch)
         btnHistoryFilter = findViewById(R.id.btnHistoryFilter)
         historyFilterChipsScroll = findViewById(R.id.historyFilterChipsScroll)

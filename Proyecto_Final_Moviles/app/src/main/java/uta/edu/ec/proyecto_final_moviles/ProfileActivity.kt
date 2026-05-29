@@ -112,9 +112,16 @@ class ProfileActivity : AppCompatActivity() {
 
         ivProfilePicture = findViewById(R.id.ivProfilePicture)
         bottomNavigation = findViewById(R.id.bottomNavigation)
+        val cardBottomNav = findViewById<com.google.android.material.card.MaterialCardView>(R.id.cardBottomNav)
         btnSaveProfile = findViewById(R.id.btnSaveProfile)
         pbProfile = findViewById(R.id.pbProfile)
         btnLogoutProfile = findViewById(R.id.btnLogoutProfile)
+
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(window.decorView.rootView) { _, insets ->
+            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            cardBottomNav.visibility = if (imeVisible) View.GONE else View.VISIBLE
+            insets
+        }
 
         setupInputFilters()
         setupTextWatchers()
@@ -122,7 +129,22 @@ class ProfileActivity : AppCompatActivity() {
         setupBottomNavigation()
 
         ivProfilePicture.setOnClickListener {
-            selectImageLauncher.launch("image/*")
+            val dialog = android.app.Dialog(this)
+            val view = layoutInflater.inflate(R.layout.dialog_avatar_options, null)
+            dialog.setContentView(view)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
+            dialog.window?.setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT)
+            
+            view.findViewById<View>(R.id.btnChangePhoto).setOnClickListener {
+                dialog.dismiss()
+                selectImageLauncher.launch("image/*")
+            }
+            view.findViewById<View>(R.id.btnDeletePhoto).setOnClickListener {
+                dialog.dismiss()
+                deleteProfilePicture()
+            }
+            dialog.show()
         }
 
         btnSaveProfile.setOnClickListener {
@@ -130,19 +152,22 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         btnLogoutProfile.setOnClickListener {
-            // Confirm logout
-            com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
-                .setTitle("Cerrar Sesión")
-                .setMessage("¿Estás seguro que deseas salir de tu cuenta?")
-                .setPositiveButton("Salir") { _, _ ->
-                    getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE).edit().clear().apply()
-                    val intent = android.content.Intent(this, MainActivity::class.java)
-                    intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                    finish()
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
+            val dialog = android.app.Dialog(this)
+            val view = layoutInflater.inflate(R.layout.dialog_logout, null)
+            dialog.setContentView(view)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
+            dialog.window?.setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT)
+            view.findViewById<View>(R.id.btnCancelLogout).setOnClickListener { dialog.dismiss() }
+            view.findViewById<View>(R.id.btnConfirmLogout).setOnClickListener {
+                dialog.dismiss()
+                getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE).edit().clear().apply()
+                val intent = android.content.Intent(this, MainActivity::class.java)
+                intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+            dialog.show()
         }
 
         // Botón Log de Errores
@@ -168,15 +193,15 @@ class ProfileActivity : AppCompatActivity() {
                 R.id.nav_profile -> true
                 R.id.nav_home -> {
                     checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, HomeActivity::class.java))
-                    false // Evitar que se seleccione si hay cambios, o dejarlo en falso si navegamos
+                    true // Mover visualmente la selección de inmediato
                 }
                 R.id.nav_cart -> {
                     checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, CartActivity::class.java))
-                    false
+                    true
                 }
                 R.id.nav_history -> {
                     checkUnsavedChangesAndNavigate(android.content.Intent(this@ProfileActivity, HistoryActivity::class.java))
-                    false
+                    true
                 }
                 else -> false
             }
@@ -345,6 +370,30 @@ class ProfileActivity : AppCompatActivity() {
             pbProfile.visibility = View.GONE
             Toast.makeText(this, "Error al procesar la imagen", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun deleteProfilePicture() {
+        if (currentUserId == null) return
+        
+        pbProfile.visibility = View.VISIBLE
+        ApiClient.apiService.deleteProfilePicture(currentUserId!!).enqueue(object : Callback<ResponseBody> {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                pbProfile.visibility = View.GONE
+                if (response.isSuccessful) {
+                    Toast.makeText(this@ProfileActivity, "Foto eliminada", Toast.LENGTH_SHORT).show()
+                    Glide.with(this@ProfileActivity)
+                        .load(R.drawable.bg_welcome)
+                        .into(ivProfilePicture)
+                } else {
+                    Toast.makeText(this@ProfileActivity, "Error al eliminar foto", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                pbProfile.visibility = View.GONE
+                Toast.makeText(this@ProfileActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun validateAndSave() {
