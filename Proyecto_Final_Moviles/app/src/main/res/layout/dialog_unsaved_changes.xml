@@ -8,7 +8,7 @@
     app:cardBackgroundColor="#1A103C"
     app:cardCornerRadius="24dp"
     app:cardElevation="0dp"
-    app:strokeColor="#33FFFFFF"
+    app:strokeColor="#4DFFFFFF"
     app:strokeWidth="1dp">
 
     <LinearLayout

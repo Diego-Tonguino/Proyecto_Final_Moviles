@@ -15,11 +15,11 @@
         <!-- PayPal Header azul oficial -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
             android:background="#003087"
-            android:paddingBottom="30dp">
+            android:paddingBottom="20dp">
 
             <!-- Botón volver -->
             <LinearLayout
@@ -61,7 +61,32 @@
                 android:fontFamily="sans-serif-condensed"
                 android:layout_marginTop="-20dp"
                 android:layout_marginStart="32dp" />
+
+            <!-- Paso 2 de 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Paso 2 de 3: Confirmar pago"
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Barra de progreso azul PayPal -->
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginHorizontal="24dp"
+                android:max="3"
+                android:progress="2"
+                android:progressTint="#009cde"
+                android:progressBackgroundTint="#33FFFFFF" />
         </LinearLayout>
+
+
 
         <!-- White card with rounded top -->
         <LinearLayout
@@ -147,7 +172,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:backgroundTint="#009cde"
-                app:cornerRadius="26dp"/>
+                app:cornerRadius="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"

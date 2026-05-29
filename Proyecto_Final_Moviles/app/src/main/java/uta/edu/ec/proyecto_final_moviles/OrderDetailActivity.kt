@@ -5,13 +5,13 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
-import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.google.android.material.card.MaterialCardView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import uta.edu.ec.proyecto_final_moviles.models.OrderHistoryResponse
@@ -24,7 +24,6 @@ class OrderDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_detail)
 
-        // Ocultar barras
         WindowCompat.setDecorFitsSystemWindows(window, false)
         WindowInsetsControllerCompat(window, window.decorView).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
@@ -32,7 +31,7 @@ class OrderDetailActivity : AppCompatActivity() {
         }
         supportActionBar?.hide()
 
-        val btnBack = findViewById<ImageButton>(R.id.btnBackInvoice)
+        val btnBack = findViewById<MaterialCardView>(R.id.btnBackInvoice)
         btnBack.setOnClickListener { finish() }
 
         // Recibir datos
@@ -57,7 +56,7 @@ class OrderDetailActivity : AppCompatActivity() {
         val tvInvoiceIva = findViewById<TextView>(R.id.tvInvoiceIva)
         val tvTotal = findViewById<TextView>(R.id.tvInvoiceTotal)
         val llItems = findViewById<LinearLayout>(R.id.llInvoiceItems)
-        val btnSavePdf = findViewById<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>(R.id.btnSavePdf)
+        val btnSavePdf = findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSavePdf)
 
         tvOrderNumber.text = "Nº Factura: ${order.id}"
         

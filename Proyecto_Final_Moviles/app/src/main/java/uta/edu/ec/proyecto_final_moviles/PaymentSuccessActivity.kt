@@ -27,15 +27,17 @@ class PaymentSuccessActivity : AppCompatActivity() {
         }
         supportActionBar?.hide()
 
-        // Animate the checkmark in
-        val topSection = findViewById<com.google.android.material.card.MaterialCardView>(R.id.topSection)
+        // Animate the checkmark and card in
+        val successIcon = findViewById<TextView>(R.id.ivSuccessIcon)
         val contentCard = findViewById<com.google.android.material.card.MaterialCardView>(R.id.contentCard)
 
-        topSection.alpha = 0f
+        successIcon.alpha = 0f
+        successIcon.scaleX = 0.5f
+        successIcon.scaleY = 0.5f
         contentCard.alpha = 0f
         contentCard.translationY = 60f
 
-        topSection.animate().alpha(1f).setDuration(600).start()
+        successIcon.animate().alpha(1f).scaleX(1f).scaleY(1f).setDuration(500).start()
         contentCard.animate()
             .alpha(1f)
             .translationY(0f)

@@ -39,6 +39,9 @@ class ProductDetailActivity : AppCompatActivity() {
         val tvProductPriceDetail = findViewById<TextView>(R.id.tvProductPriceDetail)
         val tvProductStockDetail = findViewById<TextView>(R.id.tvProductStockDetail)
         val btnAddToCartDetail = findViewById<MaterialButton>(R.id.btnAddToCartDetail)
+        val btnDetailPlus = findViewById<MaterialButton>(R.id.btnDetailPlus)
+        val btnDetailMinus = findViewById<MaterialButton>(R.id.btnDetailMinus)
+        val tvDetailQuantity = findViewById<TextView>(R.id.tvDetailQuantity)
 
         // Recibir datos del Intent
         val productId = intent.getIntExtra("product_id", 0)
@@ -47,6 +50,26 @@ class ProductDetailActivity : AppCompatActivity() {
         val productPrice = intent.getDoubleExtra("product_price", 0.0)
         val productStock = intent.getIntExtra("product_stock", 0)
         val productImageData = intent.getStringExtra("product_image")
+
+        // Variable de cantidad
+        var quantity = 1
+        tvDetailQuantity.text = quantity.toString()
+
+        btnDetailPlus.setOnClickListener {
+            if (quantity < productStock) {
+                quantity++
+                tvDetailQuantity.text = quantity.toString()
+            } else {
+                Toast.makeText(this, "Stock máximo: $productStock unidades", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btnDetailMinus.setOnClickListener {
+            if (quantity > 1) {
+                quantity--
+                tvDetailQuantity.text = quantity.toString()
+            }
+        }
 
         // Asignar a vistas
         tvProductNameDetail.text = productName
@@ -66,7 +89,7 @@ class ProductDetailActivity : AppCompatActivity() {
 
         // Botón Volver
         btnBack.setOnClickListener {
-            finish() // Cierra esta pantalla y vuelve al Home
+            finish()
         }
 
         // Botón Agregar al Carrito
@@ -81,9 +104,9 @@ class ProductDetailActivity : AppCompatActivity() {
                 imageContentType = null
             )
             
-            if (CartManager.addProduct(product)) {
-                Toast.makeText(this, "$productName añadido al carrito", Toast.LENGTH_SHORT).show()
-                finish() // Vuelve a la lista después de agregar
+            if (CartManager.addProduct(product, quantity)) {
+                Toast.makeText(this, "$productName (x$quantity) añadido al carrito", Toast.LENGTH_SHORT).show()
+                finish()
             } else {
                 Toast.makeText(this, "Stock máximo alcanzado para $productName", Toast.LENGTH_SHORT).show()
             }

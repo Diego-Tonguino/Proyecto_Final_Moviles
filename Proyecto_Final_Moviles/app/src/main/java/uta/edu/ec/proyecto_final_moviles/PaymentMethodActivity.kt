@@ -60,7 +60,15 @@ class PaymentMethodActivity : AppCompatActivity() {
         val tvWalletBalance = findViewById<TextView>(R.id.tvWalletBalanceMethod)
         tvWalletBalance.text = "Saldo: $${String.format("%.2f", walletBalance)}"
 
+        val subtotal = CartManager.getSubtotal()
+        val iva = CartManager.getIva()
+
+        val tvSubtotal = findViewById<TextView>(R.id.tvMethodSubtotal)
+        val tvIva = findViewById<TextView>(R.id.tvMethodIva)
         val tvTotal = findViewById<TextView>(R.id.tvTotalAmount)
+
+        tvSubtotal.text = "$${String.format("%.2f", subtotal)}"
+        tvIva.text = "$${String.format("%.2f", iva)}"
         tvTotal.text = "$${String.format("%.2f", total)}"
 
         // Set initial selection

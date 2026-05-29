@@ -93,14 +93,16 @@ class ProductAdapter(
     override fun getItemCount() = products.size
 
     fun filter(text: String) {
-        val filteredList = if (text.isEmpty()) {
-            productsFull
-        } else {
-            productsFull.filter {
-                it.name.lowercase().contains(text.lowercase())
-            }
+        filterFull(text, null, null)
+    }
+
+    fun filterFull(text: String, minPrice: Double?, maxPrice: Double?) {
+        products = productsFull.filter { product ->
+            val matchesName = text.isEmpty() || product.name.lowercase().contains(text.lowercase())
+            val matchesMin = minPrice == null || product.unitPrice >= minPrice
+            val matchesMax = maxPrice == null || product.unitPrice <= maxPrice
+            matchesName && matchesMin && matchesMax
         }
-        products = filteredList
         notifyDataSetChanged()
     }
 
@@ -109,6 +111,9 @@ class ProductAdapter(
         productsFull = ArrayList(newList)
         notifyDataSetChanged()
     }
+
+    fun getMinPrice(): Float = productsFull.minOfOrNull { it.unitPrice }?.toFloat() ?: 0f
+    fun getMaxPrice(): Float = productsFull.maxOfOrNull { it.unitPrice }?.toFloat() ?: 1000f
 
     // Utilidad para cargar imágenes evitando caché en otras situaciones
     private fun cargarImagenConGlide(holder: ProductViewHolder, modelo: Any) {

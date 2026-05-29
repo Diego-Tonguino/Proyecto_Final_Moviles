@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
-        app:cardBackgroundColor="#CC1E293B"
+        app:cardBackgroundColor="#4D000000"
         app:cardCornerRadius="24dp"
-        app:cardElevation="8dp"
-        app:strokeColor="#33FFFFFF"
+        app:cardElevation="0dp"
+        app:strokeColor="#4DFFFFFF"
         app:strokeWidth="1dp"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -71,19 +71,22 @@
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Barra de Búsqueda Flotante -->
+    <!-- Barra de Búsqueda + Botón Filtro -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardSearch"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
-        app:cardBackgroundColor="#CC1E293B"
+        app:cardBackgroundColor="#4D000000"
         app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
+        app:cardElevation="0dp"
         app:strokeColor="#22FFFFFF"
         app:strokeWidth="1dp"
-        app:layout_constraintTop_toBottomOf="@id/cardHeader">
+        app:layout_constraintTop_toBottomOf="@id/cardHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnFilter">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,26 +116,79 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- Botón de filtros -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnFilter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#4D000000"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#22FFFFFF"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="#a78bfa" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Chips de filtros activos -->
+    <HorizontalScrollView
+        android:id="@+id/filterChipsScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cardSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/filterChipsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp" />
+    </HorizontalScrollView>
+
+
+
     <TextView
         android:id="@+id/tvLabelProducts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="Productos Destacados"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         android:letterSpacing="0.02"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardSearch" />
+        app:layout_constraintTop_toBottomOf="@id/filterChipsScroll" />
+
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardBottomNav"
         app:layout_constraintTop_toBottomOf="@id/tvLabelProducts">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -141,7 +197,7 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:paddingHorizontal="12dp"
-            android:paddingBottom="100dp" 
+            android:paddingBottom="12dp"
             tools:listitem="@layout/item_product" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -153,10 +209,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="24dp"
-        app:cardBackgroundColor="#CC1E293B"
+        app:cardBackgroundColor="#4D000000"
         app:cardCornerRadius="24dp"
-        app:cardElevation="12dp"
-        app:strokeColor="#33FFFFFF"
+        app:cardElevation="0dp"
+        app:strokeColor="#4DFFFFFF"
         app:strokeWidth="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

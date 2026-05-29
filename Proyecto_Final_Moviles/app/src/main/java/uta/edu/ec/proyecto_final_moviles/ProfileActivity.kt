@@ -145,6 +145,12 @@ class ProfileActivity : AppCompatActivity() {
                 .show()
         }
 
+        // Botón Log de Errores
+        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnViewErrorLog)
+            .setOnClickListener {
+                startActivity(android.content.Intent(this, ErrorLogActivity::class.java))
+            }
+
         loadUserIdFromToken()
 
         onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {

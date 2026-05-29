@@ -33,5 +33,6 @@
         <activity android:name=".PaymentMethodActivity" />
         <activity android:name=".PaymentDetailsActivity" />
         <activity android:name=".PaymentSuccessActivity" />
+        <activity android:name=".ErrorLogActivity" />
     </application>
-</manifest>
+</manifest>
