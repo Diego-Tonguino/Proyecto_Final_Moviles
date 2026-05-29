@@ -449,7 +449,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
             return;
         }
 
-        const API_URL = "http://localhost:5033/CreateOrder";
+        const API_URL = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/CreateOrder";
         const cuerpoTabla = document.getElementById('listaProductosCuerpo');
         const filaVacia = document.getElementById('filaVacia');
         let urlDestinoSalida = ''; 
@@ -464,7 +464,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
 
         async function fetchSiguienteNumeroFactura() {
             try {
-                const res = await fetch("http://localhost:5033/api/orders", {
+                const res = await fetch("https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/orders", {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) {
@@ -578,7 +578,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
             row.setAttribute('data-price', pPrice);
             
             const timestamp = new Date().getTime();
-            const imageUrl = `http://localhost:5033/api/products/${pId}/image?t=${timestamp}`;
+            const imageUrl = `https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products/${pId}/image?t=${timestamp}`;
             const iconProduct = `
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -845,7 +845,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                 msjLower.includes('referen') || msjLower.includes('product')) {
                                 
                                 try {
-                                    const resProd = await fetch('http://localhost:5033/api/products');
+                                    const resProd = await fetch('https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products');
                                     
                                     if (resProd.ok) {
                                         const productosActuales = await resProd.json();

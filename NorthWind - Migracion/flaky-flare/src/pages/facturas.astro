@@ -145,8 +145,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 </style>
 
 <script>
-  const API_ORDERS = 'http://localhost:5033/api/orders';
-  const API_CUSTOMERS = 'http://localhost:5033/api/customers';
+  const API_ORDERS = 'https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/orders';
+  const API_CUSTOMERS = 'https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/customers';
   
   let todasLasFacturas: any[] = [];
   let facturasFiltradas: any[] = [];
@@ -398,7 +398,7 @@ import MainLayout from '../layouts/MainLayout.astro';
               
               if (!name && prodId !== '-' && !productosCache[prodId]) {
                   try {
-                      const prodResponse = await fetch(`http://localhost:5033/api/products/${prodId}`);
+                      const prodResponse = await fetch(`https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products/${prodId}`);
                       if (prodResponse.ok) {
                           const prod = await prodResponse.json();
                           name = prod.name || prod.Name || prod.productName || prod.ProductName || `Producto #${prodId}`;

@@ -309,7 +309,7 @@ const iconLogout = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="2
                 
                 // Cargar foto de perfil si existe el userId
                 if (userId && navUserImg && navUserSvg) {
-                    const avatarUrl = `http://localhost:5033/api/users/${userId}/profile-picture`;
+                    const avatarUrl = `https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/users/${userId}/profile-picture`;
                     fetch(avatarUrl, {
                         headers: {
                             'Authorization': `Bearer ${token}`

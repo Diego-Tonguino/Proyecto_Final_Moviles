@@ -163,7 +163,7 @@
   async function cargarProductos() {
     if (paginationInfo) paginationInfo.textContent = "Cargando...";
     try {
-      const response = await fetch('http://localhost:5033/api/products'); 
+      const response = await fetch('https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products'); 
       const data = await response.json();
       
       // Cargar todos los productos (los que no tienen stock se deshabilitarán en el render)
@@ -208,7 +208,7 @@
       const deshabilitar = idsAgregados.includes(id) || stock <= 0;
       
       const timestamp = new Date().getTime();
-      const imageUrl = `http://localhost:5033/api/products/${id}/image?t=${timestamp}`;
+      const imageUrl = `https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products/${id}/image?t=${timestamp}`;
       const iconProduct = `
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
