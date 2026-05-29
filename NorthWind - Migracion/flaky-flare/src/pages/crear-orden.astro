@@ -436,7 +436,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
             return;
         }
 
-        const API_URL = "https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/CreateOrder";
+        const API_URL = "http://localhost:5033/CreateOrder";
         const cuerpoTabla = document.getElementById('listaProductosCuerpo');
         const filaVacia = document.getElementById('filaVacia');
         let urlDestinoSalida = ''; 
@@ -451,7 +451,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
 
         async function fetchSiguienteNumeroFactura() {
             try {
-                const res = await fetch("https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/orders", {
+                const res = await fetch("http://localhost:5033/api/orders", {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) {
@@ -787,7 +787,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                 msjLower.includes('referen') || msjLower.includes('product')) {
                                 
                                 try {
-                                    const resProd = await fetch('https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products');
+                                    const resProd = await fetch('http://localhost:5033/api/products');
                                     
                                     if (resProd.ok) {
                                         const productosActuales = await resProd.json();

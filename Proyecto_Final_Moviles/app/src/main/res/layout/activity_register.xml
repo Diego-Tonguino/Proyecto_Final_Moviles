@@ -5,12 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@drawable/bg_welcome">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -138,20 +143,7 @@
                         <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRegCity" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:hint="Ciudad de residencia" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:textColorHint="#8094a3b8" tools:ignore="TextFields" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="País" android:textColor="#94a3b8" android:layout_marginBottom="4dp" tools:ignore="HardcodedText" />
-                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilRegCountry" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRegCountry" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:hint="Ecuador" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:textColorHint="#8094a3b8" tools:ignore="TextFields" />
-                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Código Postal" android:textColor="#94a3b8" android:layout_marginBottom="4dp" tools:ignore="HardcodedText" />
-                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilRegPostalCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRegPostalCode" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:hint="180150" android:inputType="number" android:maxLength="5" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:textColorHint="#8094a3b8" tools:ignore="TextFields" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dirección" android:textColor="#94a3b8" android:layout_marginBottom="4dp" tools:ignore="HardcodedText" />
-                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilRegAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:hintEnabled="false" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRegAddress" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input" android:hint="Calle principal y número" android:maxLength="30" android:paddingHorizontal="16dp" android:textColor="#FFFFFF" android:textColorHint="#8094a3b8" tools:ignore="TextFields" />
-                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
                 <!-- PASO 3: SEGURIDAD -->

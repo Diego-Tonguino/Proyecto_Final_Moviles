@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const editPassword = document.getElementById('editPassword') as HTMLInputElement;
     const editConfirmPassword = document.getElementById('editConfirmPassword') as HTMLInputElement;
 
-    const API_BASE = 'https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/users';
+    const API_BASE = 'http://localhost:5033/api/users';
     const avatarUrlBase = `${API_BASE}/${userId}/profile-picture`;
 
     let currentUserData: any = null;

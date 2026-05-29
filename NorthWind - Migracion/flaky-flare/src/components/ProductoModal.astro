@@ -156,7 +156,7 @@
   async function cargarProductos() {
     if (paginationInfo) paginationInfo.textContent = "Cargando...";
     try {
-      const response = await fetch('https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api/products'); 
+      const response = await fetch('http://localhost:5033/api/products'); 
       const data = await response.json();
       
       // Filtramos para que solo existan los que tienen stock > 0
