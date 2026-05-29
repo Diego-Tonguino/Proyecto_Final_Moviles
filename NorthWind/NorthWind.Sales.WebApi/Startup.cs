@@ -71,15 +71,15 @@ internal static class Startup
                   .AddDefaultTokenProviders();
         }
 
-        //  Configurar CORS para permitir que Astro (http://localhost:4321) se conecte
+        //  Configurar CORS para permitir peticiones desde cualquier origen
+        //  (Blazor local, app Android, Azure, etc.)
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("AstroDevPolicy", config =>
             {
-                config.WithOrigins("http://localhost:4321")
+                config.AllowAnyOrigin()
                       .AllowAnyMethod()
-                      .AllowAnyHeader()
-                      .AllowCredentials();
+                      .AllowAnyHeader();
             });
         });
 
@@ -135,14 +135,15 @@ internal static class Startup
         if (app.Environment.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
-            //  Activar Swagger en desarrollo
-            app.UseSwagger();
-            app.UseSwaggerUI();
         }
         else
         {
             app.UseExceptionHandler(builder => { });
         }
+
+        //  Activar Swagger en todos los entornos (desarrollo y producción/Azure)
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
         // Redirigir HTTP a HTTPS para evitar problemas de mixed-content y asegurar
         // que la UI de Swagger esté accesible en el puerto HTTPS configurado.

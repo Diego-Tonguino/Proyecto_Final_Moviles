@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
     // Restauramos a localhost que es la configuración que te funcionaba con adb reverse
-    private const val BASE_URL = "http://localhost:5033/"
+    private const val BASE_URL = "https://northwind-api-uta-anflgshdbxfjancr.switzerlandnorth-01.azurewebsites.net/"
 
     var authToken: String? = null
 
