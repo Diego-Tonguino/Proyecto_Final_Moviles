@@ -162,7 +162,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     if (subtitle) subtitle.textContent = `Panel de control principal - Sesión iniciada como ${userRole}`;
 
     // 4. Cargar estadísticas reales desde las APIs
-    const API_BASE = 'http://localhost:5033/api';
+    const API_BASE = 'https://northwind-api-uta-anffgshdbxfjaecr.switzerlandnorth-01.azurewebsites.net/api';
 
     // Cargar Clientes
     fetch(`${API_BASE}/customers`, { headers })
