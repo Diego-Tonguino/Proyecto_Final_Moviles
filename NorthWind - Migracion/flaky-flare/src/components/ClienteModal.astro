@@ -20,7 +20,9 @@
             <option value="Apellido">Apellido</option>
             <option value="Email">Email</option>
             <option value="Telefono">Teléfono</option>
-            <option value="Direccion">Dirección</option>
+            <option value="Ciudad">Ciudad</option>
+            <option value="ConDeuda">Con Deuda</option>
+            <option value="SinDeuda">Sin Deuda</option>
           </select>
         </div>
         <div class="search-input-container">
@@ -35,17 +37,16 @@
             <thead>
               <tr>
                 <th style="width: 10%;">CÉDULA</th>
-                <th style="width: 12%;">NOMBRE</th>
-                <th style="width: 12%;">APELLIDO</th>
-                <th style="width: 13%;">TELÉFONO</th>
-                <th style="width: 20%;">CORREO ELECTRÓNICO</th>
-                <th style="width: 20%;">DIRECCIÓN</th>
+                <th style="width: 17%;">NOMBRE</th>
+                <th style="width: 17%;">APELLIDO</th>
+                <th style="width: 18%;">TELÉFONO</th>
+                <th style="width: 25%;">CORREO ELECTRÓNICO</th>
                 <th style="text-align: right; width: 13%;">BALANCE ACTUAL</th>
               </tr>
             </thead>
             <tbody id="tablebody">
               <tr class="state-row">
-                <td colspan="7" style="text-align: center; padding: 3rem;">Cargando datos de Northwind...</td>
+                <td colspan="6" style="text-align: center; padding: 3rem;">Cargando datos de Northwind...</td>
               </tr>
             </tbody>
           </table>
@@ -68,28 +69,31 @@
   .modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10000;
+    animation: fadeIn 0.2s ease-out;
   }
 
   /* --- MODAL MUCHO MÁS ANCHO Y ADAPTABLE --- */
   .modal-glass-card {
-    background: rgba(30, 20, 60, 0.9);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1.5rem;
-    width: 95%;
-    max-width: 1400px; 
+    background: #1f163f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    width: 98%;
+    max-width: 1600px; 
     max-height: 90vh;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  
+  @keyframes scaleUp { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
   .modal-header {
     padding: 1.5rem 2rem;
@@ -169,7 +173,6 @@
     companyName?: string; CompanyName?: string; 
     email?: string; Email?: string;
     phone?: string; Phone?: string;
-    address?: string; Address?: string;
     city?: string; City?: string;
     country?: string; Country?: string;
     postalCode?: string; PostalCode?: string;
@@ -203,18 +206,13 @@
       if (!response.ok) throw new Error('Error al conectar');
       const data: Cliente[] = await response.json();
       
-      const clientesSinDeuda = data.filter(c => {
-        const balance = (c.currentBalance !== undefined) ? c.currentBalance : (c.CurrentBalance || 0);
-        return balance <= 0;
-      });
-
-      todosClientes = clientesSinDeuda;
-      clientesFiltrados = clientesSinDeuda;
+      todosClientes = data;
+      clientesFiltrados = data;
       paginaActual = 1; 
       renderizarPagina();
     } catch (e) {
       console.error("Error cargando clientes:", e);
-      if (tablebody) tablebody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:3rem; color:#ef4444;">Error al conectar con la API de clientes</td></tr>';
+      if (tablebody) tablebody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:3rem; color:#ef4444;">Error al conectar con la API de clientes</td></tr>';
     }
   }
 
@@ -230,7 +228,7 @@
     }
 
     if (clientesFiltrados.length === 0) {
-      tablebody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron clientes sin deuda</td></tr>';
+      tablebody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:3rem; color:#94a3b8;">No se encontraron clientes</td></tr>';
       renderizarControlesPaginacion(0);
       return;
     }
@@ -241,19 +239,33 @@
       const lastName = c.lastName || c.LastName || '';
       const phone = c.phone || c.Phone || 'Sin teléfono';
       const email = c.email || c.Email || 'No registrado';
-      const address = c.address || c.Address || 'Sin dirección';
       const balance = Number(c.currentBalance ?? c.CurrentBalance ?? 0);
+      const id = c.id || c.Id || c.customerId || c.CustomerId || '';
+
+      const timestamp = new Date().getTime();
+      const imageUrl = `http://localhost:5033/api/customers/${id}/profile-picture?t=${timestamp}`;
+      const iconClient = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+      `;
 
       const clienteJson = encodeURIComponent(JSON.stringify(c)).replace(/'/g, "%27");
 
       return `
         <tr class="cliente-row" data-json="${clienteJson}">
           <td><span style="color:#a78bfa; font-weight:bold; letter-spacing: 0.5px;">${cedula}</span></td>
-          <td style="font-weight: 600; color: white; white-space: nowrap;">${firstName}</td>
+          <td style="font-weight: 600; color: white; white-space: nowrap;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="${imageUrl}" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(124, 58, 237, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(124, 58, 237, 0.2); color: #a78bfa; display: none; align-items: center; justify-content: center; border: 2px solid rgba(124, 58, 237, 0.3);">${iconClient}</div>
+                <span>${firstName}</span>
+            </div>
+          </td>
           <td style="font-weight: 600; color: white; white-space: nowrap;">${lastName}</td>
           <td style="color: #cbd5e1; white-space: nowrap;">${phone}</td>
           <td style="color: #93c5fd; white-space: nowrap;">${email}</td>
-          <td style="max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${address}">${address}</td>
           <td style="text-align: right; color: #86efac; font-weight: 600; white-space: nowrap;">$${balance.toFixed(2)}</td>
         </tr>
       `;
@@ -314,7 +326,8 @@
       const lastName = String(c.lastName || c.LastName || "").toLowerCase();
       const email = String(c.email || c.Email || "").toLowerCase();
       const phone = String(c.phone || c.Phone || "").toLowerCase();
-      const address = String(c.address || c.Address || "").toLowerCase();
+      const city = String(c.city || c.City || "").toLowerCase();
+      const balance = Number(c.currentBalance ?? c.CurrentBalance ?? 0);
 
       let matchText = false;
       
@@ -329,15 +342,21 @@
         matchText = email.startsWith(term);
       } else if (filterType === "Telefono") {
         matchText = phone.startsWith(term);
-      } else if (filterType === "Direccion") {
-        matchText = address.startsWith(term);
+      } else if (filterType === "Ciudad") {
+        matchText = city.startsWith(term);
       } else {
         matchText = cedulaStr.startsWith(term) || 
                     firstName.startsWith(term) || 
                     lastName.startsWith(term) || 
                     email.startsWith(term) || 
                     phone.startsWith(term) || 
-                    address.startsWith(term);
+                    city.startsWith(term);
+      }
+
+      if (filterType === "ConDeuda") {
+        return matchText && balance > 0;
+      } else if (filterType === "SinDeuda") {
+        return matchText && balance === 0;
       }
 
       return matchText;

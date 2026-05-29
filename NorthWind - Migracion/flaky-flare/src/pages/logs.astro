@@ -64,7 +64,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <style is:global>
   :root {
-    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --bg-card-dark: rgba(255, 255, 255, 0.03);
     --border-dark: rgba(255, 255, 255, 0.1);
     --text-muted: #94a3b8;
     --text-white: #ffffff;
@@ -98,7 +98,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   .table-responsive { overflow-x: auto; max-height: calc(100vh - 250px); }
   
   .main-table { width: 100%; border-collapse: collapse; text-align: left; }
-  .main-table thead th { background-color: #1a103c; color: var(--text-muted); font-size: 0.8rem; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border-dark); }
+  .main-table thead th { background: rgba(255, 255, 255, 0.03); color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; padding: 1.2rem 1.5rem; position: sticky; top: 0; z-index: 1; }
   .main-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.03); transition: background-color 0.15s; }
   .main-table tbody tr:hover { background: rgba(124, 58, 237, 0.15); }
   .main-table td { padding: 1rem 1.5rem; font-size: 0.9rem; color: #cbd5e1; vertical-align: middle; }

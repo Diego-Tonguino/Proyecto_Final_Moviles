@@ -21,6 +21,8 @@ import MainLayout from '../layouts/MainLayout.astro';
               <option value="Email">Email</option>
               <option value="Telefono">Teléfono</option>
               <option value="Ciudad">Ciudad</option>
+              <option value="ConDeuda">Con Deuda</option>
+              <option value="SinDeuda">Sin Deuda</option>
             </select>
           </div>
           <div class="search-input-container">
@@ -120,8 +122,11 @@ import MainLayout from '../layouts/MainLayout.astro';
           
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
               <div class="form-group" style="margin-bottom: 0;">
-                <label for="formCedula">Cédula</label>
-                <input type="text" id="formCedula" required maxlength="10" placeholder="Ej: 1723456789" class="reg-input" oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^0-9]/g, '');">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                    <label for="formCedula" style="margin-bottom: 0;">Cédula</label>
+                    <span id="provinciaLabel" style="font-size: 0.8rem; font-weight: 600; color: var(--color-success); display: none;"></span>
+                </div>
+                <input type="text" id="formCedula" required maxlength="10" placeholder="Ej: 1723456789" class="reg-input" oninput="this.setCustomValidity(''); this.value = this.value.replace(/[^0-9]/g, ''); if(window.validarCedulaEcuatoriana) window.validarCedulaEcuatoriana(this);">
               </div>
               <div class="form-group" style="margin-bottom: 0;">
                 <label for="formFirstName">Nombre</label>
@@ -178,7 +183,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 <label for="formBalance">Balance Actual</label>
                 <div style="position: relative;">
                     <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-weight: bold;">$</span>
-                    <input type="number" id="formBalance" step="0.01" min="0" max="99999999.99" placeholder="0.00" class="reg-input" style="padding-left: 28px;" onkeydown="if(['e', 'E', '+', '-'].includes(event.key)) event.preventDefault();" oninput="this.setCustomValidity(''); if(Number(this.value) > 99999999.99) this.value = this.value.toString().slice(0, -1);">
+                    <input type="number" id="formBalance" step="0.01" min="0" max="9999.99" placeholder="0.00" class="reg-input" style="padding-left: 28px;" onkeydown="if(['e', 'E', '+', '-'].includes(event.key)) event.preventDefault();" oninput="this.setCustomValidity(''); if(Number(this.value) > 9999.99) this.value = this.value.toString().slice(0, -1);">
                 </div>
               </div>
           </div>
@@ -268,7 +273,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <style is:global>
   :root {
-    --bg-card-dark: rgba(30, 20, 60, 0.9);
+    --bg-card-dark: rgba(255, 255, 255, 0.03);
     --bg-input-dark: rgba(0, 0, 0, 0.3);
     --border-dark: rgba(255, 255, 255, 0.1);
     --text-muted: #94a3b8;
@@ -656,6 +661,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       const email = String(c.email || c.Email || "").toLowerCase();
       const phone = String(c.phone || c.Phone || "").toLowerCase();
       const city = String(c.city || c.City || "").toLowerCase();
+      const balance = Number(c.currentBalance ?? c.CurrentBalance ?? 0);
 
       let matchText = false;
       
@@ -681,6 +687,12 @@ import MainLayout from '../layouts/MainLayout.astro';
                     city.startsWith(term);
       }
 
+      if (filterType === "ConDeuda") {
+        return matchText && balance > 0;
+      } else if (filterType === "SinDeuda") {
+        return matchText && balance === 0;
+      }
+
       return matchText;
     });
     
@@ -691,11 +703,71 @@ import MainLayout from '../layouts/MainLayout.astro';
   searchInput?.addEventListener('input', aplicarFiltros);
   searchFilter?.addEventListener('change', aplicarFiltros);
 
+  (window as any).validarCedulaEcuatoriana = (input: HTMLInputElement) => {
+    const cedula = input.value;
+    const provLabel = document.getElementById('provinciaLabel');
+    if (!provLabel) return;
+    
+    input.setCustomValidity('');
+    
+    if (cedula.length < 2) {
+        provLabel.style.display = 'none';
+        return;
+    }
+
+    const provCode = parseInt(cedula.substring(0, 2), 10);
+    const provincias: Record<number, string> = {
+        1: 'Azuay', 2: 'Bolívar', 3: 'Cañar', 4: 'Carchi', 5: 'Cotopaxi',
+        6: 'Chimborazo', 7: 'El Oro', 8: 'Esmeraldas', 9: 'Guayas', 10: 'Imbabura',
+        11: 'Loja', 12: 'Los Ríos', 13: 'Manabí', 14: 'Morona Santiago', 15: 'Napo',
+        16: 'Pastaza', 17: 'Pichincha', 18: 'Tungurahua', 19: 'Zamora Chinchipe', 20: 'Galápagos',
+        21: 'Sucumbíos', 22: 'Orellana', 23: 'Santo Domingo', 24: 'Santa Elena', 30: 'Exterior'
+    };
+
+    if (provCode < 1 || (provCode > 24 && provCode !== 30)) {
+        if (cedula.length === 10) input.setCustomValidity('Provincia inválida en la cédula.');
+        provLabel.style.display = 'none';
+        return;
+    }
+
+    provLabel.textContent = 'Provincia: ' + provincias[provCode];
+    provLabel.style.display = 'inline';
+
+    if (cedula.length === 10) {
+        const tercerDigito = parseInt(cedula.substring(2, 3), 10);
+        if (tercerDigito >= 6) {
+            input.setCustomValidity('Cédula inválida. Tercer dígito debe ser menor a 6.');
+            return;
+        }
+
+        let suma = 0;
+        const coeficientes = [2, 1, 2, 1, 2, 1, 2, 1, 2];
+        for (let i = 0; i < 9; i++) {
+            let valor = parseInt(cedula.charAt(i), 10) * coeficientes[i];
+            if (valor >= 10) valor -= 9;
+            suma += valor;
+        }
+        
+        const decenaSuperior = Math.ceil(suma / 10) * 10;
+        let digitoVerificador = decenaSuperior - suma;
+        if (digitoVerificador === 10) digitoVerificador = 0;
+        
+        if (digitoVerificador !== parseInt(cedula.charAt(9), 10)) {
+            input.setCustomValidity('Cédula ecuatoriana inválida.');
+            return;
+        }
+    }
+  };
+
   (window as any).abrirModalCliente = () => {
     const modal = document.getElementById('formClienteModal') as HTMLElement;
     if (modal) {
       isFormDirty = false; // Resetear al abrir
       document.getElementById('formMode')!.value = 'create';
+      
+      const provLabel = document.getElementById('provinciaLabel');
+      if (provLabel) provLabel.style.display = 'none';
+
       
       (document.getElementById('formInternalId') as HTMLInputElement).value = '';
       
@@ -786,6 +858,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       inputCedula.readOnly = true;
       inputCedula.style.opacity = '0.6';
       inputCedula.style.cursor = 'not-allowed';
+      if ((window as any).validarCedulaEcuatoriana) (window as any).validarCedulaEcuatoriana(inputCedula);
 
       (document.getElementById('formFirstName') as HTMLInputElement).value = data.firstName || '';
       (document.getElementById('formLastName') as HTMLInputElement).value = data.lastName || '';
@@ -889,6 +962,13 @@ import MainLayout from '../layouts/MainLayout.astro';
       inputCedula.reportValidity();
       return;
     }
+    if ((window as any).validarCedulaEcuatoriana) {
+      (window as any).validarCedulaEcuatoriana(inputCedula);
+      if (!inputCedula.checkValidity()) {
+        inputCedula.reportValidity();
+        return;
+      }
+    }
 
     const regexNombres = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/;
     if (!regexNombres.test(firstName)) {
@@ -918,9 +998,15 @@ import MainLayout from '../layouts/MainLayout.astro';
       return;
     }
 
+    const regexSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     if (mode === 'create') {
         if (password.length > 0 && password.length < 6) {
             inputPassword.setCustomValidity('La contraseña debe tener al menos 6 caracteres.');
+            inputPassword.reportValidity();
+            return;
+        }
+        if (password.length > 0 && !regexSpecialChar.test(password)) {
+            inputPassword.setCustomValidity('La contraseña debe incluir al menos un carácter especial.');
             inputPassword.reportValidity();
             return;
         }
@@ -932,6 +1018,11 @@ import MainLayout from '../layouts/MainLayout.astro';
     } else if (password || confirmPassword) {
         if (password.length > 0 && password.length < 6) {
             inputPassword.setCustomValidity('La contraseña debe tener al menos 6 caracteres.');
+            inputPassword.reportValidity();
+            return;
+        }
+        if (password.length > 0 && !regexSpecialChar.test(password)) {
+            inputPassword.setCustomValidity('La contraseña debe incluir al menos un carácter especial.');
             inputPassword.reportValidity();
             return;
         }

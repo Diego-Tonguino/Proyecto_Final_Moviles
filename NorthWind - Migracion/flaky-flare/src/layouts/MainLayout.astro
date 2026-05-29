@@ -53,21 +53,27 @@ const iconLogout = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="2
         }
         
         .sidebar-header { 
-            padding: 1.5rem; 
+            height: 70px;
+            padding: 0 1.5rem; 
             font-size: 1.5rem; 
             font-weight: 800; 
             color: white; 
             text-decoration: none; 
-            display: block;
+            display: flex;
+            align-items: center;
             border-bottom: 1px solid var(--card-border);
             letter-spacing: 0.05em;
         }
         
+        .sidebar-divider-container {
+            padding: 0 1rem;
+            margin: 0.75rem 0;
+        }
+
         .sidebar-divider {
             border: none;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15) 20%, rgba(255, 255, 255, 0.15) 80%, transparent);
-            margin: 0.75rem 0;
+            background: linear-gradient(90deg, rgba(124, 58, 237, 0), rgba(124, 58, 237, 0.5) 50%, rgba(124, 58, 237, 0));
             width: 100%;
         }
 
@@ -84,6 +90,7 @@ const iconLogout = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="2
             font-weight: 500;
             border-radius: 0.5rem;
             transition: all 0.2s;
+            border: 1px solid transparent;
         }
         
         .sidebar-menu li a:hover { 
@@ -196,7 +203,7 @@ const iconLogout = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="2
             <li><a href="/"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Inicio</a></li>
             <li><a href="/perfil"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span> Perfil</a></li>
             
-            <hr class="sidebar-divider" />
+            <li class="sidebar-divider-container"><hr class="sidebar-divider" /></li>
             
             <li><a href="/crear-orden"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg></span> Crear Orden</a></li>
             
