@@ -1,4 +1,4 @@
-﻿using NorthWind.Transactions.Entities.Interfaces;
+using NorthWind.Transactions.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +10,21 @@ namespace NorthWind.Transactions.Entities.Services
 {
     internal class DomainTransaction : IDomainTransaction, IDisposable
     {
-        TransactionScope? TransactionScope;
+        //TransactionScope? TransactionScope;
         public void BeginTransaction()
         {
-            TransactionManager.ImplicitDistributedTransactions = true;
-            TransactionScope = new TransactionScope(
-            TransactionScopeOption.Required,
-            new TransactionOptions
-            {
-                IsolationLevel = IsolationLevel.ReadCommitted
-            },
-            TransactionScopeAsyncFlowOption.Enabled);
+            //TransactionManager.ImplicitDistributedTransactions = true;
+            //TransactionScope = new TransactionScope(
+            //TransactionScopeOption.Required,
+            //new TransactionOptions
+            //{
+            //    IsolationLevel = IsolationLevel.ReadCommitted
+            //},
+            //TransactionScopeAsyncFlowOption.Enabled);
         }
         public void CommitTransaction()
         {
-            TransactionScope.Complete();
+            //TransactionScope.Complete();
             Dispose();
         }
         public void RollbackTransaction()
@@ -33,7 +33,7 @@ namespace NorthWind.Transactions.Entities.Services
         }
         public void Dispose()
         {
-            TransactionScope?.Dispose();
+            //TransactionScope?.Dispose();
         }
     }
 }
