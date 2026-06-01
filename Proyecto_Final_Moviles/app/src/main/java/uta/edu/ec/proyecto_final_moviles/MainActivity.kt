@@ -105,6 +105,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun realizarLogin() {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as android.view.inputmethod.InputMethodManager
+        imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+        
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
@@ -123,9 +126,6 @@ class MainActivity : AppCompatActivity() {
 
         ApiClient.apiService.loginCustomer(request).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                btnLogin.isEnabled = true
-                btnLogin.text = "Iniciar sesión"
-
                 if (response.isSuccessful && response.body() != null) {
                     val loginResponse = response.body()!!
                     val prefs = getSharedPreferences("NorthwindPrefs", Context.MODE_PRIVATE)
@@ -189,6 +189,8 @@ class MainActivity : AppCompatActivity() {
                         irAHome()
                     }
                 } else {
+                    btnLogin.isEnabled = true
+                    btnLogin.text = "Iniciar sesión"
                     etEmail.setBackgroundResource(R.drawable.bg_input_error)
                     etPassword.setBackgroundResource(R.drawable.bg_input_error)
                     mostrarError("Correo o contraseña incorrectos.")

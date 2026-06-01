@@ -45,7 +45,7 @@ interface NorthwindApi {
     @POST("api/customers/{id}/photo")
     fun uploadProfilePicture(@Path("id") id: String, @retrofit2.http.Part file: okhttp3.MultipartBody.Part): Call<ResponseBody>
 
-    @retrofit2.http.DELETE("api/customers/{id}/photo")
+    @retrofit2.http.DELETE("api/customers/{id}/profile-picture")
     fun deleteProfilePicture(@Path("id") id: String): Call<ResponseBody>
 
     @POST("CreateOrder")

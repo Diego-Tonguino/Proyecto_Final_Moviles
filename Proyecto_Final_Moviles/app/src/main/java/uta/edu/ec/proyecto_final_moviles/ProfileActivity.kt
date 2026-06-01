@@ -170,11 +170,11 @@ class ProfileActivity : AppCompatActivity() {
             dialog.show()
         }
 
-        // Botón Log de Errores
-        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnViewErrorLog)
-            .setOnClickListener {
-                startActivity(android.content.Intent(this, ErrorLogActivity::class.java))
-            }
+        // Botón Log de Errores (Oculto a petición del usuario)
+        // findViewById<com.google.android.material.button.MaterialButton>(R.id.btnViewErrorLog)
+        //     .setOnClickListener {
+        //         startActivity(android.content.Intent(this, ErrorLogActivity::class.java))
+        //     }
 
         loadUserIdFromToken()
 
@@ -306,10 +306,16 @@ class ProfileActivity : AppCompatActivity() {
                     originalEmail = profile.email
 
                     // Cargar imagen de perfil con Glide
-                    val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
+                    val imageUrl = "${uta.edu.ec.proyecto_final_moviles.api.ApiClient.BASE_URL}api/customers/${currentUserId}/profile-picture"
+                    val builder = com.bumptech.glide.load.model.LazyHeaders.Builder()
+                    uta.edu.ec.proyecto_final_moviles.api.ApiClient.authToken?.let { builder.addHeader("Authorization", "Bearer $it") }
+                    val glideUrl = com.bumptech.glide.load.model.GlideUrl(imageUrl, builder.build())
+                    
                     Glide.with(this@ProfileActivity)
-                        .load(imageUrl)
-                        .signature(ObjectKey(System.currentTimeMillis().toString())) // Evitar cachÃ©
+                        .load(glideUrl)
+                        .diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy.NONE)
+                        .skipMemoryCache(true)
+                        .signature(ObjectKey(System.currentTimeMillis().toString())) // Evitar caché
                         .placeholder(R.drawable.bg_welcome) // o un avatar por defecto
                         .error(R.drawable.bg_welcome)
                         .into(ivProfilePicture)
@@ -336,8 +342,14 @@ class ProfileActivity : AppCompatActivity() {
         try {
             val file = File(cacheDir, "profile_pic.jpg")
             contentResolver.openInputStream(uri)?.use { inputStream ->
-                FileOutputStream(file).use { outputStream ->
-                    inputStream.copyTo(outputStream)
+                val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+                if (bitmap != null) {
+                    FileOutputStream(file).use { outputStream ->
+                        bitmap.compress(android.graphics.Bitmap.CompressFormat.JPEG, 80, outputStream)
+                    }
+                } else {
+                    runOnUiThread { Toast.makeText(this@ProfileActivity, "No se pudo procesar la imagen", Toast.LENGTH_SHORT).show() }
+                    return
                 }
             }
             
@@ -349,9 +361,15 @@ class ProfileActivity : AppCompatActivity() {
                     pbProfile.visibility = View.GONE
                     if (response.isSuccessful) {
                         Toast.makeText(this@ProfileActivity, "Foto actualizada", Toast.LENGTH_SHORT).show()
-                        val imageUrl = "http://localhost:5033/api/customers/${currentUserId}/profile-picture"
+                        val imageUrl = "${uta.edu.ec.proyecto_final_moviles.api.ApiClient.BASE_URL}api/customers/${currentUserId}/profile-picture"
+                        val builder = com.bumptech.glide.load.model.LazyHeaders.Builder()
+                        uta.edu.ec.proyecto_final_moviles.api.ApiClient.authToken?.let { builder.addHeader("Authorization", "Bearer $it") }
+                        val glideUrl = com.bumptech.glide.load.model.GlideUrl(imageUrl, builder.build())
+                        
                         Glide.with(this@ProfileActivity)
-                            .load(imageUrl)
+                            .load(glideUrl)
+                            .diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true)
                             .signature(ObjectKey(System.currentTimeMillis().toString()))
                             .placeholder(R.drawable.bg_welcome)
                             .error(R.drawable.bg_welcome)

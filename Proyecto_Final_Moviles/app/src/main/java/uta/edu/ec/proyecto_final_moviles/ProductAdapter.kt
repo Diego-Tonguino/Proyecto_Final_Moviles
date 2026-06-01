@@ -57,7 +57,7 @@ class ProductAdapter(
                 }
                 // CASO 3: URL Directa
                 else if (imageData.startsWith("http", ignoreCase = true) || imageData.startsWith("/")) {
-                    val imageUrl = if (imageData.startsWith("/")) "http://localhost:5033$imageData" else imageData
+                    val imageUrl = if (imageData.startsWith("/")) "${uta.edu.ec.proyecto_final_moviles.api.ApiClient.BASE_URL.removeSuffix("/")}$imageData" else imageData
                     cargarImagenConGlide(holder, imageUrl)
                 }
                 // CASO 4: Base64 Puro
@@ -74,7 +74,7 @@ class ProductAdapter(
         }
         else {
             // CASO 5: NO HAY IMAGEN EN JSON (API Optimizada). Llama al endpoint de imagen
-            val imageUrl = "http://localhost:5033/api/products/${product.id}/image"
+            val imageUrl = "${uta.edu.ec.proyecto_final_moviles.api.ApiClient.BASE_URL}api/products/${product.id}/image"
 
             Glide.with(holder.itemView.context)
                 .load(imageUrl)
@@ -98,7 +98,7 @@ class ProductAdapter(
 
     fun filterFull(text: String, minPrice: Double?, maxPrice: Double?) {
         products = productsFull.filter { product ->
-            val matchesName = text.isEmpty() || product.name.lowercase().contains(text.lowercase())
+            val matchesName = text.isEmpty() || product.name.lowercase().startsWith(text.lowercase())
             val matchesMin = minPrice == null || product.unitPrice >= minPrice
             val matchesMax = maxPrice == null || product.unitPrice <= maxPrice
             matchesName && matchesMin && matchesMax

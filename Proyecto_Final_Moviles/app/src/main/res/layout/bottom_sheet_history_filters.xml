@@ -45,47 +45,7 @@
         android:textSize="13sp"
         android:layout_marginBottom="24dp" />
 
-    <!-- Tipo de búsqueda -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🔍  Buscar por"
-        android:textColor="#a78bfa"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginBottom="24dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFilterByOrder"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:text="# Orden"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            app:backgroundTint="#7c3aed"
-            app:cornerRadius="12dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFilterByProduct"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:text="Producto"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            app:backgroundTint="#33FFFFFF"
-            app:cornerRadius="12dp" />
-    </LinearLayout>
 
     <!-- Rango de fecha con selector calendario -->
     <TextView

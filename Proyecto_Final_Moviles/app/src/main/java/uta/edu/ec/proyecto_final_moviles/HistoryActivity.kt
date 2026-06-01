@@ -126,8 +126,6 @@ class HistoryActivity : AppCompatActivity() {
         val view = layoutInflater.inflate(R.layout.bottom_sheet_history_filters, null)
         dialog.setContentView(view)
 
-        val btnByOrder = view.findViewById<MaterialButton>(R.id.btnFilterByOrder)
-        val btnByProduct = view.findViewById<MaterialButton>(R.id.btnFilterByProduct)
         val btnPickFrom = view.findViewById<com.google.android.material.card.MaterialCardView>(R.id.btnPickDateFrom)
         val btnPickTo = view.findViewById<com.google.android.material.card.MaterialCardView>(R.id.btnPickDateTo)
         val tvDateFrom = view.findViewById<android.widget.TextView>(R.id.tvDateFrom)
@@ -139,16 +137,8 @@ class HistoryActivity : AppCompatActivity() {
         var tempDateFrom: String? = filterDateFrom
         var tempDateTo: String? = filterDateTo
 
-        actualizarBotonesFilterType(btnByOrder, btnByProduct)
         tvDateFrom.text = filterDateFrom ?: "Seleccionar"
         tvDateTo.text = filterDateTo ?: "Seleccionar"
-
-        btnByOrder.setOnClickListener {
-            filterType = "order"; actualizarBotonesFilterType(btnByOrder, btnByProduct)
-        }
-        btnByProduct.setOnClickListener {
-            filterType = "product"; actualizarBotonesFilterType(btnByOrder, btnByProduct)
-        }
 
         // DatePicker Desde
         btnPickFrom.setOnClickListener {
@@ -201,17 +191,6 @@ class HistoryActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun actualizarBotonesFilterType(btnOrder: MaterialButton, btnProduct: MaterialButton) {
-        val purple = Color.parseColor("#7c3aed")
-        val transparent = Color.parseColor("#33FFFFFF")
-        if (filterType == "order") {
-            btnOrder.backgroundTintList = ColorStateList.valueOf(purple)
-            btnProduct.backgroundTintList = ColorStateList.valueOf(transparent)
-        } else {
-            btnOrder.backgroundTintList = ColorStateList.valueOf(transparent)
-            btnProduct.backgroundTintList = ColorStateList.valueOf(purple)
-        }
-    }
 
     private fun aplicarFiltros() {
         val query = etHistorySearch.text.toString()
@@ -224,17 +203,13 @@ class HistoryActivity : AppCompatActivity() {
         historyFilterChipsContainer.removeAllViews()
         var hasChips = false
 
-        // Chip tipo búsqueda
-        val typeLabel = if (filterType == "product") "Buscar: Producto" else "Buscar: # Orden"
-        historyFilterChipsContainer.addView(crearChipReadOnly(typeLabel))
-        hasChips = true
-
         if (filterDateFrom != null || filterDateTo != null) {
             val dateLabel = "Fecha: ${filterDateFrom ?: "..."} → ${filterDateTo ?: "..."}"
             historyFilterChipsContainer.addView(crearChip(dateLabel) {
                 filterDateFrom = null; filterDateTo = null
                 actualizarChips(); aplicarFiltros()
             })
+            hasChips = true
         }
 
         historyFilterChipsScroll.visibility = if (hasChips) View.VISIBLE else View.GONE

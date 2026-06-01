@@ -251,7 +251,8 @@
                 android:textSize="14sp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:strokeColor="#44a78bfa"
-                app:cornerRadius="16dp" />
+                app:cornerRadius="16dp"
+                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>

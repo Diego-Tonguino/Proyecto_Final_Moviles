@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "error": "NullReferenceException al cargar perfil",
+    "linea": "PerfilController.cs:45",
+    "fecha": "2026-05-29T10:00:00",
+    "pantalla": "Perfil de Usuario",
+    "evento": "Carga inicial"
+  },
+  {
+    "id": 2,
+    "error": "Timeout de conexión en la búsqueda de productos",
+    "linea": "DatabaseContext.cs:120",
+    "fecha": "2026-05-28T14:30:00",
+    "pantalla": "Inventario de Productos",
+    "evento": "Filtrado por categoría"
+  },
+  {
+    "id": 3,
+    "error": "Error de validación: formato de cédula incorrecto",
+    "linea": "Validaciones.cs:22",
+    "fecha": "2026-05-27T09:15:00",
+    "pantalla": "Registro de Cliente",
+    "evento": "Click en Guardar"
+  },
+  {
+    "id": 4,
+    "error": "Error desconocido",
+    "linea": "N/A",
+    "fecha": "2026-05-29T15:29:50.017Z",
+    "pantalla": "Desconocida",
+    "evento": "General"
+  },
+  {
+    "id": 5,
+    "error": "Producto \"dfdsfsdf\" sin stock en este momento.",
+    "linea": "crear-orden.astro:872",
+    "fecha": "2026-05-29T15:34:34.174Z",
+    "pantalla": "Crear Orden",
+    "evento": "Validación de Stock"
+  },
+  {
+    "id": 6,
+    "error": "El producto \"dfdsfsdf\" ya fue eliminado.",
+    "linea": "crear-orden.astro:865",
+    "fecha": "2026-05-29T15:36:11.297Z",
+    "pantalla": "Crear Orden",
+    "evento": "Validación de Stock"
+  }
+]

@@ -86,9 +86,13 @@ class CartActivity : AppCompatActivity() {
         
         val userId = prefs.getString("user_id", null)
         if (userId != null) {
-            val imageUrl = "http://localhost:5033/api/customers/${userId}/profile-picture"
+            val imageUrl = "${uta.edu.ec.proyecto_final_moviles.api.ApiClient.BASE_URL}api/customers/${userId}/profile-picture"
+            val builder = com.bumptech.glide.load.model.LazyHeaders.Builder()
+            uta.edu.ec.proyecto_final_moviles.api.ApiClient.authToken?.let { builder.addHeader("Authorization", "Bearer $it") }
+            val glideUrl = com.bumptech.glide.load.model.GlideUrl(imageUrl, builder.build())
+            
             com.bumptech.glide.Glide.with(this)
-                .load(imageUrl)
+                .load(glideUrl)
                 .placeholder(R.drawable.bg_welcome)
                 .error(R.drawable.bg_welcome)
                 .into(ivCartProfilePic)

@@ -17,6 +17,14 @@ import com.google.gson.reflect.TypeToken
 import uta.edu.ec.proyecto_final_moviles.models.OrderHistoryResponse
 import java.text.SimpleDateFormat
 import java.util.Locale
+import android.graphics.pdf.PdfDocument
+import android.os.Build
+import android.os.Environment
+import android.provider.MediaStore
+import android.content.ContentValues
+import android.view.View
+import android.widget.Toast
+import java.io.OutputStream
 
 class OrderDetailActivity : AppCompatActivity() {
 
@@ -133,8 +141,51 @@ class OrderDetailActivity : AppCompatActivity() {
     }
 
     private fun crearYGuardarPdf() {
-        // En una implementación completa esto generaría el archivo PDF en Descargas
-        // o utilizaría PdfDocument. Por ahora mostraremos un mensaje de éxito.
-        android.widget.Toast.makeText(this, "Factura guardada como PDF en Descargas", android.widget.Toast.LENGTH_LONG).show()
+        val invoiceView = findViewById<View>(R.id.cardInvoicePaper)
+        
+        if (invoiceView.width == 0 || invoiceView.height == 0) {
+            Toast.makeText(this, "La vista aún no se ha cargado", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val pdfDocument = PdfDocument()
+        val pageInfo = PdfDocument.PageInfo.Builder(invoiceView.width, invoiceView.height, 1).create()
+        val page = pdfDocument.startPage(pageInfo)
+
+        invoiceView.draw(page.canvas)
+        pdfDocument.finishPage(page)
+
+        val fileName = "Factura_${System.currentTimeMillis()}.pdf"
+        var outputStream: OutputStream? = null
+
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                val values = ContentValues().apply {
+                    put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+                    put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf")
+                    put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
+                }
+                val uri = contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
+                if (uri != null) {
+                    outputStream = contentResolver.openOutputStream(uri)
+                }
+            } else {
+                val targetPdf = java.io.File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName)
+                outputStream = java.io.FileOutputStream(targetPdf)
+            }
+
+            if (outputStream != null) {
+                pdfDocument.writeTo(outputStream)
+                Toast.makeText(this, "Factura guardada exitosamente en Descargas", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Error al crear el archivo PDF", Toast.LENGTH_LONG).show()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Error al guardar: ${e.message}", Toast.LENGTH_LONG).show()
+        } finally {
+            pdfDocument.close()
+            outputStream?.close()
+        }
     }
 }

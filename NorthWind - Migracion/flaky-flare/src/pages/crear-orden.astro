@@ -454,6 +454,20 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
         const filaVacia = document.getElementById('filaVacia');
         let urlDestinoSalida = ''; 
         let numeroFacturaActual = "---";
+
+        async function guardarErrorLocal(msg, evento, linea) {
+            try {
+                const params = new URLSearchParams({
+                    error: msg,
+                    pantalla: "Crear Orden",
+                    evento: evento,
+                    linea: linea
+                });
+                await fetch('/api/guardar-error?' + params.toString());
+            } catch(e) {
+                console.error("No se pudo guardar el error localmente", e);
+            }
+        }
         
         // Variables globales para los modales de confirmación
         let filaAEliminar = null;
@@ -863,6 +877,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                             if (!prodEnBd) {
                                                 // Aumentamos a 8 segundos (8000 ms) y no borramos la fila automáticamente
                                                 mostrarNotificacion(`⚠️ El producto "${name}" ya fue eliminado por un administrador. Por favor, elimínalo de la orden.`, "error", 8000);
+                                                guardarErrorLocal(`El producto "${name}" ya fue eliminado.`, "Validación de Stock", "crear-orden.astro:865");
                                                 problemaEncontrado = true;
                                             } else {
                                                 const stockReal = Number(prodEnBd.unitsInStock ?? prodEnBd.UnitsInStock ?? 0);
@@ -870,6 +885,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                     if (stockReal <= 0) {
                                                         // Aumentamos a 8 segundos y no borramos la fila automáticamente
                                                         mostrarNotificacion(`⚠️ El producto "${name}" ya está sin stock en este momento. Por favor, elimínalo de la orden.`, "error", 8000);
+                                                        guardarErrorLocal(`Producto "${name}" sin stock en este momento.`, "Validación de Stock", "crear-orden.astro:872");
                                                     } else {
                                                         mostrarNotificacion(`⚠️ Solo quedan ${stockReal} unidades disponibles de "${name}". Tu orden ha sido ajustada.`, "warning", 8000);
                                                         inputCant.value = stockReal;
@@ -893,6 +909,7 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             if (!mostroErrorPersonalizado) {
                                 if (msjLower.includes('client') || msjLower.includes('customer') || msjLower.includes('foreign key') || msjLower.includes('referen')) {
                                     mostrarNotificacion(`⚠️ El cliente seleccionado parece haber sido eliminado. Por favor, búscalo nuevamente.`, "error");
+                                    guardarErrorLocal(`El cliente seleccionado parece haber sido eliminado.`, "Validación de Cliente", "crear-orden.astro:895");
                                     document.getElementById('internalCustomerId').value = '';
                                     document.getElementById('customerCedula').value = '';
                                     document.getElementById('firstName').value = '';
@@ -904,16 +921,19 @@ const iconSave = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     document.getElementById('shipPostalCode').value = '';
                                 } else {
                                     mostrarNotificacion(`❌ No se pudo crear la orden: ${mensajeError}`, "error");
+                                    guardarErrorLocal(`No se pudo crear la orden: ${mensajeError}`, "Error del Servidor", "crear-orden.astro:906");
                                 }
                             }
 
                         } catch (e) {
                             mostrarNotificacion("Error crítico al guardar la orden. Intente nuevamente.", "error");
+                            guardarErrorLocal("Error crítico al procesar la respuesta del servidor.", "Excepción de Sistema", "crear-orden.astro:911");
                         }
                     }
                 }
             } catch (error) {
                 mostrarNotificacion("No se pudo conectar con el servidor.", "error");
+                guardarErrorLocal("No se pudo conectar con el servidor (timeout o red).", "Error de Conexión", "crear-orden.astro:916");
                 console.error(error);
             } finally {
                 mostrarCargaBoton(false);
